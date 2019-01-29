@@ -1,5 +1,5 @@
 This is annotate.info, produced by makeinfo version 4.13 from
-/tmp/dgboter/bbs/rhev-vm10--rhe6x86_64/buildbot/rhe6x86_64--aarch64-linux-gnu/build/src/binutils-gdb--gdb/gdb/doc/annotate.texinfo.
+/tmp/dgboter/bbs/rhev-vm3--rhe6x86_64/buildbot/rhe6x86_64--aarch64-linux-gnu/build/src/binutils-gdb--gdb/gdb/doc/annotate.texinfo.
 
 INFO-DIR-SECTION Software development
 START-INFO-DIR-ENTRY
@@ -1170,21 +1170,21 @@ permit their use in free software.
 
 
 Tag Table:
-Node: Top1285
-Node: Annotations Overview2455
-Node: Limitations4254
-Node: Migrating to GDB/MI6839
-Node: Server Prefix7222
-Node: Value Annotations7868
-Node: Frame Annotations11038
-Node: Displays14937
-Node: Prompting15968
-Node: Errors17471
-Node: Breakpoint Info18361
-Node: Invalidation19586
-Node: Annotations for Running20065
-Node: Source Annotations21578
-Node: Multi-threaded Apps22524
-Node: GNU Free Documentation License23133
+Node: Top1284
+Node: Annotations Overview2454
+Node: Limitations4253
+Node: Migrating to GDB/MI6838
+Node: Server Prefix7221
+Node: Value Annotations7867
+Node: Frame Annotations11037
+Node: Displays14936
+Node: Prompting15967
+Node: Errors17470
+Node: Breakpoint Info18360
+Node: Invalidation19585
+Node: Annotations for Running20064
+Node: Source Annotations21577
+Node: Multi-threaded Apps22523
+Node: GNU Free Documentation License23132
 
 End Tag Table

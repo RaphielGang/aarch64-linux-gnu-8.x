@@ -1,5 +1,5 @@
 This is binutils.info, produced by makeinfo version 4.13 from
-/tmp/dgboter/bbs/rhev-vm10--rhe6x86_64/buildbot/rhe6x86_64--aarch64-linux-gnu/build/src/binutils-gdb/binutils/doc/binutils.texi.
+/tmp/dgboter/bbs/rhev-vm3--rhe6x86_64/buildbot/rhe6x86_64--aarch64-linux-gnu/build/src/binutils-gdb/binutils/doc/binutils.texi.
 
 Copyright (C) 1991-2018 Free Software Foundation, Inc.
 
@@ -43,8 +43,8 @@ Introduction
 ************
 
 This brief manual contains documentation for the GNU binary utilities
-(GNU Toolchain for the A-profile Architecture 8.2-2018.11
-(arm-rel-8.26)) version 2.30.0:
+(GNU Toolchain for the A-profile Architecture 8.2-2019.01
+(arm-rel-8.28)) version 2.30.0:
 
    This document is distributed under the terms of the GNU Free
 Documentation License version 1.3.  A copy of the license is included
@@ -4730,7 +4730,7 @@ recommend you contact that organization first.
 individuals in the file `etc/SERVICE' in the GNU Emacs distribution.
 
    In any event, we also recommend that you send bug reports for the
-binary utilities to `http://www.sourceware.org/bugzilla/'.
+binary utilities to `https://bugs.linaro.org/'.
 
    The fundamental principle of reporting bugs usefully is this:
 *report all the facts*.  If you are not sure whether to state a fact or
@@ -5521,35 +5521,35 @@ Binutils Index
 
 
 Tag Table:
-Node: Top2008
-Node: ar3779
-Node: ar cmdline6917
-Node: ar scripts18323
-Node: nm24011
-Node: objcopy35641
-Node: objdump74841
-Node: ranlib104223
-Node: size105828
-Node: strings108832
-Node: strip113240
-Node: c++filt122635
-Ref: c++filt-Footnote-1127476
-Node: addr2line127582
-Node: nlmconv132153
-Node: windmc134758
-Node: windres138407
-Node: dlltool144768
-Node: def file format157875
-Node: readelf160414
-Node: elfedit171997
-Node: Common Options174269
-Node: Selecting the Target System175309
-Node: Target Selection176241
-Node: Architecture Selection178223
-Node: Reporting Bugs179051
-Node: Bug Criteria179830
-Node: Bug Reporting180383
-Node: GNU Free Documentation License187253
-Node: Binutils Index212432
+Node: Top2007
+Node: ar3778
+Node: ar cmdline6916
+Node: ar scripts18322
+Node: nm24010
+Node: objcopy35640
+Node: objdump74840
+Node: ranlib104222
+Node: size105827
+Node: strings108831
+Node: strip113239
+Node: c++filt122634
+Ref: c++filt-Footnote-1127475
+Node: addr2line127581
+Node: nlmconv132152
+Node: windmc134757
+Node: windres138406
+Node: dlltool144767
+Node: def file format157874
+Node: readelf160413
+Node: elfedit171996
+Node: Common Options174268
+Node: Selecting the Target System175308
+Node: Target Selection176240
+Node: Architecture Selection178222
+Node: Reporting Bugs179050
+Node: Bug Criteria179829
+Node: Bug Reporting180382
+Node: GNU Free Documentation License187241
+Node: Binutils Index212420
 
 End Tag Table
