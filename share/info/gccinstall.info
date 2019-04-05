@@ -1,5 +1,5 @@
 This is doc/gccinstall.info, produced by makeinfo version 4.13 from
-/tmp/dgboter/bbs/rhev-vm3--rhe6x86_64/buildbot/rhe6x86_64--aarch64-linux-gnu/build/src/gcc/gcc/doc/install.texi.
+/tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--aarch64-linux-gnu/build/src/gcc/gcc/doc/install.texi.
 
 Copyright (C) 1988-2018 Free Software Foundation, Inc.
 
@@ -852,8 +852,17 @@ option.
 `--without-multilib-list'
      Specify what multilibs to build.  LIST is a comma separated list of
      values, possibly consisting of a single value.  Currently only
-     implemented for arm*-*-*, sh*-*-* and x86-64-*-linux*.  The
-     accepted values and meaning for each target is given below.
+     implemented for aarch64*-*-*, arm*-*-*, sh*-*-* and
+     x86-64-*-linux*.  The accepted alues and meaning for each target
+     is given below.
+
+    `aarch64*-*-*'
+          LIST is a comma separated list of `ilp32', and `lp64' to
+          enable ILP32 and LP64 run-time libraries, respectively.  If
+          LIST is empty, then there will be no multilibs and only the
+          default run-time library will be built.  If LIST is `default'
+          or -with-multilib-list= is not specified, then the default
+          set of libraries is selected based on the value of `--target'.
 
     `arm*-*-*'
           LIST is a comma separated list of `aprofile' and `rmprofile'
@@ -4631,7 +4640,7 @@ Concept Index
 * Menu:
 
 * Binaries:                              Binaries.           (line    6)
-* build_configargs:                      Configuration.      (line 1594)
+* build_configargs:                      Configuration.      (line 1603)
 * Configuration:                         Configuration.      (line    6)
 * configurations supported by GCC:       Configurations.     (line    6)
 * Downloading GCC:                       Downloading the source.
@@ -4641,7 +4650,7 @@ Concept Index
 * FDL, GNU Free Documentation License:   GNU Free Documentation License.
                                                              (line    6)
 * Host specific installation:            Specific.           (line    6)
-* host_configargs:                       Configuration.      (line 1598)
+* host_configargs:                       Configuration.      (line 1607)
 * Installing GCC: Binaries:              Binaries.           (line    6)
 * Installing GCC: Building:              Building.           (line    6)
 * Installing GCC: Configuration:         Configuration.      (line    6)
@@ -4651,7 +4660,7 @@ Concept Index
 * Specific installation notes:           Specific.           (line    6)
 * Target specific installation:          Specific.           (line    6)
 * Target specific installation notes:    Specific.           (line    6)
-* target_configargs:                     Configuration.      (line 1602)
+* target_configargs:                     Configuration.      (line 1611)
 * Testing:                               Testing.            (line    6)
 * Testsuite:                             Testing.            (line    6)
 
@@ -4666,96 +4675,96 @@ Node: Configuration16221
 Ref: with-gnu-as31812
 Ref: with-as32710
 Ref: with-gnu-ld34123
-Ref: WithAixSoname54091
-Ref: AixLdCommand54752
-Node: Building89840
-Node: Testing106180
-Node: Final install114060
-Node: Binaries119363
-Node: Specific120495
-Ref: aarch64-x-x121005
-Ref: alpha-x-x122437
-Ref: amd64-x-solaris210122846
-Ref: arc-x-elf32122949
-Ref: arc-linux-uclibc123125
-Ref: arm-x-eabi123266
-Ref: avr123519
-Ref: bfin124101
-Ref: cr16124344
-Ref: cris124759
-Ref: dos125458
-Ref: epiphany-x-elf125781
-Ref: x-x-freebsd125886
-Ref: ft32-x-elf127687
-Ref: h8300-hms127785
-Ref: hppa-hp-hpux128137
-Ref: hppa-hp-hpux10130508
-Ref: hppa-hp-hpux11130921
-Ref: x-x-linux-gnu136323
-Ref: ix86-x-linux136516
-Ref: ix86-x-solaris210136829
-Ref: ia64-x-linux138174
-Ref: ia64-x-hpux138944
-Ref: x-ibm-aix139499
-Ref: TransferAixShobj143161
-Ref: iq2000-x-elf146972
-Ref: lm32-x-elf147112
-Ref: lm32-x-uclinux147216
-Ref: m32c-x-elf147344
-Ref: m32r-x-elf147446
-Ref: m68k-x-x147548
-Ref: m68k-x-uclinux148586
-Ref: microblaze-x-elf148832
-Ref: mips-x-x148951
-Ref: moxie-x-elf150862
-Ref: msp430-x-elf150909
-Ref: nds32le-x-elf151012
-Ref: nds32be-x-elf151084
-Ref: nvptx-x-none151153
-Ref: powerpc-x-x151716
-Ref: powerpc-x-darwin151907
-Ref: powerpc-x-elf152401
-Ref: powerpc-x-linux-gnu152486
-Ref: powerpc-x-netbsd152581
-Ref: powerpc-x-eabisim152669
-Ref: powerpc-x-eabi152795
-Ref: powerpcle-x-elf152871
-Ref: powerpcle-x-eabisim152963
-Ref: powerpcle-x-eabi153096
-Ref: rl78-x-elf153179
-Ref: riscv32-x-elf153285
-Ref: riscv32-x-linux153495
-Ref: riscv64-x-elf153673
-Ref: riscv64-x-linux153883
-Ref: rx-x-elf154061
-Ref: s390-x-linux154107
-Ref: s390x-x-linux154179
-Ref: s390x-ibm-tpf154266
-Ref: x-x-solaris2154397
-Ref: sparc-x-x158265
-Ref: sparc-sun-solaris2158767
-Ref: sparc-sun-solaris210159907
-Ref: sparc-x-linux160283
-Ref: sparc64-x-solaris2160314
-Ref: sparcv9-x-solaris2160647
-Ref: c6x-x-x160734
-Ref: tilegx-*-linux160825
-Ref: tilegxbe-*-linux160967
-Ref: tilepro-*-linux161110
-Ref: visium-x-elf161231
-Ref: x-x-vxworks161339
-Ref: x86-64-x-x162861
-Ref: x86-64-x-solaris210163189
-Ref: xtensa-x-elf163853
-Ref: xtensa-x-linux164524
-Ref: windows164865
-Ref: x-x-cygwin166709
-Ref: x-x-mingw32167262
-Ref: older167488
-Ref: elf169605
-Node: Old169863
-Node: Configurations173000
-Node: GNU Free Documentation License176541
-Node: Concept Index201688
+Ref: WithAixSoname54550
+Ref: AixLdCommand55211
+Node: Building90299
+Node: Testing106639
+Node: Final install114519
+Node: Binaries119822
+Node: Specific120954
+Ref: aarch64-x-x121464
+Ref: alpha-x-x122896
+Ref: amd64-x-solaris210123305
+Ref: arc-x-elf32123408
+Ref: arc-linux-uclibc123584
+Ref: arm-x-eabi123725
+Ref: avr123978
+Ref: bfin124560
+Ref: cr16124803
+Ref: cris125218
+Ref: dos125917
+Ref: epiphany-x-elf126240
+Ref: x-x-freebsd126345
+Ref: ft32-x-elf128146
+Ref: h8300-hms128244
+Ref: hppa-hp-hpux128596
+Ref: hppa-hp-hpux10130967
+Ref: hppa-hp-hpux11131380
+Ref: x-x-linux-gnu136782
+Ref: ix86-x-linux136975
+Ref: ix86-x-solaris210137288
+Ref: ia64-x-linux138633
+Ref: ia64-x-hpux139403
+Ref: x-ibm-aix139958
+Ref: TransferAixShobj143620
+Ref: iq2000-x-elf147431
+Ref: lm32-x-elf147571
+Ref: lm32-x-uclinux147675
+Ref: m32c-x-elf147803
+Ref: m32r-x-elf147905
+Ref: m68k-x-x148007
+Ref: m68k-x-uclinux149045
+Ref: microblaze-x-elf149291
+Ref: mips-x-x149410
+Ref: moxie-x-elf151321
+Ref: msp430-x-elf151368
+Ref: nds32le-x-elf151471
+Ref: nds32be-x-elf151543
+Ref: nvptx-x-none151612
+Ref: powerpc-x-x152175
+Ref: powerpc-x-darwin152366
+Ref: powerpc-x-elf152860
+Ref: powerpc-x-linux-gnu152945
+Ref: powerpc-x-netbsd153040
+Ref: powerpc-x-eabisim153128
+Ref: powerpc-x-eabi153254
+Ref: powerpcle-x-elf153330
+Ref: powerpcle-x-eabisim153422
+Ref: powerpcle-x-eabi153555
+Ref: rl78-x-elf153638
+Ref: riscv32-x-elf153744
+Ref: riscv32-x-linux153954
+Ref: riscv64-x-elf154132
+Ref: riscv64-x-linux154342
+Ref: rx-x-elf154520
+Ref: s390-x-linux154566
+Ref: s390x-x-linux154638
+Ref: s390x-ibm-tpf154725
+Ref: x-x-solaris2154856
+Ref: sparc-x-x158724
+Ref: sparc-sun-solaris2159226
+Ref: sparc-sun-solaris210160366
+Ref: sparc-x-linux160742
+Ref: sparc64-x-solaris2160773
+Ref: sparcv9-x-solaris2161106
+Ref: c6x-x-x161193
+Ref: tilegx-*-linux161284
+Ref: tilegxbe-*-linux161426
+Ref: tilepro-*-linux161569
+Ref: visium-x-elf161690
+Ref: x-x-vxworks161798
+Ref: x86-64-x-x163320
+Ref: x86-64-x-solaris210163648
+Ref: xtensa-x-elf164312
+Ref: xtensa-x-linux164983
+Ref: windows165324
+Ref: x-x-cygwin167168
+Ref: x-x-mingw32167721
+Ref: older167947
+Ref: elf170064
+Node: Old170322
+Node: Configurations173459
+Node: GNU Free Documentation License177000
+Node: Concept Index202147
 
 End Tag Table

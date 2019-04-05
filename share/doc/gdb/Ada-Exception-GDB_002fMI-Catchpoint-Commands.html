@@ -52,7 +52,7 @@ that stop the execution when Ada exceptions are being raised.
 
 <h4 class="subheading">The <code>-catch-assert</code> Command</h4>
 
-<p><a name="index-g_t_002dcatch_002dassert-2937"></a>
+<p><a name="index-g_t_002dcatch_002dassert-2953"></a>
 
 <h5 class="subsubheading">Synopsis</h5>
 
@@ -83,7 +83,7 @@ that stop the execution when Ada exceptions are being raised.
 </pre>
 <h4 class="subheading">The <code>-catch-exception</code> Command</h4>
 
-<p><a name="index-g_t_002dcatch_002dexception-2938"></a>
+<p><a name="index-g_t_002dcatch_002dexception-2954"></a>
 
 <h5 class="subsubheading">Synopsis</h5>
 
@@ -120,6 +120,43 @@ and &lsquo;<samp><span class="samp">catch exception unhandled</span></samp>&rsqu
      enabled="y",addr="0x0000000000404874",
      what="`Program_Error' Ada exception", thread-groups=["i1"],
      times="0",original-location="__gnat_debug_raise_exception"}
+     (gdb)
+</pre>
+<h4 class="subheading">The <code>-catch-handlers</code> Command</h4>
+
+<p><a name="index-g_t_002dcatch_002dhandlers-2955"></a>
+
+<h5 class="subsubheading">Synopsis</h5>
+
+<pre class="smallexample">      -catch-handlers [ -c <var>condition</var>] [ -d ] [ -e <var>exception-name</var> ]
+         [ -t ]
+</pre>
+   <p>Add a catchpoint stopping when Ada exceptions are handled. 
+By default, the command stops the program when any Ada exception
+gets handled.  But it is also possible, by using some of the
+optional parameters described below, to create more selective
+catchpoints.
+
+   <p>The possible optional parameters for this command are:
+
+     <dl>
+<dt>&lsquo;<samp><span class="samp">-c </span><var>condition</var></samp>&rsquo;<dd>Make the catchpoint conditional on <var>condition</var>. 
+<br><dt>&lsquo;<samp><span class="samp">-d</span></samp>&rsquo;<dd>Create a disabled catchpoint. 
+<br><dt>&lsquo;<samp><span class="samp">-e </span><var>exception-name</var></samp>&rsquo;<dd>Only stop when <var>exception-name</var> is handled. 
+<br><dt>&lsquo;<samp><span class="samp">-t</span></samp>&rsquo;<dd>Create a temporary catchpoint. 
+</dl>
+
+<h5 class="subsubheading"><span class="sc">gdb</span> Command</h5>
+
+<p>The corresponding <span class="sc">gdb</span> command is &lsquo;<samp><span class="samp">catch handlers</span></samp>&rsquo;.
+
+<h5 class="subsubheading">Example</h5>
+
+<pre class="smallexample">     -catch-handlers -e Constraint_Error
+     ^done,bkptno="4",bkpt={number="4",type="breakpoint",disp="keep",
+     enabled="y",addr="0x0000000000402f68",
+     what="`Constraint_Error' Ada exception handlers",thread-groups=["i1"],
+     times="0",original-location="__gnat_begin_handler"}
      (gdb)
 </pre>
 <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%% SECTION %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->

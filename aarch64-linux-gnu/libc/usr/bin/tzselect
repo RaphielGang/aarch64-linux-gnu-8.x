@@ -1,6 +1,6 @@
 #!/arm/tools/gnu/bash/4.2/rhe6-x86_64/bin/bash
 
-PKGVERSION="(GNU Toolchain for the A-profile Architecture 8.2-2019.01 (arm-rel-8.28)) "
+PKGVERSION="(GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36)) "
 TZVERSION="2.28"
 REPORT_BUGS_TO="<https://bugs.linaro.org/>"
 

@@ -48,7 +48,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Python-API.html#Python-API">Python API<
 
 <h5 class="subsubsection">23.2.2.10 Decorating Frames.</h5>
 
-<p><a name="index-frame-decorator-api-1984"></a>
+<p><a name="index-frame-decorator-api-1996"></a>
 Frame decorators are sister objects to frame filters (see <a href="Frame-Filter-API.html#Frame-Filter-API">Frame Filter API</a>).  Frame decorators are applied by a frame filter and can
 only be used in conjunction with frame filters.
 
@@ -70,7 +70,7 @@ recommended that other frame decorators inherit and extend this
 object, and only to override the methods needed.
 
 <div class="defun">
-&mdash; Function: <b>FrameDecorator.elided</b> (<var>self</var>)<var><a name="index-FrameDecorator_002eelided-1985"></a></var><br>
+&mdash; Function: <b>FrameDecorator.elided</b> (<var>self</var>)<var><a name="index-FrameDecorator_002eelided-1997"></a></var><br>
 <blockquote>
         <p>The <code>elided</code> method groups frames together in a hierarchical
 system.  An example would be an interpreter, where multiple low-level
@@ -92,7 +92,7 @@ the source iterator.  This will avoid printing the frame twice.
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Function: <b>FrameDecorator.function</b> (<var>self</var>)<var><a name="index-FrameDecorator_002efunction-1986"></a></var><br>
+&mdash; Function: <b>FrameDecorator.function</b> (<var>self</var>)<var><a name="index-FrameDecorator_002efunction-1998"></a></var><br>
 <blockquote>
         <p>This method returns the name of the function in the frame that is to
 be printed.
@@ -105,7 +105,7 @@ data for this field.
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Function: <b>FrameDecorator.address</b> (<var>self</var>)<var><a name="index-FrameDecorator_002eaddress-1987"></a></var><br>
+&mdash; Function: <b>FrameDecorator.address</b> (<var>self</var>)<var><a name="index-FrameDecorator_002eaddress-1999"></a></var><br>
 <blockquote>
         <p>This method returns the address of the frame that is to be printed.
 
@@ -117,7 +117,7 @@ any data for this field.
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Function: <b>FrameDecorator.filename</b> (<var>self</var>)<var><a name="index-FrameDecorator_002efilename-1988"></a></var><br>
+&mdash; Function: <b>FrameDecorator.filename</b> (<var>self</var>)<var><a name="index-FrameDecorator_002efilename-2000"></a></var><br>
 <blockquote>
         <p>This method returns the filename and path associated with this frame.
 
@@ -129,7 +129,7 @@ any data for this field.
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Function: <b>FrameDecorator.line</b> (<var>self</var>)<var>:<a name="index-FrameDecorator_002eline-1989"></a></var><br>
+&mdash; Function: <b>FrameDecorator.line</b> (<var>self</var>)<var>:<a name="index-FrameDecorator_002eline-2001"></a></var><br>
 <blockquote>
         <p>This method returns the line number associated with the current
 position within the function addressed by this frame.
@@ -141,7 +141,7 @@ any data for this field.
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Function: <b>FrameDecorator.frame_args</b> (<var>self</var>)<var><a name="index-FrameDecorator_002eframe_005fargs-1990"></a></var><br>
+&mdash; Function: <b>FrameDecorator.frame_args</b> (<var>self</var>)<var><a name="index-FrameDecorator_002eframe_005fargs-2002"></a></var><br>
 <blockquote><p><a name="frame_005fargs"></a>This method must return an iterable, or <code>None</code>.  Returning an
 empty iterable, or <code>None</code> means frame arguments will not be
 printed for this frame.  This iterable must contain objects that
@@ -195,7 +195,7 @@ the <code>gdb.Symbol</code> automatically.
         </blockquote></div>
 
 <div class="defun">
-&mdash; Function: <b>FrameDecorator.frame_locals</b> (<var>self</var>)<var><a name="index-FrameDecorator_002eframe_005flocals-1991"></a></var><br>
+&mdash; Function: <b>FrameDecorator.frame_locals</b> (<var>self</var>)<var><a name="index-FrameDecorator_002eframe_005flocals-2003"></a></var><br>
 <blockquote>
         <p>This method must return an iterable or <code>None</code>.  Returning an
 empty iterable, or <code>None</code> means frame local arguments will not be
@@ -230,7 +230,7 @@ described in the <code>frame_args</code> function, (see <a href="frame_005fargs.
         </blockquote></div>
 
 <div class="defun">
-&mdash; Function: <b>FrameDecorator.inferior_frame</b> (<var>self</var>)<var>:<a name="index-FrameDecorator_002einferior_005fframe-1992"></a></var><br>
+&mdash; Function: <b>FrameDecorator.inferior_frame</b> (<var>self</var>)<var>:<a name="index-FrameDecorator_002einferior_005fframe-2004"></a></var><br>
 <blockquote>
         <p>This method must return the underlying <code>gdb.Frame</code> that this
 frame decorator is decorating.  <span class="sc">gdb</span> requires the underlying

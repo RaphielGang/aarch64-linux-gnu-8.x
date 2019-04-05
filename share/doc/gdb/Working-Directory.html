@@ -72,7 +72,7 @@ fallback.
 
      <p>You can also change <span class="sc">gdb</span>'s current working directory by using
 the <code>cd</code> command. 
-See <a href="cd-command.html#cd-command">cd command</a>
+See <a href="cd-command.html#cd-command">cd command</a>.
 
      <p><a name="index-show-cwd-138"></a><a name="index-show-inferior_0027s-working-directory-139"></a><br><dt><code>show cwd</code><dd>Show the inferior's working directory.  If no directory has been
 specified by <kbd>set cwd</kbd>, then the default inferior's working
@@ -84,16 +84,16 @@ given, <var>directory</var> uses <samp><span class="file">'~'</span></samp>.
      <p>The <span class="sc">gdb</span> working directory serves as a default for the
 commands that specify files for <span class="sc">gdb</span> to operate on. 
 See <a href="Files.html#Files">Commands to Specify Files</a>. 
-See <a href="set-cwd-command.html#set-cwd-command">set cwd command</a>
+See <a href="set-cwd-command.html#set-cwd-command">set cwd command</a>.
 
      <p><a name="index-pwd-142"></a><br><dt><code>pwd</code><dd>Print the <span class="sc">gdb</span> working directory. 
 </dl>
 
    <p>It is generally impossible to find the current working directory of
 the process being debugged (since a program can change its directory
-during its run).  If you work on a system where <span class="sc">gdb</span> is
-configured with the <samp><span class="file">/proc</span></samp> support, you can use the <code>info
-proc</code> command (see <a href="SVR4-Process-Information.html#SVR4-Process-Information">SVR4 Process Information</a>) to find out the
+during its run).  If you work on a system where <span class="sc">gdb</span> supports
+the <code>info proc</code> command (see <a href="Process-Information.html#Process-Information">Process Information</a>), you can
+use the <code>info proc</code> command to find out the
 current working directory of the debuggee.
 
    </body></html>

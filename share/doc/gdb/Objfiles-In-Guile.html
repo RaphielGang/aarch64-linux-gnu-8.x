@@ -48,7 +48,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Guile-API.html#Guile-API">Guile API</a>
 
 <h5 class="subsubsection">23.3.3.14 Objfiles In Guile</h5>
 
-<p><a name="index-objfiles-in-guile-2606"></a><a name="index-g_t_003cgdb_003aobjfile_003e-2607"></a><span class="sc">gdb</span> loads symbols for an inferior from various
+<p><a name="index-objfiles-in-guile-2622"></a><a name="index-g_t_003cgdb_003aobjfile_003e-2623"></a><span class="sc">gdb</span> loads symbols for an inferior from various
 symbol-containing files (see <a href="Files.html#Files">Files</a>).  These include the primary
 executable file, any shared libraries used by the inferior, and any
 separate debug info files (see <a href="Separate-Debug-Files.html#Separate-Debug-Files">Separate Debug Files</a>). 
@@ -60,13 +60,13 @@ separate debug info files (see <a href="Separate-Debug-Files.html#Separate-Debug
 <code>(gdb)</code> module:
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>objfile?</b><var> object<a name="index-objfile_003f-2608"></a></var><br>
+&mdash; Scheme Procedure: <b>objfile?</b><var> object<a name="index-objfile_003f-2624"></a></var><br>
 <blockquote><p>Return <code>#t</code> if <var>object</var> is a <code>&lt;gdb:objfile&gt;</code> object. 
 Otherwise return <code>#f</code>. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>objfile-valid?</b><var> objfile<a name="index-objfile_002dvalid_003f-2609"></a></var><br>
+&mdash; Scheme Procedure: <b>objfile-valid?</b><var> objfile<a name="index-objfile_002dvalid_003f-2625"></a></var><br>
 <blockquote><p>Return <code>#t</code> if <var>objfile</var> is valid, <code>#f</code> if not. 
 A <code>&lt;gdb:objfile&gt;</code> object can become invalid
 if the object file it refers to is not loaded in <span class="sc">gdb</span> any
@@ -75,25 +75,25 @@ if it is invalid at the time the procedure is called.
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>objfile-filename</b><var> objfile<a name="index-objfile_002dfilename-2610"></a></var><br>
+&mdash; Scheme Procedure: <b>objfile-filename</b><var> objfile<a name="index-objfile_002dfilename-2626"></a></var><br>
 <blockquote><p>Return the file name of <var>objfile</var> as a string,
 with symbolic links resolved. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>objfile-progspace</b><var> objfile<a name="index-objfile_002dprogspace-2611"></a></var><br>
+&mdash; Scheme Procedure: <b>objfile-progspace</b><var> objfile<a name="index-objfile_002dprogspace-2627"></a></var><br>
 <blockquote><p>Return the <code>&lt;gdb:progspace&gt;</code> that this object file lives in. 
 See <a href="Progspaces-In-Guile.html#Progspaces-In-Guile">Progspaces In Guile</a>, for more on progspaces. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>objfile-pretty-printers</b><var> objfile<a name="index-objfile_002dpretty_002dprinters-2612"></a></var><br>
+&mdash; Scheme Procedure: <b>objfile-pretty-printers</b><var> objfile<a name="index-objfile_002dpretty_002dprinters-2628"></a></var><br>
 <blockquote><p>Return the list of registered <code>&lt;gdb:pretty-printer&gt;</code> objects for
 <var>objfile</var>.  See <a href="Guile-Pretty-Printing-API.html#Guile-Pretty-Printing-API">Guile Pretty Printing API</a>, for more information. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>set-objfile-pretty-printers!</b><var> objfile printer-list<a name="index-set_002dobjfile_002dpretty_002dprinters_0021-2613"></a></var><br>
+&mdash; Scheme Procedure: <b>set-objfile-pretty-printers!</b><var> objfile printer-list<a name="index-set_002dobjfile_002dpretty_002dprinters_0021-2629"></a></var><br>
 <blockquote><p>Set the list of registered <code>&lt;gdb:pretty-printer&gt;</code> objects for
 <var>objfile</var> to <var>printer-list</var>.  The
 <var>printer-list</var> must be a list of <code>&lt;gdb:pretty-printer&gt;</code> objects. 
@@ -101,7 +101,7 @@ See <a href="Guile-Pretty-Printing-API.html#Guile-Pretty-Printing-API">Guile Pre
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>current-objfile</b><var><a name="index-current_002dobjfile-2614"></a></var><br>
+&mdash; Scheme Procedure: <b>current-objfile</b><var><a name="index-current_002dobjfile-2630"></a></var><br>
 <blockquote><p>When auto-loading a Guile script (see <a href="Guile-Auto_002dloading.html#Guile-Auto_002dloading">Guile Auto-loading</a>), <span class="sc">gdb</span>
 sets the &ldquo;current objfile&rdquo; to the corresponding objfile.  This
 function returns the current objfile.  If there is no current objfile,
@@ -109,7 +109,7 @@ this function returns <code>#f</code>.
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>objfiles</b><var><a name="index-objfiles-2615"></a></var><br>
+&mdash; Scheme Procedure: <b>objfiles</b><var><a name="index-objfiles-2631"></a></var><br>
 <blockquote><p>Return a list of all the objfiles in the current program space. 
 </p></blockquote></div>
 

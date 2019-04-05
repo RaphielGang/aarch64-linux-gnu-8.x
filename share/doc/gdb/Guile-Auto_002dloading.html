@@ -49,7 +49,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Guile.html#Guile">Guile</a>
 
 <h4 class="subsection">23.3.4 Guile Auto-loading</h4>
 
-<p><a name="index-guile-auto_002dloading-2813"></a>
+<p><a name="index-guile-auto_002dloading-2829"></a>
 When a new object file is read (for example, due to the <code>file</code>
 command, or because the inferior has loaded a shared library),
 <span class="sc">gdb</span> will look for Guile support scripts in two ways:
@@ -63,11 +63,11 @@ debugging commands and scripts.
 and the list of auto-loaded scripts can be printed.
 
      <dl>
-<a name="set-auto_002dload-guile_002dscripts"></a><a name="index-set-auto_002dload-guile_002dscripts-2814"></a><dt><code>set auto-load guile-scripts [on|off]</code><dd>Enable or disable the auto-loading of Guile scripts.
+<a name="set-auto_002dload-guile_002dscripts"></a><a name="index-set-auto_002dload-guile_002dscripts-2830"></a><dt><code>set auto-load guile-scripts [on|off]</code><dd>Enable or disable the auto-loading of Guile scripts.
 
-     <p><a name="show-auto_002dload-guile_002dscripts"></a><a name="index-show-auto_002dload-guile_002dscripts-2815"></a><br><dt><code>show auto-load guile-scripts</code><dd>Show whether auto-loading of Guile scripts is enabled or disabled.
+     <p><a name="show-auto_002dload-guile_002dscripts"></a><a name="index-show-auto_002dload-guile_002dscripts-2831"></a><br><dt><code>show auto-load guile-scripts</code><dd>Show whether auto-loading of Guile scripts is enabled or disabled.
 
-     <p><a name="info-auto_002dload-guile_002dscripts"></a><a name="index-info-auto_002dload-guile_002dscripts-2816"></a><a name="index-print-list-of-auto_002dloaded-Guile-scripts-2817"></a><br><dt><code>info auto-load guile-scripts [</code><var>regexp</var><code>]</code><dd>Print the list of all Guile scripts that <span class="sc">gdb</span> auto-loaded.
+     <p><a name="info-auto_002dload-guile_002dscripts"></a><a name="index-info-auto_002dload-guile_002dscripts-2832"></a><a name="index-print-list-of-auto_002dloaded-Guile-scripts-2833"></a><br><dt><code>info auto-load guile-scripts [</code><var>regexp</var><code>]</code><dd>Print the list of all Guile scripts that <span class="sc">gdb</span> auto-loaded.
 
      <p>Also printed is the list of Guile scripts that were mentioned in
 the <code>.debug_gdb_scripts</code> section and were not found. 

@@ -48,7 +48,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Guile-API.html#Guile-API">Guile API</a>
 
 <h5 class="subsubsection">23.3.3.8 Guile Pretty Printing API</h5>
 
-<p><a name="index-guile-pretty-printing-api-2537"></a>
+<p><a name="index-guile-pretty-printing-api-2553"></a>
 An example output is provided (see <a href="Pretty-Printing.html#Pretty-Printing">Pretty Printing</a>).
 
    <p>A pretty-printer is represented by an object of type &lt;gdb:pretty-printer&gt;. 
@@ -58,7 +58,7 @@ Pretty-printer objects are created with <code>make-pretty-printer</code>.
 <code>(gdb)</code> module:
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>make-pretty-printer</b><var> name lookup-function<a name="index-make_002dpretty_002dprinter-2538"></a></var><br>
+&mdash; Scheme Procedure: <b>make-pretty-printer</b><var> name lookup-function<a name="index-make_002dpretty_002dprinter-2554"></a></var><br>
 <blockquote><p>Return a <code>&lt;gdb:pretty-printer&gt;</code> object named <var>name</var>.
 
         <p><var>lookup-function</var> is a function of one parameter: the value to
@@ -69,36 +69,36 @@ Otherwise <var>lookup-function</var> returns <code>#f</code>.
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>pretty-printer?</b><var> object<a name="index-pretty_002dprinter_003f-2539"></a></var><br>
+&mdash; Scheme Procedure: <b>pretty-printer?</b><var> object<a name="index-pretty_002dprinter_003f-2555"></a></var><br>
 <blockquote><p>Return <code>#t</code> if <var>object</var> is a <code>&lt;gdb:pretty-printer&gt;</code> object. 
 Otherwise return <code>#f</code>. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>pretty-printer-enabled?</b><var> pretty-printer<a name="index-pretty_002dprinter_002denabled_003f-2540"></a></var><br>
+&mdash; Scheme Procedure: <b>pretty-printer-enabled?</b><var> pretty-printer<a name="index-pretty_002dprinter_002denabled_003f-2556"></a></var><br>
 <blockquote><p>Return <code>#t</code> if <var>pretty-printer</var> is enabled. 
 Otherwise return <code>#f</code>. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>set-pretty-printer-enabled!</b><var> pretty-printer flag<a name="index-set_002dpretty_002dprinter_002denabled_0021-2541"></a></var><br>
+&mdash; Scheme Procedure: <b>set-pretty-printer-enabled!</b><var> pretty-printer flag<a name="index-set_002dpretty_002dprinter_002denabled_0021-2557"></a></var><br>
 <blockquote><p>Set the enabled flag of <var>pretty-printer</var> to <var>flag</var>. 
 The value returned is unspecified. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>pretty-printers</b><var><a name="index-pretty_002dprinters-2542"></a></var><br>
+&mdash; Scheme Procedure: <b>pretty-printers</b><var><a name="index-pretty_002dprinters-2558"></a></var><br>
 <blockquote><p>Return the list of global pretty-printers. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>set-pretty-printers!</b><var> pretty-printers<a name="index-set_002dpretty_002dprinters_0021-2543"></a></var><br>
+&mdash; Scheme Procedure: <b>set-pretty-printers!</b><var> pretty-printers<a name="index-set_002dpretty_002dprinters_0021-2559"></a></var><br>
 <blockquote><p>Set the list of global pretty-printers to <var>pretty-printers</var>. 
 The value returned is unspecified. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>make-pretty-printer-worker</b><var> display-hint to-string children<a name="index-make_002dpretty_002dprinter_002dworker-2544"></a></var><br>
+&mdash; Scheme Procedure: <b>make-pretty-printer-worker</b><var> display-hint to-string children<a name="index-make_002dpretty_002dprinter_002dworker-2560"></a></var><br>
 <blockquote><p>Return an object of type <code>&lt;gdb:pretty-printer-worker&gt;</code>.
 
         <p>This function takes three parameters:
@@ -179,7 +179,7 @@ as though the value has no children.
 default pretty-printer for a <code>&lt;gdb:value&gt;</code>:
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>default-visualizer</b><var> value<a name="index-default_002dvisualizer-2545"></a></var><br>
+&mdash; Scheme Procedure: <b>default-visualizer</b><var> value<a name="index-default_002dvisualizer-2561"></a></var><br>
 <blockquote><p>This function takes a <code>&lt;gdb:value&gt;</code> object as an argument.  If a
 pretty-printer for this value exists, then it is returned.  If no such
 printer exists, then this returns <code>#f</code>. 

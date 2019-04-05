@@ -19,7 +19,7 @@ import gdb
 import os
 import os.path
 
-pythondir = '/share/gcc-8.2.1/python'
+pythondir = '/share/gcc-8.3.0/python'
 libdir = '/aarch64-linux-gnu/lib/../lib64'
 
 # This file might be loaded when there is no current objfile.  This

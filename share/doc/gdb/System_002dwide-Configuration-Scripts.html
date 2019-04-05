@@ -45,7 +45,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="System_002dwide-configuration.html#Syst
 
 <h4 class="subsection">C.6.1 Installed System-wide Configuration Scripts</h4>
 
-<p><a name="index-system_002dwide-configuration-scripts-3243"></a>
+<p><a name="index-system_002dwide-configuration-scripts-3260"></a>
 The <samp><span class="file">system-gdbinit</span></samp> directory, located inside the data-directory
 (as specified by <samp><span class="option">--with-gdb-datadir</span></samp> at configure time) contains
 a number of scripts which can be used as system-wide init files.  To
@@ -56,14 +56,14 @@ should be able to source them by hand as needed.
    <p>The following scripts are currently available:
      <ul>
 <li><samp><span class="file">elinos.py</span></samp>
-<a name="index-elinos_002epy-3244"></a><a name="index-ELinOS-system_002dwide-configuration-script-3245"></a>This script is useful when debugging a program on an ELinOS target. 
+<a name="index-elinos_002epy-3261"></a><a name="index-ELinOS-system_002dwide-configuration-script-3262"></a>This script is useful when debugging a program on an ELinOS target. 
 It takes advantage of the environment variables defined in a standard
 ELinOS environment in order to determine the location of the system
 shared libraries, and then sets the &lsquo;<samp><span class="samp">solib-absolute-prefix</span></samp>&rsquo;
 and &lsquo;<samp><span class="samp">solib-search-path</span></samp>&rsquo; variables appropriately.
 
      <li><samp><span class="file">wrs-linux.py</span></samp>
-<a name="index-wrs_002dlinux_002epy-3246"></a><a name="index-Wind-River-Linux-system_002dwide-configuration-script-3247"></a>This script is useful when debugging a program on a target running
+<a name="index-wrs_002dlinux_002epy-3263"></a><a name="index-Wind-River-Linux-system_002dwide-configuration-script-3264"></a>This script is useful when debugging a program on a target running
 Wind River Linux.  It expects the <samp><span class="env">ENV_PREFIX</span></samp> to be set to
 the host-side sysroot used by the target system.
 

@@ -48,7 +48,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="GDB-Files.html#GDB-Files">GDB Files</a>
 
 <h3 class="section">18.3 Debugging Information in Separate Files</h3>
 
-<p><a name="index-separate-debugging-information-files-1254"></a><a name="index-debugging-information-in-separate-files-1255"></a><a name="index-g_t_0040file_007b_002edebug_007d-subdirectories-1256"></a><a name="index-debugging-information-directory_002c-global-1257"></a><a name="index-global-debugging-information-directories-1258"></a><a name="index-build-ID_002c-and-separate-debugging-files-1259"></a><a name="index-g_t_0040file_007b_002ebuild_002did_007d-directory-1260"></a>
+<p><a name="index-separate-debugging-information-files-1259"></a><a name="index-debugging-information-in-separate-files-1260"></a><a name="index-g_t_0040file_007b_002edebug_007d-subdirectories-1261"></a><a name="index-debugging-information-directory_002c-global-1262"></a><a name="index-global-debugging-information-directories-1263"></a><a name="index-build-ID_002c-and-separate-debugging-files-1264"></a><a name="index-g_t_0040file_007b_002ebuild_002did_007d-directory-1265"></a>
 <span class="sc">gdb</span> allows you to put a program's debugging information in a
 file separate from the executable itself, in a way that allows
 <span class="sc">gdb</span> to find and load the debugging information automatically. 
@@ -118,17 +118,17 @@ you can also set the global debugging info directories, and view the list
 <span class="sc">gdb</span> is currently using.
 
      
-<a name="index-set-debug_002dfile_002ddirectory-1261"></a>
+<a name="index-set-debug_002dfile_002ddirectory-1266"></a>
 <dl><dt><code>set debug-file-directory </code><var>directories</var><dd>Set the directories which <span class="sc">gdb</span> searches for separate debugging
 information files to <var>directory</var>.  Multiple path components can be set
 concatenating them by a path separator.
 
-     <p><a name="index-show-debug_002dfile_002ddirectory-1262"></a><br><dt><code>show debug-file-directory</code><dd>Show the directories <span class="sc">gdb</span> searches for separate debugging
+     <p><a name="index-show-debug_002dfile_002ddirectory-1267"></a><br><dt><code>show debug-file-directory</code><dd>Show the directories <span class="sc">gdb</span> searches for separate debugging
 information files.
 
    </dl>
 
-   <p><a name="index-g_t_0040code_007b_002egnu_005fdebuglink_007d-sections-1263"></a><a name="index-debug-link-sections-1264"></a>A debug link is a special section of the executable file named
+   <p><a name="index-g_t_0040code_007b_002egnu_005fdebuglink_007d-sections-1268"></a><a name="index-debug-link-sections-1269"></a>A debug link is a special section of the executable file named
 <code>.gnu_debuglink</code>.  The section must contain:
 
      <ul>
@@ -146,7 +146,7 @@ zero as the <var>crc</var> argument.
 contain a section named <code>.gnu_debuglink</code> with the contents
 described above.
 
-   <p><a name="index-g_t_0040code_007b_002enote_002egnu_002ebuild_002did_007d-sections-1265"></a><a name="index-build-ID-sections-1266"></a>The build ID is a special section in the executable file (and in other
+   <p><a name="index-g_t_0040code_007b_002enote_002egnu_002ebuild_002did_007d-sections-1270"></a><a name="index-build-ID-sections-1271"></a>The build ID is a special section in the executable file (and in other
 ELF binary files that <span class="sc">gdb</span> may consider).  This section is
 often named <code>.note.gnu.build-id</code>, but that name is not mandatory. 
 It contains unique identification for the built files&mdash;the ID remains
@@ -193,7 +193,7 @@ compatibility fixes for debug files separation are present in <span class="sc">g
 utilities (Binutils) package since version 2.18. 
 </ul>
 
-<p class="noindent"><a name="index-CRC-algorithm-definition-1267"></a>The CRC used in <code>.gnu_debuglink</code> is the CRC-32 defined in
+<p class="noindent"><a name="index-CRC-algorithm-definition-1272"></a>The CRC used in <code>.gnu_debuglink</code> is the CRC-32 defined in
 IEEE 802.3 using the polynomial:
 
 <!-- TexInfo requires naked braces for multi-digit exponents for Tex -->
@@ -221,7 +221,7 @@ initially supplied <code>crc</code> argument means that an initial call to
 this function passing in zero will start computing the CRC using
 <code>0xffffffff</code>.
 
-   <p><a name="index-gnu_005fdebuglink_005fcrc32-1268"></a>
+   <p><a name="index-gnu_005fdebuglink_005fcrc32-1273"></a>
 <pre class="smallexample">     unsigned long
      gnu_debuglink_crc32 (unsigned long crc,
                           unsigned char *buf, size_t len)

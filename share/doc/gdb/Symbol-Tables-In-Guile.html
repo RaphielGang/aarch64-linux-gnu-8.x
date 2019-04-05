@@ -48,7 +48,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Guile-API.html#Guile-API">Guile API</a>
 
 <h5 class="subsubsection">23.3.3.18 Symbol table representation in Guile.</h5>
 
-<p><a name="index-symbol-tables-in-guile-2691"></a><a name="index-g_t_003cgdb_003asymtab_003e-2692"></a><a name="index-g_t_003cgdb_003asal_003e-2693"></a>
+<p><a name="index-symbol-tables-in-guile-2707"></a><a name="index-g_t_003cgdb_003asymtab_003e-2708"></a><a name="index-g_t_003cgdb_003asal_003e-2709"></a>
 Access to symbol table data maintained by <span class="sc">gdb</span> on the inferior
 is exposed to Guile via two objects: <code>&lt;gdb:sal&gt;</code> (symtab-and-line) and
 <code>&lt;gdb:symtab&gt;</code>.  Symbol table and line data for a frame is returned
@@ -62,13 +62,13 @@ See <a href="Frames-In-Guile.html#Frames-In-Guile">Frames In Guile</a>.
 <code>(gdb)</code> module:
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>symtab?</b><var> object<a name="index-symtab_003f-2694"></a></var><br>
+&mdash; Scheme Procedure: <b>symtab?</b><var> object<a name="index-symtab_003f-2710"></a></var><br>
 <blockquote><p>Return <code>#t</code> if <var>object</var> is an object of type <code>&lt;gdb:symtab&gt;</code>. 
 Otherwise return <code>#f</code>. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>symtab-valid?</b><var> symtab<a name="index-symtab_002dvalid_003f-2695"></a></var><br>
+&mdash; Scheme Procedure: <b>symtab-valid?</b><var> symtab<a name="index-symtab_002dvalid_003f-2711"></a></var><br>
 <blockquote><p>Return <code>#t</code> if the <code>&lt;gdb:symtab&gt;</code> object is valid,
 <code>#f</code> if not.  A <code>&lt;gdb:symtab&gt;</code> object becomes invalid when
 the symbol table it refers to no longer exists in <span class="sc">gdb</span>. 
@@ -77,28 +77,28 @@ if it is invalid at the time the procedure is called.
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>symtab-filename</b><var> symtab<a name="index-symtab_002dfilename-2696"></a></var><br>
+&mdash; Scheme Procedure: <b>symtab-filename</b><var> symtab<a name="index-symtab_002dfilename-2712"></a></var><br>
 <blockquote><p>Return the symbol table's source filename. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>symtab-fullname</b><var> symtab<a name="index-symtab_002dfullname-2697"></a></var><br>
+&mdash; Scheme Procedure: <b>symtab-fullname</b><var> symtab<a name="index-symtab_002dfullname-2713"></a></var><br>
 <blockquote><p>Return the symbol table's source absolute file name. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>symtab-objfile</b><var> symtab<a name="index-symtab_002dobjfile-2698"></a></var><br>
+&mdash; Scheme Procedure: <b>symtab-objfile</b><var> symtab<a name="index-symtab_002dobjfile-2714"></a></var><br>
 <blockquote><p>Return the symbol table's backing object file.  See <a href="Objfiles-In-Guile.html#Objfiles-In-Guile">Objfiles In Guile</a>. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>symtab-global-block</b><var> symtab<a name="index-symtab_002dglobal_002dblock-2699"></a></var><br>
+&mdash; Scheme Procedure: <b>symtab-global-block</b><var> symtab<a name="index-symtab_002dglobal_002dblock-2715"></a></var><br>
 <blockquote><p>Return the global block of the underlying symbol table. 
 See <a href="Blocks-In-Guile.html#Blocks-In-Guile">Blocks In Guile</a>. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>symtab-static-block</b><var> symtab<a name="index-symtab_002dstatic_002dblock-2700"></a></var><br>
+&mdash; Scheme Procedure: <b>symtab-static-block</b><var> symtab<a name="index-symtab_002dstatic_002dblock-2716"></a></var><br>
 <blockquote><p>Return the static block of the underlying symbol table. 
 See <a href="Blocks-In-Guile.html#Blocks-In-Guile">Blocks In Guile</a>. 
 </p></blockquote></div>
@@ -107,13 +107,13 @@ See <a href="Blocks-In-Guile.html#Blocks-In-Guile">Blocks In Guile</a>.
 <code>(gdb)</code> module:
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>sal?</b><var> object<a name="index-sal_003f-2701"></a></var><br>
+&mdash; Scheme Procedure: <b>sal?</b><var> object<a name="index-sal_003f-2717"></a></var><br>
 <blockquote><p>Return <code>#t</code> if <var>object</var> is an object of type <code>&lt;gdb:sal&gt;</code>. 
 Otherwise return <code>#f</code>. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>sal-valid?</b><var> sal<a name="index-sal_002dvalid_003f-2702"></a></var><br>
+&mdash; Scheme Procedure: <b>sal-valid?</b><var> sal<a name="index-sal_002dvalid_003f-2718"></a></var><br>
 <blockquote><p>Return <code>#t</code> if <var>sal</var> is valid, <code>#f</code> if not. 
 A <code>&lt;gdb:sal&gt;</code> object becomes invalid when the Symbol table object
 it refers to no longer exists in <span class="sc">gdb</span>.  All other
@@ -122,27 +122,27 @@ invalid at the time the procedure is called.
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>sal-symtab</b><var> sal<a name="index-sal_002dsymtab-2703"></a></var><br>
+&mdash; Scheme Procedure: <b>sal-symtab</b><var> sal<a name="index-sal_002dsymtab-2719"></a></var><br>
 <blockquote><p>Return the symbol table object (<code>&lt;gdb:symtab&gt;</code>) for <var>sal</var>. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>sal-line</b><var> sal<a name="index-sal_002dline-2704"></a></var><br>
+&mdash; Scheme Procedure: <b>sal-line</b><var> sal<a name="index-sal_002dline-2720"></a></var><br>
 <blockquote><p>Return the line number for <var>sal</var>. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>sal-pc</b><var> sal<a name="index-sal_002dpc-2705"></a></var><br>
+&mdash; Scheme Procedure: <b>sal-pc</b><var> sal<a name="index-sal_002dpc-2721"></a></var><br>
 <blockquote><p>Return the start of the address range occupied by code for <var>sal</var>. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>sal-last</b><var> sal<a name="index-sal_002dlast-2706"></a></var><br>
+&mdash; Scheme Procedure: <b>sal-last</b><var> sal<a name="index-sal_002dlast-2722"></a></var><br>
 <blockquote><p>Return the end of the address range occupied by code for <var>sal</var>. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>find-pc-line</b><var> pc<a name="index-find_002dpc_002dline-2707"></a></var><br>
+&mdash; Scheme Procedure: <b>find-pc-line</b><var> pc<a name="index-find_002dpc_002dline-2723"></a></var><br>
 <blockquote><p>Return the <code>&lt;gdb:sal&gt;</code> object corresponding to the <var>pc</var> value. 
 If an invalid value of <var>pc</var> is passed as an argument, then the
 <code>symtab</code> and <code>line</code> attributes of the returned <code>&lt;gdb:sal&gt;</code>

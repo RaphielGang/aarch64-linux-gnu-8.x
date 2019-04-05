@@ -11,10 +11,10 @@
 <link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
 <!--
 This file documents the GNU linker LD
-(GNU Toolchain for the A-profile Architecture 8.2-2019.01 (arm-rel-8.28))
-version 2.30.0.
+(GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36))
+version 2.32.0.
 
-Copyright (C) 1991-2018 Free Software Foundation, Inc.
+Copyright (C) 1991-2019 Free Software Foundation, Inc.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3
@@ -45,15 +45,15 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Machine-Dependent.html#Machine-Dependen
 <hr>
 </div>
 
-<h3 class="section">4.5 <samp><span class="command">ld</span></samp> and HPPA 32-bit ELF Support</h3>
+<h3 class="section">4.4 <samp><span class="command">ld</span></samp> and HPPA 32-bit ELF Support</h3>
 
-<p><a name="index-HPPA-multiple-sub_002dspace-stubs-680"></a><a name="index-g_t_002d_002dmulti_002dsubspace-681"></a>When generating a shared library, <samp><span class="command">ld</span></samp> will by default generate
+<p><a name="index-HPPA-multiple-sub_002dspace-stubs-677"></a><a name="index-g_t_002d_002dmulti_002dsubspace-678"></a>When generating a shared library, <samp><span class="command">ld</span></samp> will by default generate
 import stubs suitable for use with a single sub-space application. 
 The &lsquo;<samp><span class="samp">--multi-subspace</span></samp>&rsquo; switch causes <samp><span class="command">ld</span></samp> to generate export
 stubs, and different (larger) import stubs suitable for use with
 multiple sub-spaces.
 
-   <p><a name="index-HPPA-stub-grouping-682"></a><a name="index-g_t_002d_002dstub_002dgroup_002dsize_003d_0040var_007bN_007d-683"></a>Long branch stubs and import/export stubs are placed by <samp><span class="command">ld</span></samp> in
+   <p><a name="index-HPPA-stub-grouping-679"></a><a name="index-g_t_002d_002dstub_002dgroup_002dsize_003d_0040var_007bN_007d-680"></a>Long branch stubs and import/export stubs are placed by <samp><span class="command">ld</span></samp> in
 stub sections located between groups of input sections. 
 &lsquo;<samp><span class="samp">--stub-group-size</span></samp>&rsquo; specifies the maximum size of a group of input
 sections handled by one stub section.  Since branch offsets are signed,

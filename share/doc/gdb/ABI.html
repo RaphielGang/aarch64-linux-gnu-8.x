@@ -53,7 +53,7 @@ application automatically.  However, sometimes you need to override its
 conclusions.  Use these commands to manage <span class="sc">gdb</span>'s view of the
 current ABI.
 
-   <p><a name="index-OS-ABI-1670"></a><a name="index-set-osabi-1671"></a><a name="index-show-osabi-1672"></a><a name="index-Newlib-OS-ABI-and-its-influence-on-the-longjmp-handling-1673"></a>
+   <p><a name="index-OS-ABI-1676"></a><a name="index-set-osabi-1677"></a><a name="index-show-osabi-1678"></a><a name="index-Newlib-OS-ABI-and-its-influence-on-the-longjmp-handling-1679"></a>
 One <span class="sc">gdb</span> configuration can debug binaries for multiple operating
 system targets, either via remote debugging or native emulation. 
 <span class="sc">gdb</span> will autodetect the <dfn>OS ABI</dfn> (Operating System ABI) in use,
@@ -76,7 +76,7 @@ The &ldquo;Newlib&rdquo; OS ABI can be selected by <code>set osabi Newlib</code>
      <br><dt><code>set osabi </code><var>abi</var><dd>Set the current OS ABI to <var>abi</var>. 
 </dl>
 
-   <p><a name="index-float-promotion-1674"></a>
+   <p><a name="index-float-promotion-1680"></a>
 Generally, the way that an argument of type <code>float</code> is passed to a
 function depends on whether the function is prototyped.  For a prototyped
 (i.e. ANSI/ISO style) function, <code>float</code> arguments are passed unchanged,
@@ -89,17 +89,17 @@ a function is prototyped.  If <span class="sc">gdb</span> calls a function that 
 as prototyped, it consults <kbd>set coerce-float-to-double</kbd>.
 
      
-<a name="index-set-coerce_002dfloat_002dto_002ddouble-1675"></a>
+<a name="index-set-coerce_002dfloat_002dto_002ddouble-1681"></a>
 <dl><dt><code>set coerce-float-to-double</code><dt><code>set coerce-float-to-double on</code><dd>Arguments of type <code>float</code> will be promoted to <code>double</code> when passed
 to an unprototyped function.  This is the default setting.
 
      <br><dt><code>set coerce-float-to-double off</code><dd>Arguments of type <code>float</code> will be passed directly to unprototyped
 functions.
 
-     <p><a name="index-show-coerce_002dfloat_002dto_002ddouble-1676"></a><br><dt><code>show coerce-float-to-double</code><dd>Show the current setting of promoting <code>float</code> to <code>double</code>. 
+     <p><a name="index-show-coerce_002dfloat_002dto_002ddouble-1682"></a><br><dt><code>show coerce-float-to-double</code><dd>Show the current setting of promoting <code>float</code> to <code>double</code>. 
 </dl>
 
-   <p><a name="index-set-cp_002dabi-1677"></a><a name="index-show-cp_002dabi-1678"></a><span class="sc">gdb</span> needs to know the ABI used for your program's C<tt>++</tt>
+   <p><a name="index-set-cp_002dabi-1683"></a><a name="index-show-cp_002dabi-1684"></a><span class="sc">gdb</span> needs to know the ABI used for your program's C<tt>++</tt>
 objects.  The correct C<tt>++</tt> ABI depends on which C<tt>++</tt> compiler was
 used to build your application.  <span class="sc">gdb</span> only fully supports
 programs with a single C<tt>++</tt> ABI; if your program contains code using

@@ -48,7 +48,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Data.html#Data">Data</a>
 
 <h3 class="section">10.10 Value History</h3>
 
-<p><a name="index-value-history-700"></a><a name="index-history-of-values-printed-by-_0040value_007bGDBN_007d-701"></a>Values printed by the <code>print</code> command are saved in the <span class="sc">gdb</span>
+<p><a name="index-value-history-702"></a><a name="index-history-of-values-printed-by-_0040value_007bGDBN_007d-703"></a>Values printed by the <code>print</code> command are saved in the <span class="sc">gdb</span>
 <dfn>value history</dfn>.  This allows you to refer to them in other expressions. 
 Values are kept until the symbol table is re-read or discarded
 (for example with the <code>file</code> or <code>symbol-file</code> commands). 
@@ -56,7 +56,7 @@ When the symbol table changes, the value history is discarded,
 since the values may contain pointers back to the types defined in the
 symbol table.
 
-   <p><a name="index-g_t_0040code_007b_0024_007d-702"></a><a name="index-g_t_0040code_007b_0024_0024_007d-703"></a><a name="index-history-number-704"></a>The values printed are given <dfn>history numbers</dfn> by which you can
+   <p><a name="index-g_t_0040code_007b_0024_007d-704"></a><a name="index-g_t_0040code_007b_0024_0024_007d-705"></a><a name="index-history-number-706"></a>The values printed are given <dfn>history numbers</dfn> by which you can
 refer to them.  These are successive integers starting with one. 
 <code>print</code> shows you the history number assigned to a value by
 printing &lsquo;<samp><span class="samp">$</span><var>num</var><span class="samp"> = </span></samp>&rsquo; before the value; here <var>num</var> is the
@@ -93,7 +93,7 @@ command&mdash;which you can do by just typing &lt;RET&gt;.
 remains 4 even though the value of <code>x</code> has changed.
 
      
-<a name="index-show-values-705"></a>
+<a name="index-show-values-707"></a>
 <dl><dt><code>show values</code><dd>Print the last ten values in the value history, with their item numbers. 
 This is like &lsquo;<samp><span class="samp">p $$9</span></samp>&rsquo; repeated ten times, except that <code>show
 values</code> does not change the history.

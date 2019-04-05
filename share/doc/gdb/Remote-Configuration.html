@@ -48,19 +48,19 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Remote-Debugging.html#Remote-Debugging"
 
 <h3 class="section">20.4 Remote Configuration</h3>
 
-<p><a name="index-set-remote-1356"></a><a name="index-show-remote-1357"></a>This section documents the configuration options available when
+<p><a name="index-set-remote-1361"></a><a name="index-show-remote-1362"></a>This section documents the configuration options available when
 debugging remote programs.  For the options related to the File I/O
 extensions of the remote protocol, see <a href="system.html#system">system-call-allowed</a>.
 
      <dl>
-<dt><code>set remoteaddresssize </code><var>bits</var><dd><a name="index-address-size-for-remote-targets-1358"></a><a name="index-bits-in-remote-address-1359"></a>Set the maximum size of address in a memory packet to the specified
+<dt><code>set remoteaddresssize </code><var>bits</var><dd><a name="index-address-size-for-remote-targets-1363"></a><a name="index-bits-in-remote-address-1364"></a>Set the maximum size of address in a memory packet to the specified
 number of bits.  <span class="sc">gdb</span> will mask off the address bits above
 that number, when it passes addresses to the remote target.  The
 default value is the number of bits in the target's address.
 
      <br><dt><code>show remoteaddresssize</code><dd>Show the current value of remote address size in bits.
 
-     <br><dt><code>set serial baud </code><var>n</var><dd><a name="index-baud-rate-for-remote-targets-1360"></a>Set the baud rate for the remote serial I/O to <var>n</var> baud.  The
+     <br><dt><code>set serial baud </code><var>n</var><dd><a name="index-baud-rate-for-remote-targets-1365"></a>Set the baud rate for the remote serial I/O to <var>n</var> baud.  The
 value is used to set the speed of the serial port used for debugging
 remote targets.
 
@@ -71,7 +71,7 @@ remote targets.
 
      <br><dt><code>show serial parity</code><dd>Show the current parity of the serial port.
 
-     <br><dt><code>set remotebreak</code><dd><a name="index-interrupt-remote-programs-1361"></a><a name="index-BREAK-signal-instead-of-Ctrl_002dC-1362"></a><a name="set-remotebreak"></a>If set to on, <span class="sc">gdb</span> sends a <code>BREAK</code> signal to the remote
+     <br><dt><code>set remotebreak</code><dd><a name="index-interrupt-remote-programs-1366"></a><a name="index-BREAK-signal-instead-of-Ctrl_002dC-1367"></a><a name="set-remotebreak"></a>If set to on, <span class="sc">gdb</span> sends a <code>BREAK</code> signal to the remote
 when you type <kbd>Ctrl-c</kbd> to interrupt the program running
 on the remote.  If set to off, <span class="sc">gdb</span> sends the &lsquo;<samp><span class="samp">Ctrl-C</span></samp>&rsquo;
 character instead.  The default is off, since most remote systems
@@ -80,10 +80,10 @@ expect to see &lsquo;<samp><span class="samp">Ctrl-C</span></samp>&rsquo; as the
      <br><dt><code>show remotebreak</code><dd>Show whether <span class="sc">gdb</span> sends <code>BREAK</code> or &lsquo;<samp><span class="samp">Ctrl-C</span></samp>&rsquo; to
 interrupt the remote program.
 
-     <br><dt><code>set remoteflow on</code><dt><code>set remoteflow off</code><dd><a name="index-set-remoteflow-1363"></a>Enable or disable hardware flow control (<code>RTS</code>/<code>CTS</code>)
+     <br><dt><code>set remoteflow on</code><dt><code>set remoteflow off</code><dd><a name="index-set-remoteflow-1368"></a>Enable or disable hardware flow control (<code>RTS</code>/<code>CTS</code>)
 on the serial port used to communicate to the remote target.
 
-     <br><dt><code>show remoteflow</code><dd><a name="index-show-remoteflow-1364"></a>Show the current setting of hardware flow control.
+     <br><dt><code>show remoteflow</code><dd><a name="index-show-remoteflow-1369"></a>Show the current setting of hardware flow control.
 
      <br><dt><code>set remotelogbase </code><var>base</var><dd>Set the base (a.k.a. radix) of logging serial protocol
 communications to <var>base</var>.  Supported values of <var>base</var> are:
@@ -93,34 +93,34 @@ communications to <var>base</var>.  Supported values of <var>base</var> are:
      <br><dt><code>show remotelogbase</code><dd>Show the current setting of the radix for logging remote serial
 protocol.
 
-     <br><dt><code>set remotelogfile </code><var>file</var><dd><a name="index-record-serial-communications-on-file-1365"></a>Record remote serial communications on the named <var>file</var>.  The
+     <br><dt><code>set remotelogfile </code><var>file</var><dd><a name="index-record-serial-communications-on-file-1370"></a>Record remote serial communications on the named <var>file</var>.  The
 default is not to record at all.
 
      <br><dt><code>show remotelogfile.</code><dd>Show the current setting  of the file name on which to record the
 serial communications.
 
-     <br><dt><code>set remotetimeout </code><var>num</var><dd><a name="index-timeout-for-serial-communications-1366"></a><a name="index-remote-timeout-1367"></a>Set the timeout limit to wait for the remote target to respond to
+     <br><dt><code>set remotetimeout </code><var>num</var><dd><a name="index-timeout-for-serial-communications-1371"></a><a name="index-remote-timeout-1372"></a>Set the timeout limit to wait for the remote target to respond to
 <var>num</var> seconds.  The default is 2 seconds.
 
      <br><dt><code>show remotetimeout</code><dd>Show the current number of seconds to wait for the remote target
 responses.
 
-     <p><a name="index-limit-hardware-breakpoints-and-watchpoints-1368"></a><a name="index-remote-target_002c-limit-break_002d-and-watchpoints-1369"></a><a name="set-remote-hardware_002dwatchpoint_002dlimit"></a><a name="set-remote-hardware_002dbreakpoint_002dlimit"></a><br><dt><code>set remote hardware-watchpoint-limit </code><var>limit</var><dt><code>set remote hardware-breakpoint-limit </code><var>limit</var><dd>Restrict <span class="sc">gdb</span> to using <var>limit</var> remote hardware breakpoint or
+     <p><a name="index-limit-hardware-breakpoints-and-watchpoints-1373"></a><a name="index-remote-target_002c-limit-break_002d-and-watchpoints-1374"></a><a name="set-remote-hardware_002dwatchpoint_002dlimit"></a><a name="set-remote-hardware_002dbreakpoint_002dlimit"></a><br><dt><code>set remote hardware-watchpoint-limit </code><var>limit</var><dt><code>set remote hardware-breakpoint-limit </code><var>limit</var><dd>Restrict <span class="sc">gdb</span> to using <var>limit</var> remote hardware breakpoint or
 watchpoints.  A limit of -1, the default, is treated as unlimited.
 
-     <p><a name="index-limit-hardware-watchpoints-length-1370"></a><a name="index-remote-target_002c-limit-watchpoints-length-1371"></a><a name="set-remote-hardware_002dwatchpoint_002dlength_002dlimit"></a><br><dt><code>set remote hardware-watchpoint-length-limit </code><var>limit</var><dd>Restrict <span class="sc">gdb</span> to using <var>limit</var> bytes for the maximum length of
+     <p><a name="index-limit-hardware-watchpoints-length-1375"></a><a name="index-remote-target_002c-limit-watchpoints-length-1376"></a><a name="set-remote-hardware_002dwatchpoint_002dlength_002dlimit"></a><br><dt><code>set remote hardware-watchpoint-length-limit </code><var>limit</var><dd>Restrict <span class="sc">gdb</span> to using <var>limit</var> bytes for the maximum length of
 a remote hardware watchpoint.  A limit of -1, the default, is treated
 as unlimited.
 
      <br><dt><code>show remote hardware-watchpoint-length-limit</code><dd>Show the current limit (in bytes) of the maximum length of
 a remote hardware watchpoint.
 
-     <br><dt><code>set remote exec-file </code><var>filename</var><dt><code>show remote exec-file</code><dd><a name="set-remote-exec_002dfile"></a><a name="index-executable-file_002c-for-remote-target-1372"></a>Select the file used for <code>run</code> with <code>target
+     <br><dt><code>set remote exec-file </code><var>filename</var><dt><code>show remote exec-file</code><dd><a name="set-remote-exec_002dfile"></a><a name="index-executable-file_002c-for-remote-target-1377"></a>Select the file used for <code>run</code> with <code>target
 extended-remote</code>.  This should be set to a filename valid on the
 target system.  If it is not set, the target will use a default
 filename (e.g. the last program run).
 
-     <br><dt><code>set remote interrupt-sequence</code><dd><a name="index-interrupt-remote-programs-1373"></a><a name="index-select-Ctrl_002dC_002c-BREAK-or-BREAK_002dg-1374"></a>Allow the user to select one of &lsquo;<samp><span class="samp">Ctrl-C</span></samp>&rsquo;, a <code>BREAK</code> or
+     <br><dt><code>set remote interrupt-sequence</code><dd><a name="index-interrupt-remote-programs-1378"></a><a name="index-select-Ctrl_002dC_002c-BREAK-or-BREAK_002dg-1379"></a>Allow the user to select one of &lsquo;<samp><span class="samp">Ctrl-C</span></samp>&rsquo;, a <code>BREAK</code> or
 &lsquo;<samp><span class="samp">BREAK-g</span></samp>&rsquo; as the
 sequence to the remote target in order to interrupt the execution. 
 &lsquo;<samp><span class="samp">Ctrl-C</span></samp>&rsquo; is a default.  Some system prefers <code>BREAK</code> which
@@ -133,7 +133,7 @@ is sent by <span class="sc">gdb</span> to interrupt the remote program.
 <code>BREAK-g</code> is BREAK signal followed by <code>g</code> and
 also known as Magic SysRq g.
 
-     <br><dt><code>set remote interrupt-on-connect</code><dd><a name="index-send-interrupt_002dsequence-on-start-1375"></a>Specify whether interrupt-sequence is sent to remote target when
+     <br><dt><code>set remote interrupt-on-connect</code><dd><a name="index-send-interrupt_002dsequence-on-start-1380"></a>Specify whether interrupt-sequence is sent to remote target when
 <span class="sc">gdb</span> connects to it.  This is mostly needed when you debug
 Linux kernel.  Linux kernel expects <code>BREAK</code> followed by <code>g</code>
 which is known as Magic SysRq g in order to connect <span class="sc">gdb</span>.
@@ -141,7 +141,7 @@ which is known as Magic SysRq g in order to connect <span class="sc">gdb</span>.
      <br><dt><code>show interrupt-on-connect</code><dd>Show whether interrupt-sequence is sent
 to remote target when <span class="sc">gdb</span> connects to it.
 
-     <p><a name="index-set-tcp-1376"></a><a name="index-show-tcp-1377"></a><br><dt><code>set tcp auto-retry on</code><dd><a name="index-auto_002dretry_002c-for-remote-TCP-target-1378"></a>Enable auto-retry for remote TCP connections.  This is useful if the remote
+     <p><a name="index-set-tcp-1381"></a><a name="index-show-tcp-1382"></a><br><dt><code>set tcp auto-retry on</code><dd><a name="index-auto_002dretry_002c-for-remote-TCP-target-1383"></a>Enable auto-retry for remote TCP connections.  This is useful if the remote
 debugging agent is launched in parallel with <span class="sc">gdb</span>; there is a race
 condition because the agent may not become ready to accept the connection
 before <span class="sc">gdb</span> attempts to connect.  When auto-retry is
@@ -153,7 +153,7 @@ to establish the connection using the timeout specified by
 
      <br><dt><code>show tcp auto-retry</code><dd>Show the current auto-retry setting.
 
-     <br><dt><code>set tcp connect-timeout </code><var>seconds</var><dt><code>set tcp connect-timeout unlimited</code><dd><a name="index-connection-timeout_002c-for-remote-TCP-target-1379"></a><a name="index-timeout_002c-for-remote-target-connection-1380"></a>Set the timeout for establishing a TCP connection to the remote target to
+     <br><dt><code>set tcp connect-timeout </code><var>seconds</var><dt><code>set tcp connect-timeout unlimited</code><dd><a name="index-connection-timeout_002c-for-remote-TCP-target-1384"></a><a name="index-timeout_002c-for-remote-target-connection-1385"></a>Set the timeout for establishing a TCP connection to the remote target to
 <var>seconds</var>.  The timeout affects both polling to retry failed connections
 (enabled by <code>set tcp auto-retry on</code>) and waiting for connections
 that are merely slow to complete, and represents an approximate cumulative
@@ -164,7 +164,7 @@ unless interrupted with <kbd>Ctrl-c</kbd>.  The default is 15 seconds.
      <br><dt><code>show tcp connect-timeout</code><dd>Show the current connection timeout setting. 
 </dl>
 
-   <p><a name="index-remote-packets_002c-enabling-and-disabling-1381"></a>The <span class="sc">gdb</span> remote protocol autodetects the packets supported by
+   <p><a name="index-remote-packets_002c-enabling-and-disabling-1386"></a>The <span class="sc">gdb</span> remote protocol autodetects the packets supported by
 your debugging stub.  If you need to override the autodetection, you
 can use these commands to enable or disable individual packets.  Each
 packet can be set to &lsquo;<samp><span class="samp">on</span></samp>&rsquo; (the remote target supports this

@@ -48,7 +48,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Thread-Stops.html#Thread-Stops">Thread 
 
 <h4 class="subsection">5.5.5 Interrupted System Calls</h4>
 
-<p><a name="index-thread-breakpoints-and-system-calls-424"></a><a name="index-system-calls-and-thread-breakpoints-425"></a><a name="index-premature-return-from-system-calls-426"></a>There is an unfortunate side effect when using <span class="sc">gdb</span> to debug
+<p><a name="index-thread-breakpoints-and-system-calls-425"></a><a name="index-system-calls-and-thread-breakpoints-426"></a><a name="index-premature-return-from-system-calls-427"></a>There is an unfortunate side effect when using <span class="sc">gdb</span> to debug
 multi-threaded programs.  If one thread stops for a
 breakpoint, or for some other reason, and another thread is blocked in a
 system call, then the system call may return prematurely.  This is a

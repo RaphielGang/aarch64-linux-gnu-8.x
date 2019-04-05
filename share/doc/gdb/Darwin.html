@@ -46,30 +46,30 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Native.html#Native">Native</a>
 
 <h4 class="subsection">21.1.6 Darwin</h4>
 
-<p><a name="index-Darwin-1535"></a>
+<p><a name="index-Darwin-1540"></a>
 <span class="sc">gdb</span> provides the following commands specific to the Darwin target:
 
      <dl>
-<dt><code>set debug darwin </code><var>num</var><dd><a name="index-set-debug-darwin-1536"></a>When set to a non zero value, enables debugging messages specific to
+<dt><code>set debug darwin </code><var>num</var><dd><a name="index-set-debug-darwin-1541"></a>When set to a non zero value, enables debugging messages specific to
 the Darwin support.  Higher values produce more verbose output.
 
-     <br><dt><code>show debug darwin</code><dd><a name="index-show-debug-darwin-1537"></a>Show the current state of Darwin messages.
+     <br><dt><code>show debug darwin</code><dd><a name="index-show-debug-darwin-1542"></a>Show the current state of Darwin messages.
 
-     <br><dt><code>set debug mach-o </code><var>num</var><dd><a name="index-set-debug-mach_002do-1538"></a>When set to a non zero value, enables debugging messages while
+     <br><dt><code>set debug mach-o </code><var>num</var><dd><a name="index-set-debug-mach_002do-1543"></a>When set to a non zero value, enables debugging messages while
 <span class="sc">gdb</span> is reading Darwin object files.  (<dfn>Mach-O</dfn> is the
 file format used on Darwin for object and executable files.)  Higher
 values produce more verbose output.  This is a command to diagnose
 problems internal to <span class="sc">gdb</span> and should not be needed in normal
 usage.
 
-     <br><dt><code>show debug mach-o</code><dd><a name="index-show-debug-mach_002do-1539"></a>Show the current state of Mach-O file messages.
+     <br><dt><code>show debug mach-o</code><dd><a name="index-show-debug-mach_002do-1544"></a>Show the current state of Mach-O file messages.
 
-     <br><dt><code>set mach-exceptions on</code><dt><code>set mach-exceptions off</code><dd><a name="index-set-mach_002dexceptions-1540"></a>On Darwin, faults are first reported as a Mach exception and are then
+     <br><dt><code>set mach-exceptions on</code><dt><code>set mach-exceptions off</code><dd><a name="index-set-mach_002dexceptions-1545"></a>On Darwin, faults are first reported as a Mach exception and are then
 mapped to a Posix signal.  Use this command to turn on trapping of
 Mach exceptions in the inferior.  This might be sometimes useful to
 better understand the cause of a fault.  The default is off.
 
-     <br><dt><code>show mach-exceptions</code><dd><a name="index-show-mach_002dexceptions-1541"></a>Show the current state of exceptions trapping. 
+     <br><dt><code>show mach-exceptions</code><dd><a name="index-show-mach_002dexceptions-1546"></a>Show the current state of exceptions trapping. 
 </dl>
 
    </body></html>

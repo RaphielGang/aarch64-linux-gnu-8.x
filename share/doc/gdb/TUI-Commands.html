@@ -48,7 +48,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="TUI.html#TUI">TUI</a>
 
 <h3 class="section">25.4 TUI-specific Commands</h3>
 
-<p><a name="index-TUI-commands-2874"></a>
+<p><a name="index-TUI-commands-2890"></a>
 The TUI has specific commands to control the text windows. 
 These commands are always available, even when <span class="sc">gdb</span> is not in
 the TUI mode.  When <span class="sc">gdb</span> is in the standard mode, most
@@ -61,15 +61,15 @@ these commands will fail with an error, because it would not be
 possible or desirable to enable curses window management.
 
      <dl>
-<dt><code>tui enable</code><dd><a name="index-tui-enable-2875"></a>Activate TUI mode.  The last active TUI window layout will be used if
+<dt><code>tui enable</code><dd><a name="index-tui-enable-2891"></a>Activate TUI mode.  The last active TUI window layout will be used if
 TUI mode has prevsiouly been used in the current debugging session,
 otherwise a default layout is used.
 
-     <br><dt><code>tui disable</code><dd><a name="index-tui-disable-2876"></a>Disable TUI mode, returning to the console interpreter.
+     <br><dt><code>tui disable</code><dd><a name="index-tui-disable-2892"></a>Disable TUI mode, returning to the console interpreter.
 
-     <br><dt><code>info win</code><dd><a name="index-info-win-2877"></a>List and give the size of all displayed windows.
+     <br><dt><code>info win</code><dd><a name="index-info-win-2893"></a>List and give the size of all displayed windows.
 
-     <br><dt><code>layout </code><var>name</var><dd><a name="index-layout-2878"></a>Changes which TUI windows are displayed.  In each layout the command
+     <br><dt><code>layout </code><var>name</var><dd><a name="index-layout-2894"></a>Changes which TUI windows are displayed.  In each layout the command
 window is always displayed, the <var>name</var> parameter controls which
 additional windows are displayed, and can be any of the following:
 
@@ -89,7 +89,7 @@ windows.  When in <code>asm</code> or <code>split</code> layout display the
 register, assembler, and command windows. 
 </dl>
 
-     <br><dt><code>focus </code><var>name</var><dd><a name="index-focus-2879"></a>Changes which TUI window is currently active for scrolling.  The
+     <br><dt><code>focus </code><var>name</var><dd><a name="index-focus-2895"></a>Changes which TUI window is currently active for scrolling.  The
 <var>name</var> parameter can be any of the following:
 
           <dl>
@@ -106,9 +106,9 @@ register, assembler, and command windows.
           <br><dt><code>cmd</code><dd>Make the command window active for scrolling. 
 </dl>
 
-     <br><dt><code>refresh</code><dd><a name="index-refresh-2880"></a>Refresh the screen.  This is similar to typing <kbd>C-L</kbd>.
+     <br><dt><code>refresh</code><dd><a name="index-refresh-2896"></a>Refresh the screen.  This is similar to typing <kbd>C-L</kbd>.
 
-     <br><dt><code>tui reg </code><var>group</var><dd><a name="index-tui-reg-2881"></a>Changes the register group displayed in the tui register window to
+     <br><dt><code>tui reg </code><var>group</var><dd><a name="index-tui-reg-2897"></a>Changes the register group displayed in the tui register window to
 <var>group</var>.  If the register window is not currently displayed this
 command will cause the register window to be displayed.  The list of
 register groups, as well as their order is target specific. The
@@ -128,15 +128,15 @@ through all of the available register groups in the reverse order to
 <br><dt><code>all</code><dd>Display all registers. 
 </dl>
 
-     <br><dt><code>update</code><dd><a name="index-update-2882"></a>Update the source window and the current execution point.
+     <br><dt><code>update</code><dd><a name="index-update-2898"></a>Update the source window and the current execution point.
 
-     <br><dt><code>winheight </code><var>name</var><code> +</code><var>count</var><dt><code>winheight </code><var>name</var><code> -</code><var>count</var><dd><a name="index-winheight-2883"></a>Change the height of the window <var>name</var> by <var>count</var>
+     <br><dt><code>winheight </code><var>name</var><code> +</code><var>count</var><dt><code>winheight </code><var>name</var><code> -</code><var>count</var><dd><a name="index-winheight-2899"></a>Change the height of the window <var>name</var> by <var>count</var>
 lines.  Positive counts increase the height, while negative counts
 decrease it.  The <var>name</var> parameter can be one of <code>src</code> (the
 source window), <code>cmd</code> (the command window), <code>asm</code> (the
 disassembly window), or <code>regs</code> (the register display window).
 
-     <br><dt><code>tabset </code><var>nchars</var><dd><a name="index-tabset-2884"></a>Set the width of tab stops to be <var>nchars</var> characters.  This
+     <br><dt><code>tabset </code><var>nchars</var><dd><a name="index-tabset-2900"></a>Set the width of tab stops to be <var>nchars</var> characters.  This
 setting affects the display of TAB characters in the source and
 assembly windows. 
 </dl>

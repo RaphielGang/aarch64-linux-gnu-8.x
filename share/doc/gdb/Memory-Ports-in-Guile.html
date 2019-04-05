@@ -54,7 +54,7 @@ bytevector functionality.  The main routine is <code>open-memory</code> which
 returns a port object.  One can then read/write memory using that object.
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>open-memory</b> <span class="roman">[</span><var>#:mode mode</var>] <span class="roman">[</span><var>#:start address</var>] <span class="roman">[</span><var>#:size size</var>]<var><a name="index-open_002dmemory-2790"></a></var><br>
+&mdash; Scheme Procedure: <b>open-memory</b> <span class="roman">[</span><var>#:mode mode</var>] <span class="roman">[</span><var>#:start address</var>] <span class="roman">[</span><var>#:size size</var>]<var><a name="index-open_002dmemory-2806"></a></var><br>
 <blockquote><p>Return a port object that can be used for reading and writing memory. 
 The port will be open according to <var>mode</var>, which is the standard
 mode argument to Guile port open routines, except that the &lsquo;<samp><span class="samp">"a"</span></samp>&rsquo;
@@ -74,38 +74,38 @@ in the rane [<var>start</var>,<var>start</var>+<var>size</var>) can be accessed.
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>memory-port?</b><var><a name="index-memory_002dport_003f-2791"></a></var><br>
+&mdash; Scheme Procedure: <b>memory-port?</b><var><a name="index-memory_002dport_003f-2807"></a></var><br>
 <blockquote><p>Return <code>#t</code> if <var>object</var> is an object of type <code>&lt;gdb:memory-port&gt;</code>. 
 Otherwise return <code>#f</code>. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>memory-port-range</b><var> memory-port<a name="index-memory_002dport_002drange-2792"></a></var><br>
+&mdash; Scheme Procedure: <b>memory-port-range</b><var> memory-port<a name="index-memory_002dport_002drange-2808"></a></var><br>
 <blockquote><p>Return the range of <code>&lt;gdb:memory-port&gt;</code> <var>memory-port</var> as a list
 of two elements: <code>(start end)</code>.  The range is <var>start</var> to <var>end</var>
 inclusive. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>memory-port-read-buffer-size</b><var> memory-port<a name="index-memory_002dport_002dread_002dbuffer_002dsize-2793"></a></var><br>
+&mdash; Scheme Procedure: <b>memory-port-read-buffer-size</b><var> memory-port<a name="index-memory_002dport_002dread_002dbuffer_002dsize-2809"></a></var><br>
 <blockquote><p>Return the size of the read buffer of <code>&lt;gdb:memory-port&gt;</code>
 <var>memory-port</var>. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>set-memory-port-read-buffer-size!</b><var> memory-port size<a name="index-set_002dmemory_002dport_002dread_002dbuffer_002dsize_0021-2794"></a></var><br>
+&mdash; Scheme Procedure: <b>set-memory-port-read-buffer-size!</b><var> memory-port size<a name="index-set_002dmemory_002dport_002dread_002dbuffer_002dsize_0021-2810"></a></var><br>
 <blockquote><p>Set the size of the read buffer of <code>&lt;gdb:memory-port&gt;</code>
 <var>memory-port</var> to <var>size</var>.  The result is unspecified. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>memory-port-write-buffer-size</b><var> memory-port<a name="index-memory_002dport_002dwrite_002dbuffer_002dsize-2795"></a></var><br>
+&mdash; Scheme Procedure: <b>memory-port-write-buffer-size</b><var> memory-port<a name="index-memory_002dport_002dwrite_002dbuffer_002dsize-2811"></a></var><br>
 <blockquote><p>Return the size of the write buffer of <code>&lt;gdb:memory-port&gt;</code>
 <var>memory-port</var>. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>set-memory-port-write-buffer-size!</b><var> memory-port size<a name="index-set_002dmemory_002dport_002dwrite_002dbuffer_002dsize_0021-2796"></a></var><br>
+&mdash; Scheme Procedure: <b>set-memory-port-write-buffer-size!</b><var> memory-port size<a name="index-set_002dmemory_002dport_002dwrite_002dbuffer_002dsize_0021-2812"></a></var><br>
 <blockquote><p>Set the size of the write buffer of <code>&lt;gdb:memory-port&gt;</code>
 <var>memory-port</var> to <var>size</var>.  The result is unspecified. 
 </p></blockquote></div>

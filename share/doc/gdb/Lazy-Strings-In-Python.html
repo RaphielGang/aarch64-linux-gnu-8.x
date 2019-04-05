@@ -48,7 +48,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Python-API.html#Python-API">Python API<
 
 <h5 class="subsubsection">23.2.2.32 Python representation of lazy strings.</h5>
 
-<p><a name="index-lazy-strings-in-python-2369"></a><a name="index-gdb_002eLazyString-2370"></a>
+<p><a name="index-lazy-strings-in-python-2385"></a><a name="index-gdb_002eLazyString-2386"></a>
 A <dfn>lazy string</dfn> is a string whose contents is not retrieved or
 encoded until it is needed.
 
@@ -65,7 +65,7 @@ wrapping a string is immediately retrieved and encoded on creation.
    <p>A <code>gdb.LazyString</code> object has the following functions:
 
 <div class="defun">
-&mdash; Function: <b>LazyString.value</b> ()<var><a name="index-LazyString_002evalue-2371"></a></var><br>
+&mdash; Function: <b>LazyString.value</b> ()<var><a name="index-LazyString_002evalue-2387"></a></var><br>
 <blockquote><p>Convert the <code>gdb.LazyString</code> to a <code>gdb.Value</code>.  This value
 will point to the string in memory, but will lose all the delayed
 retrieval, encoding and handling that <span class="sc">gdb</span> applies to a
@@ -73,20 +73,20 @@ retrieval, encoding and handling that <span class="sc">gdb</span> applies to a
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Variable: <b>LazyString.address</b><var><a name="index-LazyString_002eaddress-2372"></a></var><br>
+&mdash; Variable: <b>LazyString.address</b><var><a name="index-LazyString_002eaddress-2388"></a></var><br>
 <blockquote><p>This attribute holds the address of the string.  This attribute is not
 writable. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Variable: <b>LazyString.length</b><var><a name="index-LazyString_002elength-2373"></a></var><br>
+&mdash; Variable: <b>LazyString.length</b><var><a name="index-LazyString_002elength-2389"></a></var><br>
 <blockquote><p>This attribute holds the length of the string in characters.  If the
 length is -1, then the string will be fetched and encoded up to the
 first null of appropriate width.  This attribute is not writable. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Variable: <b>LazyString.encoding</b><var><a name="index-LazyString_002eencoding-2374"></a></var><br>
+&mdash; Variable: <b>LazyString.encoding</b><var><a name="index-LazyString_002eencoding-2390"></a></var><br>
 <blockquote><p>This attribute holds the encoding that will be applied to the string
 when the string is printed by <span class="sc">gdb</span>.  If the encoding is not
 set, or contains an empty string,  then <span class="sc">gdb</span> will select the
@@ -95,7 +95,7 @@ is not writable.
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Variable: <b>LazyString.type</b><var><a name="index-LazyString_002etype-2375"></a></var><br>
+&mdash; Variable: <b>LazyString.type</b><var><a name="index-LazyString_002etype-2391"></a></var><br>
 <blockquote><p>This attribute holds the type that is represented by the lazy string's
 type.  For a lazy string this is a pointer or array type.  To
 resolve this to the lazy string's character type, use the type's

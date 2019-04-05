@@ -46,7 +46,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Remote-Debugging.html#Remote-Debugging"
 
 <h3 class="section">20.5 Implementing a Remote Stub</h3>
 
-<p><a name="index-debugging-stub_002c-example-1382"></a><a name="index-remote-stub_002c-example-1383"></a><a name="index-stub-example_002c-remote-debugging-1384"></a>The stub files provided with <span class="sc">gdb</span> implement the target side of the
+<p><a name="index-debugging-stub_002c-example-1387"></a><a name="index-remote-stub_002c-example-1388"></a><a name="index-stub-example_002c-remote-debugging-1389"></a>The stub files provided with <span class="sc">gdb</span> implement the target side of the
 communication protocol, and the <span class="sc">gdb</span> side is implemented in the
 <span class="sc">gdb</span> source file <samp><span class="file">remote.c</span></samp>.  Normally, you can simply allow
 these subroutines to communicate, and ignore the details.  (If you're
@@ -54,7 +54,7 @@ implementing your own stub file, you can still ignore the details: start
 with one of the existing stub files.  <samp><span class="file">sparc-stub.c</span></samp> is the best
 organized, and therefore the easiest to read.)
 
-   <p><a name="index-remote-serial-debugging_002c-overview-1385"></a>To debug a program running on another machine (the debugging
+   <p><a name="index-remote-serial-debugging_002c-overview-1390"></a>To debug a program running on another machine (the debugging
 <dfn>target</dfn> machine), you must first arrange for all the usual
 prerequisites for the program to run by itself.  For example, for a C
 program, you need:
@@ -95,18 +95,18 @@ See <a href="Server.html#Server">Using the <code>gdbserver</code> Program</a>, f
 machine; for example, use <samp><span class="file">sparc-stub.c</span></samp> to debug programs on
 <span class="sc">sparc</span> boards.
 
-   <p><a name="index-remote-serial-stub-list-1386"></a>These working remote stubs are distributed with <span class="sc">gdb</span>:
+   <p><a name="index-remote-serial-stub-list-1391"></a>These working remote stubs are distributed with <span class="sc">gdb</span>:
 
      <dl>
-<dt><code>i386-stub.c</code><dd><a name="index-g_t_0040file_007bi386_002dstub_002ec_007d-1387"></a><a name="index-Intel-1388"></a><a name="index-i386-1389"></a>For Intel 386 and compatible architectures.
+<dt><code>i386-stub.c</code><dd><a name="index-g_t_0040file_007bi386_002dstub_002ec_007d-1392"></a><a name="index-Intel-1393"></a><a name="index-i386-1394"></a>For Intel 386 and compatible architectures.
 
-     <br><dt><code>m68k-stub.c</code><dd><a name="index-g_t_0040file_007bm68k_002dstub_002ec_007d-1390"></a><a name="index-Motorola-680x0-1391"></a><a name="index-m680x0-1392"></a>For Motorola 680x0 architectures.
+     <br><dt><code>m68k-stub.c</code><dd><a name="index-g_t_0040file_007bm68k_002dstub_002ec_007d-1395"></a><a name="index-Motorola-680x0-1396"></a><a name="index-m680x0-1397"></a>For Motorola 680x0 architectures.
 
-     <br><dt><code>sh-stub.c</code><dd><a name="index-g_t_0040file_007bsh_002dstub_002ec_007d-1393"></a><a name="index-Renesas-1394"></a><a name="index-SH-1395"></a>For Renesas SH architectures.
+     <br><dt><code>sh-stub.c</code><dd><a name="index-g_t_0040file_007bsh_002dstub_002ec_007d-1398"></a><a name="index-Renesas-1399"></a><a name="index-SH-1400"></a>For Renesas SH architectures.
 
-     <br><dt><code>sparc-stub.c</code><dd><a name="index-g_t_0040file_007bsparc_002dstub_002ec_007d-1396"></a><a name="index-Sparc-1397"></a>For <span class="sc">sparc</span> architectures.
+     <br><dt><code>sparc-stub.c</code><dd><a name="index-g_t_0040file_007bsparc_002dstub_002ec_007d-1401"></a><a name="index-Sparc-1402"></a>For <span class="sc">sparc</span> architectures.
 
-     <br><dt><code>sparcl-stub.c</code><dd><a name="index-g_t_0040file_007bsparcl_002dstub_002ec_007d-1398"></a><a name="index-Fujitsu-1399"></a><a name="index-SparcLite-1400"></a>For Fujitsu <span class="sc">sparclite</span> architectures.
+     <br><dt><code>sparcl-stub.c</code><dd><a name="index-g_t_0040file_007bsparcl_002dstub_002ec_007d-1403"></a><a name="index-Fujitsu-1404"></a><a name="index-SparcLite-1405"></a>For Fujitsu <span class="sc">sparclite</span> architectures.
 
    </dl>
 

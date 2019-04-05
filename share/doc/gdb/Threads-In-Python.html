@@ -48,17 +48,17 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Python-API.html#Python-API">Python API<
 
 <h5 class="subsubsection">23.2.2.18 Threads In Python</h5>
 
-<p><a name="index-threads-in-python-2051"></a>
-<a name="index-gdb_002eInferiorThread-2052"></a>Python scripts can access information about, and manipulate inferior threads
+<p><a name="index-threads-in-python-2063"></a>
+<a name="index-gdb_002eInferiorThread-2064"></a>Python scripts can access information about, and manipulate inferior threads
 controlled by <span class="sc">gdb</span>, via objects of the <code>gdb.InferiorThread</code> class.
 
    <p>The following thread-related functions are available in the <code>gdb</code>
 module:
 
-   <p><a name="index-gdb_002eselected_005fthread-2053"></a>
+   <p><a name="index-gdb_002eselected_005fthread-2065"></a>
 
 <div class="defun">
-&mdash; Function: <b>gdb.selected_thread</b> ()<var><a name="index-gdb_002eselected_005fthread-2054"></a></var><br>
+&mdash; Function: <b>gdb.selected_thread</b> ()<var><a name="index-gdb_002eselected_005fthread-2066"></a></var><br>
 <blockquote><p>This function returns the thread object for the selected thread.  If there
 is no selected thread, this will return <code>None</code>. 
 </p></blockquote></div>
@@ -66,7 +66,7 @@ is no selected thread, this will return <code>None</code>.
    <p>A <code>gdb.InferiorThread</code> object has the following attributes:
 
 <div class="defun">
-&mdash; Variable: <b>InferiorThread.name</b><var><a name="index-InferiorThread_002ename-2055"></a></var><br>
+&mdash; Variable: <b>InferiorThread.name</b><var><a name="index-InferiorThread_002ename-2067"></a></var><br>
 <blockquote><p>The name of the thread.  If the user specified a name using
 <code>thread name</code>, then this returns that name.  Otherwise, if an
 OS-supplied name is available, then it is returned.  Otherwise, this
@@ -78,19 +78,19 @@ user-specified thread name.
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Variable: <b>InferiorThread.num</b><var><a name="index-InferiorThread_002enum-2056"></a></var><br>
+&mdash; Variable: <b>InferiorThread.num</b><var><a name="index-InferiorThread_002enum-2068"></a></var><br>
 <blockquote><p>The per-inferior number of the thread, as assigned by GDB. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Variable: <b>InferiorThread.global_num</b><var><a name="index-InferiorThread_002eglobal_005fnum-2057"></a></var><br>
+&mdash; Variable: <b>InferiorThread.global_num</b><var><a name="index-InferiorThread_002eglobal_005fnum-2069"></a></var><br>
 <blockquote><p>The global ID of the thread, as assigned by GDB.  You can use this to
 make Python breakpoints thread-specific, for example
 (see <a href="python_005fbreakpoint_005fthread.html#python_005fbreakpoint_005fthread">The Breakpoint.thread attribute</a>). 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Variable: <b>InferiorThread.ptid</b><var><a name="index-InferiorThread_002eptid-2058"></a></var><br>
+&mdash; Variable: <b>InferiorThread.ptid</b><var><a name="index-InferiorThread_002eptid-2070"></a></var><br>
 <blockquote><p>ID of the thread, as assigned by the operating system.  This attribute is a
 tuple containing three integers.  The first is the Process ID (PID); the second
 is the Lightweight Process ID (LWPID), and the third is the Thread ID (TID). 
@@ -99,7 +99,7 @@ does not  use that identifier.
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Variable: <b>InferiorThread.inferior</b><var><a name="index-InferiorThread_002einferior-2059"></a></var><br>
+&mdash; Variable: <b>InferiorThread.inferior</b><var><a name="index-InferiorThread_002einferior-2071"></a></var><br>
 <blockquote><p>The inferior this thread belongs to.  This attribute is represented as
 a <code>gdb.Inferior</code> object.  This attribute is not writable. 
 </p></blockquote></div>
@@ -107,7 +107,7 @@ a <code>gdb.Inferior</code> object.  This attribute is not writable.
    <p>A <code>gdb.InferiorThread</code> object has the following methods:
 
 <div class="defun">
-&mdash; Function: <b>InferiorThread.is_valid</b> ()<var><a name="index-InferiorThread_002eis_005fvalid-2060"></a></var><br>
+&mdash; Function: <b>InferiorThread.is_valid</b> ()<var><a name="index-InferiorThread_002eis_005fvalid-2072"></a></var><br>
 <blockquote><p>Returns <code>True</code> if the <code>gdb.InferiorThread</code> object is valid,
 <code>False</code> if not.  A <code>gdb.InferiorThread</code> object will become
 invalid if the thread exits, or the inferior that the thread belongs
@@ -116,23 +116,23 @@ exception if it is invalid at the time the method is called.
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Function: <b>InferiorThread.switch</b> ()<var><a name="index-InferiorThread_002eswitch-2061"></a></var><br>
+&mdash; Function: <b>InferiorThread.switch</b> ()<var><a name="index-InferiorThread_002eswitch-2073"></a></var><br>
 <blockquote><p>This changes <span class="sc">gdb</span>'s currently selected thread to the one represented
 by this object. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Function: <b>InferiorThread.is_stopped</b> ()<var><a name="index-InferiorThread_002eis_005fstopped-2062"></a></var><br>
+&mdash; Function: <b>InferiorThread.is_stopped</b> ()<var><a name="index-InferiorThread_002eis_005fstopped-2074"></a></var><br>
 <blockquote><p>Return a Boolean indicating whether the thread is stopped. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Function: <b>InferiorThread.is_running</b> ()<var><a name="index-InferiorThread_002eis_005frunning-2063"></a></var><br>
+&mdash; Function: <b>InferiorThread.is_running</b> ()<var><a name="index-InferiorThread_002eis_005frunning-2075"></a></var><br>
 <blockquote><p>Return a Boolean indicating whether the thread is running. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Function: <b>InferiorThread.is_exited</b> ()<var><a name="index-InferiorThread_002eis_005fexited-2064"></a></var><br>
+&mdash; Function: <b>InferiorThread.is_exited</b> ()<var><a name="index-InferiorThread_002eis_005fexited-2076"></a></var><br>
 <blockquote><p>Return a Boolean indicating whether the thread is exited. 
 </p></blockquote></div>
 

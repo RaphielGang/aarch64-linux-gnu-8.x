@@ -49,7 +49,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Controlling-GDB.html#Controlling-GDB">C
 
 <h3 class="section">22.7 Automatically loading associated files</h3>
 
-<p><a name="index-auto_002dloading-1679"></a>
+<p><a name="index-auto_002dloading-1685"></a>
 <span class="sc">gdb</span> sometimes reads files with commands and settings automatically,
 without being explicitly told so by the user.  We call this feature
 <dfn>auto-loading</dfn>.  While auto-loading is useful for automatically adapting
@@ -77,7 +77,7 @@ file) requires accordingly configured <code>auto-load safe-path</code>
 control when to auto-load files and which files should be auto-loaded.
 
      <dl>
-<a name="set-auto_002dload-off"></a><a name="index-set-auto_002dload-off-1680"></a><dt><code>set auto-load off</code><dd>Globally disable loading of all auto-loaded files. 
+<a name="set-auto_002dload-off"></a><a name="index-set-auto_002dload-off-1686"></a><dt><code>set auto-load off</code><dd>Globally disable loading of all auto-loaded files. 
 You may want to use this command with the &lsquo;<samp><span class="samp">-iex</span></samp>&rsquo; option
 (see <a href="Option-_002dinit_002deval_002dcommand.html#Option-_002dinit_002deval_002dcommand">Option -init-eval-command</a>) such as:
      <pre class="smallexample">          $ <kbd>gdb -iex "set auto-load off" untrusted-executable corefile</kbd>
@@ -89,7 +89,7 @@ To prevent <span class="sc">gdb</span> from auto-loading even those init files, 
 <samp><span class="option">-nx</span></samp> option (see <a href="Mode-Options.html#Mode-Options">Mode Options</a>), in addition to
 <code>set auto-load no</code>.
 
-     <p><a name="show-auto_002dload"></a><a name="index-show-auto_002dload-1681"></a><br><dt><code>show auto-load</code><dd>Show whether auto-loading of each specific &lsquo;<samp><span class="samp">auto-load</span></samp>&rsquo; file(s) is enabled
+     <p><a name="show-auto_002dload"></a><a name="index-show-auto_002dload-1687"></a><br><dt><code>show auto-load</code><dd>Show whether auto-loading of each specific &lsquo;<samp><span class="samp">auto-load</span></samp>&rsquo; file(s) is enabled
 or disabled.
 
      <pre class="smallexample">          (gdb) show auto-load
@@ -103,7 +103,7 @@ or disabled.
           scripts-directory:  List of directories from which to load auto-loaded scripts
                               is $debugdir:$datadir/auto-load.
 </pre>
-     <p><a name="info-auto_002dload"></a><a name="index-info-auto_002dload-1682"></a><br><dt><code>info auto-load</code><dd>Print whether each specific &lsquo;<samp><span class="samp">auto-load</span></samp>&rsquo; file(s) have been auto-loaded or
+     <p><a name="info-auto_002dload"></a><a name="index-info-auto_002dload-1688"></a><br><dt><code>info auto-load</code><dd>Print whether each specific &lsquo;<samp><span class="samp">auto-load</span></samp>&rsquo; file(s) have been auto-loaded or
 not.
 
      <pre class="smallexample">          (gdb) info auto-load

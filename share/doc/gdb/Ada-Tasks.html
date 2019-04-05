@@ -48,12 +48,12 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Ada.html#Ada">Ada</a>
 
 <h5 class="subsubsection">15.4.10.7 Extensions for Ada Tasks</h5>
 
-<p><a name="index-Ada_002c-tasking-1053"></a>
+<p><a name="index-Ada_002c-tasking-1055"></a>
 Support for Ada tasks is analogous to that for threads (see <a href="Threads.html#Threads">Threads</a>). 
 <span class="sc">gdb</span> provides the following task-related commands:
 
      
-<a name="index-info-tasks-1054"></a>
+<a name="index-info-tasks-1056"></a>
 <dl><dt><code>info tasks</code><dd>This command shows a list of current Ada tasks, as in the following example:
 
      <pre class="smallexample">          (gdb) info tasks
@@ -115,7 +115,7 @@ finish terminating.
 
      </dl>
 
-     <p><a name="index-info-task-_0040var_007btaskno_007d-1055"></a><br><dt><code>info task </code><var>taskno</var><dd>This command shows detailled informations on the specified task, as in
+     <p><a name="index-info-task-_0040var_007btaskno_007d-1057"></a><br><dt><code>info task </code><var>taskno</var><dd>This command shows detailled informations on the specified task, as in
 the following example:
      <pre class="smallexample">          (gdb) info tasks
             ID       TID P-ID Pri State                  Name
@@ -129,7 +129,7 @@ the following example:
           Base Priority: 15
           State: Runnable
 </pre>
-     <br><dt><code>task</code><dd><a name="index-task_0040r_007b-_0028Ada_0029_007d-1056"></a><a name="index-current-Ada-task-ID-1057"></a>This command prints the ID of the current task.
+     <br><dt><code>task</code><dd><a name="index-task_0040r_007b-_0028Ada_0029_007d-1058"></a><a name="index-current-Ada-task-ID-1059"></a>This command prints the ID of the current task.
 
      <pre class="smallexample">          (gdb) info tasks
             ID       TID P-ID Pri State                  Name
@@ -138,7 +138,7 @@ the following example:
           (gdb) task
           [Current task is 2]
 </pre>
-     <br><dt><code>task </code><var>taskno</var><dd><a name="index-Ada-task-switching-1058"></a>This command is like the <code>thread </code><var>thread-id</var>
+     <br><dt><code>task </code><var>taskno</var><dd><a name="index-Ada-task-switching-1060"></a>This command is like the <code>thread </code><var>thread-id</var>
 command (see <a href="Threads.html#Threads">Threads</a>).  It switches the context of debugging
 from the current task to the given task.
 
@@ -156,7 +156,7 @@ from the current task to the given task.
           #3  0x806153e in system.tasking.stages.activate_tasks ()
           #4  0x804aacc in un () at un.adb:5
 </pre>
-     <br><dt><code>break </code><var>location</var><code> task </code><var>taskno</var><dt><code>break </code><var>location</var><code> task </code><var>taskno</var><code> if ...</code><dd><a name="index-breakpoints-and-tasks_002c-in-Ada-1059"></a><a name="index-task-breakpoints_002c-in-Ada-1060"></a><a name="index-break-_0040dots_007b_007d-task-_0040var_007btaskno_007d_0040r_007b-_0028Ada_0029_007d-1061"></a>These commands are like the <code>break ... thread ...</code>
+     <br><dt><code>break </code><var>location</var><code> task </code><var>taskno</var><dt><code>break </code><var>location</var><code> task </code><var>taskno</var><code> if ...</code><dd><a name="index-breakpoints-and-tasks_002c-in-Ada-1061"></a><a name="index-task-breakpoints_002c-in-Ada-1062"></a><a name="index-break-_0040dots_007b_007d-task-_0040var_007btaskno_007d_0040r_007b-_0028Ada_0029_007d-1063"></a>These commands are like the <code>break ... thread ...</code>
 command (see <a href="Thread-Stops.html#Thread-Stops">Thread Stops</a>).  The
 <var>location</var> argument specifies source lines, as described
 in <a href="Specify-Location.html#Specify-Location">Specify Location</a>.

@@ -48,7 +48,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Guile-API.html#Guile-API">Guile API</a>
 
 <h5 class="subsubsection">23.3.3.4 Guile Exception Handling</h5>
 
-<p><a name="index-guile-exceptions-2415"></a><a name="index-exceptions_002c-guile-2416"></a><a name="index-set-guile-print_002dstack-2417"></a>
+<p><a name="index-guile-exceptions-2431"></a><a name="index-exceptions_002c-guile-2432"></a><a name="index-set-guile-print_002dstack-2433"></a>
 When executing the <code>guile</code> command, Guile exceptions
 uncaught within the Guile code are translated to calls to the
 <span class="sc">gdb</span> error-reporting mechanism.  If the command that called
@@ -115,19 +115,19 @@ prompt) is translated to a Guile <code>signal</code> exception with value
    <p><span class="sc">gdb</span> Guile procedures can also throw these exceptions:
 
      <dl>
-<dt><code>gdb:error</code><a name="index-gdb_003aerror-2418"></a><dd>This exception is a catch-all for errors generated from within <span class="sc">gdb</span>.
+<dt><code>gdb:error</code><a name="index-gdb_003aerror-2434"></a><dd>This exception is a catch-all for errors generated from within <span class="sc">gdb</span>.
 
-     <br><dt><code>gdb:invalid-object</code><a name="index-gdb_003ainvalid_002dobject-2419"></a><dd>This exception is thrown when accessing Guile objects that wrap underlying
+     <br><dt><code>gdb:invalid-object</code><a name="index-gdb_003ainvalid_002dobject-2435"></a><dd>This exception is thrown when accessing Guile objects that wrap underlying
 <span class="sc">gdb</span> objects have become invalid.  For example, a
 <code>&lt;gdb:breakpoint&gt;</code> object becomes invalid if the user deletes it
 from the command line.  The object still exists in Guile, but the
 object it represents is gone.  Further operations on this breakpoint
 will throw this exception.
 
-     <br><dt><code>gdb:memory-error</code><a name="index-gdb_003amemory_002derror-2420"></a><dd>This exception is thrown when an operation tried to access invalid
+     <br><dt><code>gdb:memory-error</code><a name="index-gdb_003amemory_002derror-2436"></a><dd>This exception is thrown when an operation tried to access invalid
 memory in the inferior.
 
-     <br><dt><code>gdb:pp-type-error</code><a name="index-gdb_003app_002dtype_002derror-2421"></a><dd>This exception is thrown when a Guile pretty-printer passes a bad object
+     <br><dt><code>gdb:pp-type-error</code><a name="index-gdb_003app_002dtype_002derror-2437"></a><dd>This exception is thrown when a Guile pretty-printer passes a bad object
 to <span class="sc">gdb</span>. 
 </dl>
 
@@ -135,25 +135,25 @@ to <span class="sc">gdb</span>.
 <code>(gdb)</code> module.
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>make-exception</b><var> key args<a name="index-make_002dexception-2422"></a></var><br>
+&mdash; Scheme Procedure: <b>make-exception</b><var> key args<a name="index-make_002dexception-2438"></a></var><br>
 <blockquote><p>Return a <code>&lt;gdb:exception&gt;</code> object given by its <var>key</var> and
 <var>args</var>, which are the standard Guile parameters of an exception. 
 See the Guile documentation for more information (see <a href="../guile/Exceptions.html#Exceptions">Exceptions</a>). 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>exception?</b><var> object<a name="index-exception_003f-2423"></a></var><br>
+&mdash; Scheme Procedure: <b>exception?</b><var> object<a name="index-exception_003f-2439"></a></var><br>
 <blockquote><p>Return <code>#t</code> if <var>object</var> is a <code>&lt;gdb:exception&gt;</code> object. 
 Otherwise return <code>#f</code>. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>exception-key</b><var> exception<a name="index-exception_002dkey-2424"></a></var><br>
+&mdash; Scheme Procedure: <b>exception-key</b><var> exception<a name="index-exception_002dkey-2440"></a></var><br>
 <blockquote><p>Return the <var>args</var> field of a <code>&lt;gdb:exception&gt;</code> object. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>exception-args</b><var> exception<a name="index-exception_002dargs-2425"></a></var><br>
+&mdash; Scheme Procedure: <b>exception-args</b><var> exception<a name="index-exception_002dargs-2441"></a></var><br>
 <blockquote><p>Return the <var>args</var> field of a <code>&lt;gdb:exception&gt;</code> object. 
 </p></blockquote></div>
 

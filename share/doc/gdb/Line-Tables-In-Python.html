@@ -48,7 +48,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Python-API.html#Python-API">Python API<
 
 <h5 class="subsubsection">23.2.2.29 Manipulating line tables using Python</h5>
 
-<p><a name="index-line-tables-in-python-2319"></a><a name="index-gdb_002eLineTable-2320"></a>
+<p><a name="index-line-tables-in-python-2335"></a><a name="index-gdb_002eLineTable-2336"></a>
 Python code can request and inspect line table information from a
 symbol table that is loaded in <span class="sc">gdb</span>.  A line table is a
 mapping of source lines to their executable locations in memory.  To
@@ -61,14 +61,14 @@ address for each line table entry.  <code>LineTableEntry</code> objects have
 the following attributes:
 
 <div class="defun">
-&mdash; Variable: <b>LineTableEntry.line</b><var><a name="index-LineTableEntry_002eline-2321"></a></var><br>
+&mdash; Variable: <b>LineTableEntry.line</b><var><a name="index-LineTableEntry_002eline-2337"></a></var><br>
 <blockquote><p>The source line number for this line table entry.  This number
 corresponds to the actual line of source.  This attribute is not
 writable. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Variable: <b>LineTableEntry.pc</b><var><a name="index-LineTableEntry_002epc-2322"></a></var><br>
+&mdash; Variable: <b>LineTableEntry.pc</b><var><a name="index-LineTableEntry_002epc-2338"></a></var><br>
 <blockquote><p>The address that is associated with the line table entry where the
 executable code for that source line resides in memory.  This
 attribute is not writable. 
@@ -100,7 +100,7 @@ example illustrating iterating over a line table.
 has the following direct access methods:
 
 <div class="defun">
-&mdash; Function: <b>LineTable.line</b> (<var>line</var>)<var><a name="index-LineTable_002eline-2323"></a></var><br>
+&mdash; Function: <b>LineTable.line</b> (<var>line</var>)<var><a name="index-LineTable_002eline-2339"></a></var><br>
 <blockquote><p>Return a Python <code>Tuple</code> of <code>LineTableEntry</code> objects for any
 entries in the line table for the given <var>line</var>, which specifies
 the source code line.  If there are no entries for that source code
@@ -108,14 +108,14 @@ the source code line.  If there are no entries for that source code
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Function: <b>LineTable.has_line</b> (<var>line</var>)<var><a name="index-LineTable_002ehas_005fline-2324"></a></var><br>
+&mdash; Function: <b>LineTable.has_line</b> (<var>line</var>)<var><a name="index-LineTable_002ehas_005fline-2340"></a></var><br>
 <blockquote><p>Return a Python <code>Boolean</code> indicating whether there is an entry in
 the line table for this source line.  Return <code>True</code> if an entry
 is found, or <code>False</code> if not. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Function: <b>LineTable.source_lines</b> ()<var><a name="index-LineTable_002esource_005flines-2325"></a></var><br>
+&mdash; Function: <b>LineTable.source_lines</b> ()<var><a name="index-LineTable_002esource_005flines-2341"></a></var><br>
 <blockquote><p>Return a Python <code>List</code> of the source line numbers in the symbol
 table.  Only lines with executable code locations are returned.  The
 contents of the <code>List</code> will just be the source line entries

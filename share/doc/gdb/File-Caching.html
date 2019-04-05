@@ -48,17 +48,17 @@ Up:&nbsp;<a rel="up" accesskey="u" href="GDB-Files.html#GDB-Files">GDB Files</a>
 
 <h3 class="section">18.2 File Caching</h3>
 
-<p><a name="index-caching-of-opened-files-1244"></a><a name="index-caching-of-bfd-objects-1245"></a>
+<p><a name="index-caching-of-opened-files-1249"></a><a name="index-caching-of-bfd-objects-1250"></a>
 To speed up file loading, and reduce memory usage, <span class="sc">gdb</span> will
 reuse the <code>bfd</code> objects used to track open files.  See <a href="../bfd/index.html#Top">BFD</a>.  The following commands
 allow visibility and control of the caching behavior.
 
      
-<a name="index-maint-info-bfds-1246"></a>
+<a name="index-maint-info-bfds-1251"></a>
 <dl><dt><code>maint info bfds</code><dd>This prints information about each <code>bfd</code> object that is known to
 <span class="sc">gdb</span>.
 
-     <p><a name="index-maint-set-bfd_002dsharing-1247"></a><a name="index-maint-show-bfd_002dsharing-1248"></a><a name="index-bfd-caching-1249"></a><br><dt><code>maint set bfd-sharing</code><br><dt><code>maint show bfd-sharing</code><dd>Control whether <code>bfd</code> objects can be shared.  When sharing is
+     <p><a name="index-maint-set-bfd_002dsharing-1252"></a><a name="index-maint-show-bfd_002dsharing-1253"></a><a name="index-bfd-caching-1254"></a><br><dt><code>maint set bfd-sharing</code><br><dt><code>maint show bfd-sharing</code><dd>Control whether <code>bfd</code> objects can be shared.  When sharing is
 enabled <span class="sc">gdb</span> reuses already open <code>bfd</code> objects rather
 than reopening the same file.  Turning sharing off does not cause
 already shared <code>bfd</code> objects to be unshared, but all future files
@@ -66,9 +66,9 @@ that are opened will create a new <code>bfd</code> object.  Similarly,
 re-enabling sharing does not cause multiple existing <code>bfd</code>
 objects to be collapsed into a single shared <code>bfd</code> object.
 
-     <p><a name="index-set-debug-bfd_002dcache-_0040var_007blevel_007d-1250"></a><a name="index-bfd-caching-1251"></a><br><dt><code>set debug bfd-cache </code><var>level</var><dd>Turns on debugging of the bfd cache, setting the level to <var>level</var>.
+     <p><a name="index-set-debug-bfd_002dcache-_0040var_007blevel_007d-1255"></a><a name="index-bfd-caching-1256"></a><br><dt><code>set debug bfd-cache </code><var>level</var><dd>Turns on debugging of the bfd cache, setting the level to <var>level</var>.
 
-     <p><a name="index-show-debug-bfd_002dcache-1252"></a><a name="index-bfd-caching-1253"></a><br><dt><code>show debug bfd-cache</code><dd>Show the current debugging level of the bfd cache. 
+     <p><a name="index-show-debug-bfd_002dcache-1257"></a><a name="index-bfd-caching-1258"></a><br><dt><code>show debug bfd-cache</code><dd>Show the current debugging level of the bfd cache. 
 </dl>
 
    </body></html>

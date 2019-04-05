@@ -6,7 +6,7 @@
 <meta name="generator" content="makeinfo 4.13">
 <link title="Top" rel="start" href="index.html#Top">
 <link rel="up" href="Native.html#Native" title="Native">
-<link rel="prev" href="SVR4-Process-Information.html#SVR4-Process-Information" title="SVR4 Process Information">
+<link rel="prev" href="Process-Information.html#Process-Information" title="Process Information">
 <link rel="next" href="Cygwin-Native.html#Cygwin-Native" title="Cygwin Native">
 <link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
 <!--
@@ -41,15 +41,15 @@ developing GNU and promoting software freedom.''
 <a name="DJGPP-Native"></a>
 <p>
 Next:&nbsp;<a rel="next" accesskey="n" href="Cygwin-Native.html#Cygwin-Native">Cygwin Native</a>,
-Previous:&nbsp;<a rel="previous" accesskey="p" href="SVR4-Process-Information.html#SVR4-Process-Information">SVR4 Process Information</a>,
+Previous:&nbsp;<a rel="previous" accesskey="p" href="Process-Information.html#Process-Information">Process Information</a>,
 Up:&nbsp;<a rel="up" accesskey="u" href="Native.html#Native">Native</a>
 <hr>
 </div>
 
 <h4 class="subsection">21.1.3 Features for Debugging <span class="sc">djgpp</span> Programs</h4>
 
-<p><a name="index-g_t_0040sc_007bdjgpp_007d-debugging-1443"></a><a name="index-native-_0040sc_007bdjgpp_007d-debugging-1444"></a><a name="index-MS_002dDOS_002dspecific-commands-1445"></a>
-<a name="index-DPMI-1446"></a><span class="sc">djgpp</span> is a port of the <span class="sc">gnu</span> development tools to MS-DOS and
+<p><a name="index-g_t_0040sc_007bdjgpp_007d-debugging-1448"></a><a name="index-native-_0040sc_007bdjgpp_007d-debugging-1449"></a><a name="index-MS_002dDOS_002dspecific-commands-1450"></a>
+<a name="index-DPMI-1451"></a><span class="sc">djgpp</span> is a port of the <span class="sc">gnu</span> development tools to MS-DOS and
 MS-Windows.  <span class="sc">djgpp</span> programs are 32-bit protected-mode programs
 that use the <dfn>DPMI</dfn> (DOS Protected-Mode Interface) API to run on
 top of real-mode DOS systems and their emulations.
@@ -59,15 +59,15 @@ defines a few commands specific to the <span class="sc">djgpp</span> port.  This
 subsection describes those commands.
 
      
-<a name="index-info-dos-1447"></a>
+<a name="index-info-dos-1452"></a>
 <dl><dt><code>info dos</code><dd>This is a prefix of <span class="sc">djgpp</span>-specific commands which print
 information about the target system and important OS structures.
 
-     <p><a name="index-sysinfo-1448"></a><a name="index-MS_002dDOS-system-info-1449"></a><a name="index-free-memory-information-_0028MS_002dDOS_0029-1450"></a><br><dt><code>info dos sysinfo</code><dd>This command displays assorted information about the underlying
+     <p><a name="index-sysinfo-1453"></a><a name="index-MS_002dDOS-system-info-1454"></a><a name="index-free-memory-information-_0028MS_002dDOS_0029-1455"></a><br><dt><code>info dos sysinfo</code><dd>This command displays assorted information about the underlying
 platform: the CPU type and features, the OS version and flavor, the
 DPMI version, and the available conventional and DPMI memory.
 
-     <p><a name="index-GDT-1451"></a><a name="index-LDT-1452"></a><a name="index-IDT-1453"></a><a name="index-segment-descriptor-tables-1454"></a><a name="index-descriptor-tables-display-1455"></a><br><dt><code>info dos gdt</code><dt><code>info dos ldt</code><dt><code>info dos idt</code><dd>These 3 commands display entries from, respectively, Global, Local,
+     <p><a name="index-GDT-1456"></a><a name="index-LDT-1457"></a><a name="index-IDT-1458"></a><a name="index-segment-descriptor-tables-1459"></a><a name="index-descriptor-tables-display-1460"></a><br><dt><code>info dos gdt</code><dt><code>info dos ldt</code><dt><code>info dos idt</code><dd>These 3 commands display entries from, respectively, Global, Local,
 and Interrupt Descriptor Tables (GDT, LDT, and IDT).  The descriptor
 tables are data structures which store a descriptor for each segment
 that is currently in use.  The segment's selector is an index into a
@@ -81,7 +81,7 @@ allows access to DOS/BIOS data structures and absolute addresses in
 conventional memory).  However, the DPMI host will usually define
 additional segments in order to support the DPMI environment.
 
-     <p><a name="index-garbled-pointers-1456"></a>These commands allow to display entries from the descriptor tables. 
+     <p><a name="index-garbled-pointers-1461"></a>These commands allow to display entries from the descriptor tables. 
 Without an argument, all entries from the specified table are
 displayed.  An argument, which should be an integer expression, means
 display a single entry whose index is given by the argument.  For
@@ -94,7 +94,7 @@ debugged program's data segment:
      <p class="noindent">This comes in handy when you want to see whether a pointer is outside
 the data segment's limit (i.e. <dfn>garbled</dfn>).
 
-     <p><a name="index-page-tables-display-_0028MS_002dDOS_0029-1457"></a><br><dt><code>info dos pde</code><dt><code>info dos pte</code><dd>These two commands display entries from, respectively, the Page
+     <p><a name="index-page-tables-display-_0028MS_002dDOS_0029-1462"></a><br><dt><code>info dos pde</code><dt><code>info dos pte</code><dd>These two commands display entries from, respectively, the Page
 Directory and the Page Tables.  Page Directories and Page Tables are
 data structures which control how virtual memory addresses are mapped
 into physical addresses.  A Page Table includes an entry for every
@@ -111,13 +111,13 @@ Directory table.  An argument given to the <kbd>info dos pte</kbd> command
 means display entries from a single Page Table, the one pointed to by
 the specified entry in the Page Directory.
 
-     <p><a name="index-direct-memory-access-_0028DMA_0029-on-MS_002dDOS-1458"></a>These commands are useful when your program uses <dfn>DMA</dfn> (Direct
+     <p><a name="index-direct-memory-access-_0028DMA_0029-on-MS_002dDOS-1463"></a>These commands are useful when your program uses <dfn>DMA</dfn> (Direct
 Memory Access), which needs physical addresses to program the DMA
 controller.
 
      <p>These commands are supported only with some DPMI servers.
 
-     <p><a name="index-physical-address-from-linear-address-1459"></a><br><dt><code>info dos address-pte </code><var>addr</var><dd>This command displays the Page Table entry for a specified linear
+     <p><a name="index-physical-address-from-linear-address-1464"></a><br><dt><code>info dos address-pte </code><var>addr</var><dd>This command displays the Page Table entry for a specified linear
 address.  The argument <var>addr</var> is a linear address which should
 already have the appropriate segment's base address added to it,
 because this command accepts addresses which may belong to <em>any</em>
@@ -155,19 +155,19 @@ linear (<code>0x29110</code>) addresses are identical.
      <p>This command is supported only with some DPMI servers. 
 </dl>
 
-   <p><a name="index-DOS-serial-data-link_002c-remote-debugging-1460"></a>In addition to native debugging, the DJGPP port supports remote
+   <p><a name="index-DOS-serial-data-link_002c-remote-debugging-1465"></a>In addition to native debugging, the DJGPP port supports remote
 debugging via a serial data link.  The following commands are specific
 to remote serial debugging in the DJGPP port of <span class="sc">gdb</span>.
 
      
-<a name="index-set-com1base-1461"></a>
-<a name="index-set-com1irq-1462"></a>
-<a name="index-set-com2base-1463"></a>
-<a name="index-set-com2irq-1464"></a>
-<a name="index-set-com3base-1465"></a>
-<a name="index-set-com3irq-1466"></a>
-<a name="index-set-com4base-1467"></a>
-<a name="index-set-com4irq-1468"></a>
+<a name="index-set-com1base-1466"></a>
+<a name="index-set-com1irq-1467"></a>
+<a name="index-set-com2base-1468"></a>
+<a name="index-set-com2irq-1469"></a>
+<a name="index-set-com3base-1470"></a>
+<a name="index-set-com3irq-1471"></a>
+<a name="index-set-com4base-1472"></a>
+<a name="index-set-com4irq-1473"></a>
 <dl><dt><code>set com1base </code><var>addr</var><dd>This command sets the base I/O port address of the <samp><span class="file">COM1</span></samp> serial
 port.
 
@@ -178,11 +178,11 @@ for the <samp><span class="file">COM1</span></samp> serial port.
 etc. for setting the port address and the <code>IRQ</code> lines for the
 other 3 COM ports.
 
-     <p><a name="index-show-com1base-1469"></a><a name="index-show-com1irq-1470"></a><a name="index-show-com2base-1471"></a><a name="index-show-com2irq-1472"></a><a name="index-show-com3base-1473"></a><a name="index-show-com3irq-1474"></a><a name="index-show-com4base-1475"></a><a name="index-show-com4irq-1476"></a>The related commands &lsquo;<samp><span class="samp">show com1base</span></samp>&rsquo;, &lsquo;<samp><span class="samp">show com1irq</span></samp>&rsquo; etc. 
+     <p><a name="index-show-com1base-1474"></a><a name="index-show-com1irq-1475"></a><a name="index-show-com2base-1476"></a><a name="index-show-com2irq-1477"></a><a name="index-show-com3base-1478"></a><a name="index-show-com3irq-1479"></a><a name="index-show-com4base-1480"></a><a name="index-show-com4irq-1481"></a>The related commands &lsquo;<samp><span class="samp">show com1base</span></samp>&rsquo;, &lsquo;<samp><span class="samp">show com1irq</span></samp>&rsquo; etc. 
 display the current settings of the base address and the <code>IRQ</code>
 lines used by the COM ports.
 
-     <br><dt><code>info serial</code><dd><a name="index-info-serial-1477"></a><a name="index-DOS-serial-port-status-1478"></a>This command prints the status of the 4 DOS serial ports.  For each
+     <br><dt><code>info serial</code><dd><a name="index-info-serial-1482"></a><a name="index-DOS-serial-port-status-1483"></a>This command prints the status of the 4 DOS serial ports.  For each
 port, it prints whether it's active or not, its I/O base address and
 IRQ number, whether it uses a 16550-style FIFO, its baudrate, and the
 counts of various errors encountered so far. 

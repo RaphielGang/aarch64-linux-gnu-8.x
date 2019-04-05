@@ -1,5 +1,5 @@
 This is doc/gccint.info, produced by makeinfo version 4.13 from
-/tmp/dgboter/bbs/rhev-vm3--rhe6x86_64/buildbot/rhe6x86_64--aarch64-linux-gnu/build/src/gcc/gcc/doc/gccint.texi.
+/tmp/dgboter/bbs/rhev-vm8--rhe6x86_64/buildbot/rhe6x86_64--aarch64-linux-gnu/build/src/gcc/gcc/doc/gccint.texi.
 
 Copyright (C) 1988-2018 Free Software Foundation, Inc.
 
@@ -57,8 +57,8 @@ Introduction
 This manual documents the internals of the GNU compilers, including how
 to port them to new targets and some information about how to write
 front ends for new languages.  It corresponds to the compilers
-(GNU Toolchain for the A-profile Architecture 8.2-2019.01
-(arm-rel-8.28)) version 8.2.1.  The use of the GNU compilers is
+(GNU Toolchain for the A-profile Architecture 8.3-2019.03
+(arm-rel-8.36)) version 8.3.0.  The use of the GNU compilers is
 documented in a separate manual.  *Note Introduction: (gcc)Top.
 
  This manual is mainly a reference manual rather than a tutorial.  It

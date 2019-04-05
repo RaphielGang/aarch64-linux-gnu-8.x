@@ -48,7 +48,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Altering.html#Altering">Altering</a>
 
 <h3 class="section">17.6 Patching Programs</h3>
 
-<p><a name="index-patching-binaries-1167"></a><a name="index-writing-into-executables-1168"></a><a name="index-writing-into-corefiles-1169"></a>
+<p><a name="index-patching-binaries-1172"></a><a name="index-writing-into-executables-1173"></a><a name="index-writing-into-corefiles-1174"></a>
 By default, <span class="sc">gdb</span> opens the file containing your program's
 executable code (or the corefile) read-only.  This prevents accidental
 alterations to machine code; but it also prevents you from intentionally
@@ -60,7 +60,7 @@ want to turn on internal debugging flags, or even to make emergency
 repairs.
 
      
-<a name="index-set-write-1170"></a>
+<a name="index-set-write-1175"></a>
 <dl><dt><code>set write on</code><dt><code>set write off</code><dd>If you specify &lsquo;<samp><span class="samp">set write on</span></samp>&rsquo;, <span class="sc">gdb</span> opens executable and
 core files for both reading and writing; if you specify <kbd>set write
 off</kbd> (the default), <span class="sc">gdb</span> opens them read-only.
@@ -69,7 +69,7 @@ off</kbd> (the default), <span class="sc">gdb</span> opens them read-only.
 <code>exec-file</code> or <code>core-file</code> command) after changing <code>set
 write</code>, for your new setting to take effect.
 
-     <br><dt><code>show write</code><dd><a name="index-show-write-1171"></a>Display whether executable files and core files are opened for writing
+     <br><dt><code>show write</code><dd><a name="index-show-write-1176"></a>Display whether executable files and core files are opened for writing
 as well as reading. 
 </dl>
 

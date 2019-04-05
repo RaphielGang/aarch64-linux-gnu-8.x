@@ -46,14 +46,14 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Altering.html#Altering">Altering</a>
 
 <h3 class="section">17.7 Compiling and injecting code in <span class="sc">gdb</span></h3>
 
-<p><a name="index-injecting-code-1172"></a><a name="index-writing-into-executables-1173"></a><a name="index-compiling-code-1174"></a>
+<p><a name="index-injecting-code-1177"></a><a name="index-writing-into-executables-1178"></a><a name="index-compiling-code-1179"></a>
 <span class="sc">gdb</span> supports on-demand compilation and code injection into
 programs running under <span class="sc">gdb</span>.  GCC 5.0 or higher built with
 <samp><span class="file">libcc1.so</span></samp> must be installed for this functionality to be enabled. 
 This functionality is implemented with the following commands.
 
      
-<a name="index-compile-code-1175"></a>
+<a name="index-compile-code-1180"></a>
 <dl><dt><code>compile code </code><var>source-code</var><dt><code>compile code -raw </code><var>&ndash;</var> <var>source-code</var><dd>Compile <var>source-code</var> with the compiler language found as the current
 language in <span class="sc">gdb</span> (see <a href="Languages.html#Languages">Languages</a>).  If compilation and
 injection is not supported with the current language specified in
@@ -97,7 +97,7 @@ inferior.  Using &lsquo;<samp><span class="samp">-raw</span></samp>&rsquo; optio
 <var>source-code</var> requires &lsquo;<samp><span class="samp">#include</span></samp>&rsquo; lines which may conflict with
 inferior symbols otherwise.
 
-     <p><a name="index-compile-file-1176"></a><br><dt><code>compile file </code><var>filename</var><dt><code>compile file -raw </code><var>filename</var><dd>Like <code>compile code</code>, but take the source code from <var>filename</var>.
+     <p><a name="index-compile-file-1181"></a><br><dt><code>compile file </code><var>filename</var><dt><code>compile file -raw </code><var>filename</var><dd>Like <code>compile code</code>, but take the source code from <var>filename</var>.
 
      <pre class="smallexample">          compile file /home/user/example.c
 </pre>
@@ -110,7 +110,7 @@ value of <var>expr</var> is printed in a format appropriate to its data type;
 you can choose a different format by specifying &lsquo;<samp><span class="samp">/</span><var>f</var></samp>&rsquo;, where
 <var>f</var> is a letter specifying the format; see <a href="Output-Formats.html#Output-Formats">Output Formats</a>.
 
-     <br><dt><code>compile print</code><dt><code>compile print /</code><var>f</var><dd><a name="index-reprint-the-last-value-1177"></a>Alternatively you can enter the expression (source code producing it) as
+     <br><dt><code>compile print</code><dt><code>compile print /</code><var>f</var><dd><a name="index-reprint-the-last-value-1182"></a>Alternatively you can enter the expression (source code producing it) as
 multiple lines of text.  To enter this mode, invoke the &lsquo;<samp><span class="samp">compile print</span></samp>&rsquo;
 command without any text following the command.  This will start the
 multiple-line editor. 
@@ -119,7 +119,7 @@ multiple-line editor.
 <p class="noindent">The process of compiling and injecting the code can be inspected using:
 
      <dl>
-<a name="set-debug-compile"></a><dt><code>set debug compile</code><dd><a name="index-compile-command-debugging-info-1178"></a>Turns on or off display of <span class="sc">gdb</span> process of compiling and
+<a name="set-debug-compile"></a><dt><code>set debug compile</code><dd><a name="index-compile-command-debugging-info-1183"></a>Turns on or off display of <span class="sc">gdb</span> process of compiling and
 injecting the code.  The default is off.
 
      <br><dt><code>show debug compile</code><dd>Displays the current state of displaying <span class="sc">gdb</span> process of
@@ -153,7 +153,7 @@ try to enforce DWARF by using <code>-gdwarf-4</code>.
 <p class="noindent">You can override compilation options using the following command:
 
      <dl>
-<dt><code>set compile-args</code><dd><a name="index-compile-command-options-override-1179"></a>Set compilation options used for compiling and injecting code with the
+<dt><code>set compile-args</code><dd><a name="index-compile-command-options-override-1184"></a>Set compilation options used for compiling and injecting code with the
 <code>compile</code> commands.  These options override any conflicting ones
 from the target architecture and/or options stored during inferior
 compilation.
@@ -328,7 +328,7 @@ according to the installation of the found compiler &mdash; as possibly
 specified by the <code>set compile-gcc</code> command.
 
      <dl>
-<dt><code>set compile-gcc</code><dd><a name="index-compile-command-driver-filename-override-1180"></a>Set compilation command used for compiling and injecting code with the
+<dt><code>set compile-gcc</code><dd><a name="index-compile-command-driver-filename-override-1185"></a>Set compilation command used for compiling and injecting code with the
 <code>compile</code> commands.  If this option is not set (it is set to
 an empty string), the search described above will occur &mdash; that is the
 default.

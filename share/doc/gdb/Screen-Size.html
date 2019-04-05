@@ -48,15 +48,17 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Controlling-GDB.html#Controlling-GDB">C
 
 <h3 class="section">22.4 Screen Size</h3>
 
-<p><a name="index-size-of-screen-1651"></a><a name="index-screen-size-1652"></a><a name="index-pagination-1653"></a><a name="index-page-size-1654"></a><a name="index-pauses-in-output-1655"></a>
+<p><a name="index-size-of-screen-1657"></a><a name="index-screen-size-1658"></a><a name="index-pagination-1659"></a><a name="index-page-size-1660"></a><a name="index-pauses-in-output-1661"></a>
 Certain commands to <span class="sc">gdb</span> may produce large amounts of
 information output to the screen.  To help you read all of it,
 <span class="sc">gdb</span> pauses and asks you for input at the end of each page of
-output.  Type &lt;RET&gt; when you want to continue the output, or <kbd>q</kbd>
-to discard the remaining output.  Also, the screen width setting
-determines when to wrap lines of output.  Depending on what is being
-printed, <span class="sc">gdb</span> tries to break the line at a readable place,
-rather than simply letting it overflow onto the following line.
+output.  Type &lt;RET&gt; when you want to see one more page of output,
+<kbd>q</kbd> to discard the remaining output, or <kbd>c</kbd> to continue
+without paging for the rest of the current command.  Also, the screen
+width setting determines when to wrap lines of output.  Depending on
+what is being printed, <span class="sc">gdb</span> tries to break the line at a
+readable place, rather than simply letting it overflow onto the
+following line.
 
    <p>Normally <span class="sc">gdb</span> knows the size of the screen from the terminal
 driver software.  For example, on Unix <span class="sc">gdb</span> uses the termcap data base
@@ -66,10 +68,10 @@ you can override it with the <code>set height</code> and <code>set
 width</code> commands:
 
      
-<a name="index-set-height-1656"></a>
-<a name="index-set-width-1657"></a>
-<a name="index-show-width-1658"></a>
-<a name="index-show-height-1659"></a>
+<a name="index-set-height-1662"></a>
+<a name="index-set-width-1663"></a>
+<a name="index-show-width-1664"></a>
+<a name="index-show-height-1665"></a>
 <dl><dt><code>set height </code><var>lpp</var><dt><code>set height unlimited</code><dt><code>show height</code><dt><code>set width </code><var>cpl</var><dt><code>set width unlimited</code><dt><code>show width</code><dd>These <code>set</code> commands specify a screen height of <var>lpp</var> lines and
 a screen width of <var>cpl</var> characters.  The associated <code>show</code>
 commands display the current settings.
@@ -82,11 +84,11 @@ buffer.
      <p>Likewise, you can specify &lsquo;<samp><span class="samp">set width unlimited</span></samp>&rsquo; or &lsquo;<samp><span class="samp">set
 width 0</span></samp>&rsquo; to prevent <span class="sc">gdb</span> from wrapping its output.
 
-     <br><dt><code>set pagination on</code><dt><code>set pagination off</code><dd><a name="index-set-pagination-1660"></a>Turn the output pagination on or off; the default is on.  Turning
+     <br><dt><code>set pagination on</code><dt><code>set pagination off</code><dd><a name="index-set-pagination-1666"></a>Turn the output pagination on or off; the default is on.  Turning
 pagination off is the alternative to <code>set height unlimited</code>.  Note that
 running <span class="sc">gdb</span> with the <samp><span class="option">--batch</span></samp> option (see <a href="Mode-Options.html#Mode-Options">-batch</a>) also automatically disables pagination.
 
-     <br><dt><code>show pagination</code><dd><a name="index-show-pagination-1661"></a>Show the current pagination mode. 
+     <br><dt><code>show pagination</code><dd><a name="index-show-pagination-1667"></a>Show the current pagination mode. 
 </dl>
 
    </body></html>

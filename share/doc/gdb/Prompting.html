@@ -48,7 +48,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Annotations.html#Annotations">Annotatio
 
 <h3 class="section">28.3 Annotation for <span class="sc">gdb</span> Input</h3>
 
-<p><a name="index-annotations-for-prompts-3052"></a>When <span class="sc">gdb</span> prompts for input, it annotates this fact so it is possible
+<p><a name="index-annotations-for-prompts-3069"></a>When <span class="sc">gdb</span> prompts for input, it annotates this fact so it is possible
 to know when to send output, when the output from a given command is
 over, etc.
 
@@ -67,19 +67,19 @@ features the following annotations:
    <p>The input types are
 
      
-<a name="index-pre_002dprompt-annotation-3053"></a>
-<a name="index-prompt-annotation-3054"></a>
-<a name="index-post_002dprompt-annotation-3055"></a>
+<a name="index-pre_002dprompt-annotation-3070"></a>
+<a name="index-prompt-annotation-3071"></a>
+<a name="index-post_002dprompt-annotation-3072"></a>
 <dl><dt><code>prompt</code><dd>When <span class="sc">gdb</span> is prompting for a command (the main <span class="sc">gdb</span> prompt).
 
-     <p><a name="index-pre_002dcommands-annotation-3056"></a><a name="index-commands-annotation-3057"></a><a name="index-post_002dcommands-annotation-3058"></a><br><dt><code>commands</code><dd>When <span class="sc">gdb</span> prompts for a set of commands, like in the <code>commands</code>
+     <p><a name="index-pre_002dcommands-annotation-3073"></a><a name="index-commands-annotation-3074"></a><a name="index-post_002dcommands-annotation-3075"></a><br><dt><code>commands</code><dd>When <span class="sc">gdb</span> prompts for a set of commands, like in the <code>commands</code>
 command.  The annotations are repeated for each command which is input.
 
-     <p><a name="index-pre_002doverload_002dchoice-annotation-3059"></a><a name="index-overload_002dchoice-annotation-3060"></a><a name="index-post_002doverload_002dchoice-annotation-3061"></a><br><dt><code>overload-choice</code><dd>When <span class="sc">gdb</span> wants the user to select between various overloaded functions.
+     <p><a name="index-pre_002doverload_002dchoice-annotation-3076"></a><a name="index-overload_002dchoice-annotation-3077"></a><a name="index-post_002doverload_002dchoice-annotation-3078"></a><br><dt><code>overload-choice</code><dd>When <span class="sc">gdb</span> wants the user to select between various overloaded functions.
 
-     <p><a name="index-pre_002dquery-annotation-3062"></a><a name="index-query-annotation-3063"></a><a name="index-post_002dquery-annotation-3064"></a><br><dt><code>query</code><dd>When <span class="sc">gdb</span> wants the user to confirm a potentially dangerous operation.
+     <p><a name="index-pre_002dquery-annotation-3079"></a><a name="index-query-annotation-3080"></a><a name="index-post_002dquery-annotation-3081"></a><br><dt><code>query</code><dd>When <span class="sc">gdb</span> wants the user to confirm a potentially dangerous operation.
 
-     <p><a name="index-pre_002dprompt_002dfor_002dcontinue-annotation-3065"></a><a name="index-prompt_002dfor_002dcontinue-annotation-3066"></a><a name="index-post_002dprompt_002dfor_002dcontinue-annotation-3067"></a><br><dt><code>prompt-for-continue</code><dd>When <span class="sc">gdb</span> is asking the user to press return to continue.  Note: Don't
+     <p><a name="index-pre_002dprompt_002dfor_002dcontinue-annotation-3082"></a><a name="index-prompt_002dfor_002dcontinue-annotation-3083"></a><a name="index-post_002dprompt_002dfor_002dcontinue-annotation-3084"></a><br><dt><code>prompt-for-continue</code><dd>When <span class="sc">gdb</span> is asking the user to press return to continue.  Note: Don't
 expect this to work well; instead use <code>set height 0</code> to disable
 prompting.  This is because the counting of lines is buggy in the
 presence of annotations. 

@@ -11,7 +11,7 @@
 <!--
 This file documents the GNU Assembler "as".
 
-Copyright (C) 1991-2018 Free Software Foundation, Inc.
+Copyright (C) 1991-2019 Free Software Foundation, Inc.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3
@@ -45,12 +45,12 @@ Up:&nbsp;<a rel="up" accesskey="u" href="S_002f390_002dDependent.html#S_002f390_
 
 <h4 class="subsection">9.40.1 Options</h4>
 
-<p><a name="index-options-for-s390-1948"></a><a name="index-s390-options-1949"></a>
+<p><a name="index-options-for-s390-2028"></a><a name="index-s390-options-2029"></a>
 The following table lists all available s390 specific options:
 
      
-<a name="index-g_t_0040samp_007b_002dm31_007d-option_002c-s390-1950"></a>
-<a name="index-g_t_0040samp_007b_002dm64_007d-option_002c-s390-1951"></a>
+<a name="index-g_t_0040samp_007b_002dm31_007d-option_002c-s390-2030"></a>
+<a name="index-g_t_0040samp_007b_002dm64_007d-option_002c-s390-2031"></a>
 <dl><dt><code>-m31 | -m64</code><dd>Select 31- or 64-bit ABI implying a word size of 32- or 64-bit.
 
      <p>These options are only available with the ELF object file format, and
@@ -58,14 +58,14 @@ require that the necessary BFD support has been included (on a 31-bit
 platform you must add &ndash;enable-64-bit-bfd on the call to the configure
 script to enable 64-bit usage and use s390x as target platform).
 
-     <p><a name="index-g_t_0040samp_007b_002dmesa_007d-option_002c-s390-1952"></a><a name="index-g_t_0040samp_007b_002dmzarch_007d-option_002c-s390-1953"></a><br><dt><code>-mesa | -mzarch</code><dd>Select the architecture mode, either the Enterprise System Architecture
+     <p><a name="index-g_t_0040samp_007b_002dmesa_007d-option_002c-s390-2032"></a><a name="index-g_t_0040samp_007b_002dmzarch_007d-option_002c-s390-2033"></a><br><dt><code>-mesa | -mzarch</code><dd>Select the architecture mode, either the Enterprise System Architecture
 (esa) mode or the z/Architecture mode (zarch).
 
      <p>The 64-bit instructions are only available with the z/Architecture mode. 
 The combination of &lsquo;<samp><span class="samp">-m64</span></samp>&rsquo; and &lsquo;<samp><span class="samp">-mesa</span></samp>&rsquo; results in a warning
 message.
 
-     <p><a name="index-g_t_0040samp_007b_002dmarch_003d_007d-option_002c-s390-1954"></a><br><dt><code>-march=</code><var>CPU</var><dd>This option specifies the target processor. The following processor names
+     <p><a name="index-g_t_0040samp_007b_002dmarch_003d_007d-option_002c-s390-2034"></a><br><dt><code>-march=</code><var>CPU</var><dd>This option specifies the target processor. The following processor names
 are recognized:
 <code>g5</code> (or <code>arch3</code>),
 <code>g6</code>,
@@ -75,8 +75,10 @@ are recognized:
 <code>z9-ec</code> (or <code>arch7</code>),
 <code>z10</code> (or <code>arch8</code>),
 <code>z196</code> (or <code>arch9</code>),
-<code>zEC12</code> (or <code>arch10</code>) and
-<code>z13</code> (or <code>arch11</code>).
+<code>zEC12</code> (or <code>arch10</code>),
+<code>z13</code> (or <code>arch11</code>),
+<code>z14</code> (or <code>arch12</code>), and
+<code>arch13</code>).
 
      <p>Assembling an instruction that is not supported on the target
 processor results in an error message.
@@ -93,11 +95,11 @@ on these processor levels.
      <p>There is no <code>arch4</code> option supported. <code>arch4</code> matches
 <code>-march=arch5 -mesa</code>.
 
-     <p><a name="index-g_t_0040samp_007b_002dmregnames_007d-option_002c-s390-1955"></a><br><dt><code>-mregnames</code><dd>Allow symbolic names for registers.
+     <p><a name="index-g_t_0040samp_007b_002dmregnames_007d-option_002c-s390-2035"></a><br><dt><code>-mregnames</code><dd>Allow symbolic names for registers.
 
-     <p><a name="index-g_t_0040samp_007b_002dmno_002dregnames_007d-option_002c-s390-1956"></a><br><dt><code>-mno-regnames</code><dd>Do not allow symbolic names for registers.
+     <p><a name="index-g_t_0040samp_007b_002dmno_002dregnames_007d-option_002c-s390-2036"></a><br><dt><code>-mno-regnames</code><dd>Do not allow symbolic names for registers.
 
-     <p><a name="index-g_t_0040samp_007b_002dmwarn_002dareg_002dzero_007d-option_002c-s390-1957"></a><br><dt><code>-mwarn-areg-zero</code><dd>Warn whenever the operand for a base or index register has been specified
+     <p><a name="index-g_t_0040samp_007b_002dmwarn_002dareg_002dzero_007d-option_002c-s390-2037"></a><br><dt><code>-mwarn-areg-zero</code><dd>Warn whenever the operand for a base or index register has been specified
 but evaluates to zero. This can indicate the misuse of general purpose
 register 0 as an address register.
 

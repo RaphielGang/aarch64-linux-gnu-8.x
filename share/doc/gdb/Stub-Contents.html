@@ -46,15 +46,15 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Remote-Stub.html#Remote-Stub">Remote St
 
 <h4 class="subsection">20.5.1 What the Stub Can Do for You</h4>
 
-<p><a name="index-remote-serial-stub-1401"></a>The debugging stub for your architecture supplies these three
+<p><a name="index-remote-serial-stub-1406"></a>The debugging stub for your architecture supplies these three
 subroutines:
 
      <dl>
-<dt><code>set_debug_traps</code><dd><a name="index-set_005fdebug_005ftraps-1402"></a><a name="index-remote-serial-stub_002c-initialization-1403"></a>This routine arranges for <code>handle_exception</code> to run when your
+<dt><code>set_debug_traps</code><dd><a name="index-set_005fdebug_005ftraps-1407"></a><a name="index-remote-serial-stub_002c-initialization-1408"></a>This routine arranges for <code>handle_exception</code> to run when your
 program stops.  You must call this subroutine explicitly in your
 program's startup code.
 
-     <br><dt><code>handle_exception</code><dd><a name="index-handle_005fexception-1404"></a><a name="index-remote-serial-stub_002c-main-routine-1405"></a>This is the central workhorse, but your program never calls it
+     <br><dt><code>handle_exception</code><dd><a name="index-handle_005fexception-1409"></a><a name="index-remote-serial-stub_002c-main-routine-1410"></a>This is the central workhorse, but your program never calls it
 explicitly&mdash;the setup code arranges for <code>handle_exception</code> to
 run when a trap is triggered.
 
@@ -69,7 +69,7 @@ execute a <span class="sc">gdb</span> command that makes your program resume; at
 <code>handle_exception</code> returns control to your own code on the target
 machine.
 
-     <br><dt><code>breakpoint</code><dd><a name="index-g_t_0040code_007bbreakpoint_007d-subroutine_002c-remote-1406"></a>Use this auxiliary subroutine to make your program contain a
+     <br><dt><code>breakpoint</code><dd><a name="index-g_t_0040code_007bbreakpoint_007d-subroutine_002c-remote-1411"></a>Use this auxiliary subroutine to make your program contain a
 breakpoint.  Depending on the particular situation, this may be the only
 way for <span class="sc">gdb</span> to get control.  For instance, if your target
 machine has some sort of interrupt button, you won't need to call this;

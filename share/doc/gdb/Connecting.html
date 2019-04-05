@@ -46,7 +46,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Remote-Debugging.html#Remote-Debugging"
 
 <h3 class="section">20.1 Connecting to a Remote Target</h3>
 
-<p><a name="index-remote-debugging_002c-connecting-1311"></a><a name="index-g_t_0040code_007bgdbserver_007d_002c-connecting-1312"></a><a name="index-remote-debugging_002c-types-of-connections-1313"></a><a name="index-g_t_0040code_007bgdbserver_007d_002c-types-of-connections-1314"></a><a name="index-g_t_0040code_007bgdbserver_007d_002c-_0040code_007btarget-remote_007d-mode-1315"></a><a name="index-g_t_0040code_007bgdbserver_007d_002c-_0040code_007btarget-extended_002dremote_007d-mode-1316"></a>
+<p><a name="index-remote-debugging_002c-connecting-1316"></a><a name="index-g_t_0040code_007bgdbserver_007d_002c-connecting-1317"></a><a name="index-remote-debugging_002c-types-of-connections-1318"></a><a name="index-g_t_0040code_007bgdbserver_007d_002c-types-of-connections-1319"></a><a name="index-g_t_0040code_007bgdbserver_007d_002c-_0040code_007btarget-remote_007d-mode-1320"></a><a name="index-g_t_0040code_007bgdbserver_007d_002c-_0040code_007btarget-extended_002dremote_007d-mode-1321"></a>
 This section describes how to connect to a remote target, including the
 types of connections and their differences, how to set up executable and
 symbol files on the host and target, and the commands used for
@@ -60,7 +60,7 @@ support only <code>target remote</code> mode.  There are several major
 differences between the two types of connections, enumerated here:
 
      
-<a name="index-remote-debugging_002c-detach-and-program-exit-1317"></a>
+<a name="index-remote-debugging_002c-detach-and-program-exit-1322"></a>
 <dl><dt>Result of detach or program exit<dd><strong>With target remote mode:</strong> When the debugged program exits or you
 detach from it, <span class="sc">gdb</span> disconnects from the target.  When using
 <code>gdbserver</code>, <code>gdbserver</code> will exit.
@@ -84,7 +84,7 @@ target.
 on the <code>gdbserver</code> command line or use the <samp><span class="option">--attach</span></samp> option
 (see <a href="Attaching-to-a-program.html#Attaching-to-a-program">Attaching to a Running Program</a>).
 
-     <p><a name="index-g_t_0040option_007b_002d_002dmulti_007d_002c-_0040code_007bgdbserver_007d-option-1318"></a><strong>With target extended-remote mode:</strong> You may specify the program to debug
+     <p><a name="index-g_t_0040option_007b_002d_002dmulti_007d_002c-_0040code_007bgdbserver_007d-option-1323"></a><strong>With target extended-remote mode:</strong> You may specify the program to debug
 on the <code>gdbserver</code> command line, or you can load the program or attach
 to it using <span class="sc">gdb</span> commands after connecting to <code>gdbserver</code>.
 
@@ -130,7 +130,7 @@ established.  If you are using <code>gdbserver</code>, you may also invoke
 
 <h4 class="subsection">20.1.2 Host and Target Files</h4>
 
-<p><a name="index-remote-debugging_002c-symbol-files-1319"></a><a name="index-symbol-files_002c-remote-debugging-1320"></a>
+<p><a name="index-remote-debugging_002c-symbol-files-1324"></a><a name="index-symbol-files_002c-remote-debugging-1325"></a>
 <span class="sc">gdb</span>, running on the host, needs access to symbol and debugging
 information for your program running on the target.  This requires
 access to an unstripped copy of your program, and possibly any associated
@@ -162,7 +162,7 @@ programs.
 
 <h4 class="subsection">20.1.3 Remote Connection Commands</h4>
 
-<p><a name="index-remote-connection-commands-1321"></a><span class="sc">gdb</span> can communicate with the target over a serial line, or
+<p><a name="index-remote-connection-commands-1326"></a><span class="sc">gdb</span> can communicate with the target over a serial line, or
 over an <acronym>IP</acronym> network using <acronym>TCP</acronym> or <acronym>UDP</acronym>.  In
 each case, <span class="sc">gdb</span> uses the same protocol for debugging your
 program; only the medium carrying the debugging packets varies.  The
@@ -171,7 +171,7 @@ establish a connection to the target.  Both commands accept the same
 arguments, which indicate the medium to use:
 
      <dl>
-<dt><code>target remote </code><var>serial-device</var><dt><code>target extended-remote </code><var>serial-device</var><dd><a name="index-serial-line_002c-_0040code_007btarget-remote_007d-1322"></a>Use <var>serial-device</var> to communicate with the target.  For example,
+<dt><code>target remote </code><var>serial-device</var><dt><code>target extended-remote </code><var>serial-device</var><dd><a name="index-serial-line_002c-_0040code_007btarget-remote_007d-1327"></a>Use <var>serial-device</var> to communicate with the target.  For example,
 to use a serial line connected to the device named <samp><span class="file">/dev/ttyb</span></samp>:
 
      <pre class="smallexample">          target remote /dev/ttyb
@@ -181,7 +181,7 @@ to use a serial line connected to the device named <samp><span class="file">/dev
 (see <a href="Remote-Configuration.html#Remote-Configuration">set serial baud</a>) before the
 <code>target</code> command.
 
-     <br><dt><code>target remote </code><var>host</var><code>:</code><var>port</var><dt><code>target remote tcp:</code><var>host</var><code>:</code><var>port</var><dt><code>target extended-remote </code><var>host</var><code>:</code><var>port</var><dt><code>target extended-remote tcp:</code><var>host</var><code>:</code><var>port</var><dd><a name="index-g_t_0040acronym_007bTCP_007d-port_002c-_0040code_007btarget-remote_007d-1323"></a>Debug using a <acronym>TCP</acronym> connection to <var>port</var> on <var>host</var>. 
+     <br><dt><code>target remote </code><var>host</var><code>:</code><var>port</var><dt><code>target remote tcp:</code><var>host</var><code>:</code><var>port</var><dt><code>target extended-remote </code><var>host</var><code>:</code><var>port</var><dt><code>target extended-remote tcp:</code><var>host</var><code>:</code><var>port</var><dd><a name="index-g_t_0040acronym_007bTCP_007d-port_002c-_0040code_007btarget-remote_007d-1328"></a>Debug using a <acronym>TCP</acronym> connection to <var>port</var> on <var>host</var>. 
 The <var>host</var> may be either a host name or a numeric <acronym>IP</acronym>
 address; <var>port</var> must be a decimal number.  The <var>host</var> could be
 the target machine itself, if it is directly connected to the net, or
@@ -202,7 +202,7 @@ port 1234 on your local machine:
 </pre>
      <p class="noindent">Note that the colon is still required here.
 
-     <br><dt><code>target remote udp:</code><var>host</var><code>:</code><var>port</var><dt><code>target extended-remote udp:</code><var>host</var><code>:</code><var>port</var><dd><a name="index-g_t_0040acronym_007bUDP_007d-port_002c-_0040code_007btarget-remote_007d-1324"></a>Debug using <acronym>UDP</acronym> packets to <var>port</var> on <var>host</var>.  For example, to
+     <br><dt><code>target remote udp:</code><var>host</var><code>:</code><var>port</var><dt><code>target extended-remote udp:</code><var>host</var><code>:</code><var>port</var><dd><a name="index-g_t_0040acronym_007bUDP_007d-port_002c-_0040code_007btarget-remote_007d-1329"></a>Debug using <acronym>UDP</acronym> packets to <var>port</var> on <var>host</var>.  For example, to
 connect to <acronym>UDP</acronym> port 2828 on a terminal server named <code>manyfarms</code>:
 
      <pre class="smallexample">          target remote udp:manyfarms:2828
@@ -212,7 +212,7 @@ keep in mind that the `U' stands for &ldquo;Unreliable&rdquo;.  <acronym>UDP</ac
 can silently drop packets on busy or unreliable networks, which will
 cause havoc with your debugging session.
 
-     <br><dt><code>target remote | </code><var>command</var><dt><code>target extended-remote | </code><var>command</var><dd><a name="index-pipe_002c-_0040code_007btarget-remote_007d-to-1325"></a>Run <var>command</var> in the background and communicate with it using a
+     <br><dt><code>target remote | </code><var>command</var><dt><code>target extended-remote | </code><var>command</var><dd><a name="index-pipe_002c-_0040code_007btarget-remote_007d-to-1330"></a>Run <var>command</var> in the background and communicate with it using a
 pipe.  The <var>command</var> is a shell command, to be parsed and expanded
 by the system's command shell, <code>/bin/sh</code>; it should expect remote
 protocol packets on its standard input, and send replies on its
@@ -226,7 +226,7 @@ program has already exited, this will have no effect.)
 
    </dl>
 
-   <p><a name="index-interrupting-remote-programs-1326"></a><a name="index-remote-programs_002c-interrupting-1327"></a>Whenever <span class="sc">gdb</span> is waiting for the remote program, if you type the
+   <p><a name="index-interrupting-remote-programs-1331"></a><a name="index-remote-programs_002c-interrupting-1332"></a>Whenever <span class="sc">gdb</span> is waiting for the remote program, if you type the
 interrupt character (often <kbd>Ctrl-c</kbd>), <span class="sc">gdb</span> attempts to stop the
 program.  This may or may not succeed, depending in part on the hardware
 and the serial drivers the remote system uses.  If you type the
@@ -244,7 +244,7 @@ you can use <kbd>target remote</kbd> again to connect once more.)  If you type
 <span class="sc">gdb</span> connected to the target.
 
      
-<a name="index-detach-_0028remote_0029-1328"></a>
+<a name="index-detach-_0028remote_0029-1333"></a>
 <dl><dt><code>detach</code><dd>When you have finished debugging the remote program, you can use the
 <code>detach</code> command to release it from <span class="sc">gdb</span> control. 
 Detaching from the target normally resumes its execution, but the results
@@ -253,13 +253,13 @@ command in <code>target remote</code> mode, <span class="sc">gdb</span> is free 
 another target.  In <code>target extended-remote</code> mode, <span class="sc">gdb</span> is
 still connected to the target.
 
-     <p><a name="index-disconnect-1329"></a><br><dt><code>disconnect</code><dd>The <code>disconnect</code> command closes the connection to the target, and
+     <p><a name="index-disconnect-1334"></a><br><dt><code>disconnect</code><dd>The <code>disconnect</code> command closes the connection to the target, and
 the target is generally not resumed.  It will wait for <span class="sc">gdb</span>
 (this instance or another one) to connect and continue debugging.  After
 the <code>disconnect</code> command, <span class="sc">gdb</span> is again free to connect to
 another target.
 
-     <p><a name="index-send-command-to-remote-monitor-1330"></a><a name="index-extend-_0040value_007bGDBN_007d-for-remote-targets-1331"></a><a name="index-add-new-commands-for-external-monitor-1332"></a><a name="index-monitor-1333"></a><br><dt><code>monitor </code><var>cmd</var><dd>This command allows you to send arbitrary commands directly to the
+     <p><a name="index-send-command-to-remote-monitor-1335"></a><a name="index-extend-_0040value_007bGDBN_007d-for-remote-targets-1336"></a><a name="index-add-new-commands-for-external-monitor-1337"></a><a name="index-monitor-1338"></a><br><dt><code>monitor </code><var>cmd</var><dd>This command allows you to send arbitrary commands directly to the
 remote monitor.  Since <span class="sc">gdb</span> doesn't care about the commands it
 sends like this, this command is the way to extend <span class="sc">gdb</span>&mdash;you
 can add new commands that only the external monitor will understand

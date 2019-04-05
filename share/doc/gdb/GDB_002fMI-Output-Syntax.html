@@ -47,7 +47,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="GDB_002fMI-Command-Syntax.html#GDB_002f
 
 <h4 class="subsection">27.2.2 <span class="sc">gdb/mi</span> Output Syntax</h4>
 
-<p><a name="index-output-syntax-of-_0040sc_007bgdb_002fmi_007d-2896"></a><a name="index-g_t_0040sc_007bgdb_002fmi_007d_002c-output-syntax-2897"></a>The output from <span class="sc">gdb/mi</span> consists of zero or more out-of-band records
+<p><a name="index-output-syntax-of-_0040sc_007bgdb_002fmi_007d-2912"></a><a name="index-g_t_0040sc_007bgdb_002fmi_007d_002c-output-syntax-2913"></a>The output from <span class="sc">gdb/mi</span> consists of zero or more out-of-band records
 followed, optionally, by a single result record.  This result record
 is for the most recent command.  The sequence of output records is
 terminated by &lsquo;<samp><span class="samp">(gdb)</span></samp>&rsquo;.
@@ -117,30 +117,30 @@ all async output as reporting general changes in the state of the
 target and there should be no need to associate async output to any
 prior command.
 
-     <li><a name="index-status-output-in-_0040sc_007bgdb_002fmi_007d-2898"></a><var>status-async-output</var> contains on-going status information about the
+     <li><a name="index-status-output-in-_0040sc_007bgdb_002fmi_007d-2914"></a><var>status-async-output</var> contains on-going status information about the
 progress of a slow operation.  It can be discarded.  All status output is
 prefixed by &lsquo;<samp><span class="samp">+</span></samp>&rsquo;.
 
-     <li><a name="index-async-output-in-_0040sc_007bgdb_002fmi_007d-2899"></a><var>exec-async-output</var> contains asynchronous state change on the target
+     <li><a name="index-async-output-in-_0040sc_007bgdb_002fmi_007d-2915"></a><var>exec-async-output</var> contains asynchronous state change on the target
 (stopped, started, disappeared).  All async output is prefixed by
 &lsquo;<samp><span class="samp">*</span></samp>&rsquo;.
 
-     <li><a name="index-notify-output-in-_0040sc_007bgdb_002fmi_007d-2900"></a><var>notify-async-output</var> contains supplementary information that the
+     <li><a name="index-notify-output-in-_0040sc_007bgdb_002fmi_007d-2916"></a><var>notify-async-output</var> contains supplementary information that the
 client should handle (e.g., a new breakpoint information).  All notify
 output is prefixed by &lsquo;<samp><span class="samp">=</span></samp>&rsquo;.
 
-     <li><a name="index-console-output-in-_0040sc_007bgdb_002fmi_007d-2901"></a><var>console-stream-output</var> is output that should be displayed as is in the
+     <li><a name="index-console-output-in-_0040sc_007bgdb_002fmi_007d-2917"></a><var>console-stream-output</var> is output that should be displayed as is in the
 console.  It is the textual response to a CLI command.  All the console
 output is prefixed by &lsquo;<samp><span class="samp">~</span></samp>&rsquo;.
 
-     <li><a name="index-target-output-in-_0040sc_007bgdb_002fmi_007d-2902"></a><var>target-stream-output</var> is the output produced by the target program. 
+     <li><a name="index-target-output-in-_0040sc_007bgdb_002fmi_007d-2918"></a><var>target-stream-output</var> is the output produced by the target program. 
 All the target output is prefixed by &lsquo;<samp><span class="samp">@</span></samp>&rsquo;.
 
-     <li><a name="index-log-output-in-_0040sc_007bgdb_002fmi_007d-2903"></a><var>log-stream-output</var> is output text coming from <span class="sc">gdb</span>'s internals, for
+     <li><a name="index-log-output-in-_0040sc_007bgdb_002fmi_007d-2919"></a><var>log-stream-output</var> is output text coming from <span class="sc">gdb</span>'s internals, for
 instance messages that should be displayed as part of an error log.  All
 the log output is prefixed by &lsquo;<samp><span class="samp">&amp;</span></samp>&rsquo;.
 
-     <li><a name="index-list-output-in-_0040sc_007bgdb_002fmi_007d-2904"></a>New <span class="sc">gdb/mi</span> commands should only output <var>lists</var> containing
+     <li><a name="index-list-output-in-_0040sc_007bgdb_002fmi_007d-2920"></a>New <span class="sc">gdb/mi</span> commands should only output <var>lists</var> containing
 <var>values</var>.
 
    </ul>

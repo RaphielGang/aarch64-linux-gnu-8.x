@@ -48,12 +48,12 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Python-API.html#Python-API">Python API<
 
 <h5 class="subsubsection">23.2.2.22 Writing new convenience functions</h5>
 
-<p><a name="index-writing-convenience-functions-2169"></a><a name="index-convenience-functions-in-python-2170"></a><a name="index-python-convenience-functions-2171"></a><a name="index-gdb_002eFunction-2172"></a><a name="index-Function-2173"></a>You can implement new convenience functions (see <a href="Convenience-Vars.html#Convenience-Vars">Convenience Vars</a>)
+<p><a name="index-writing-convenience-functions-2185"></a><a name="index-convenience-functions-in-python-2186"></a><a name="index-python-convenience-functions-2187"></a><a name="index-gdb_002eFunction-2188"></a><a name="index-Function-2189"></a>You can implement new convenience functions (see <a href="Convenience-Vars.html#Convenience-Vars">Convenience Vars</a>)
 in Python.  A convenience function is an instance of a subclass of the
 class <code>gdb.Function</code>.
 
 <div class="defun">
-&mdash; Function: <b>Function.__init__</b> (<var>name</var>)<var><a name="index-Function_002e_005f_005finit_005f_005f-2174"></a></var><br>
+&mdash; Function: <b>Function.__init__</b> (<var>name</var>)<var><a name="index-Function_002e_005f_005finit_005f_005f-2190"></a></var><br>
 <blockquote><p>The initializer for <code>Function</code> registers the new function with
 <span class="sc">gdb</span>.  The argument <var>name</var> is the name of the function,
 a string.  The function will be visible to the user as a convenience
@@ -65,7 +65,7 @@ string for the new class.
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Function: <b>Function.invoke</b> (<var>*args</var>)<var><a name="index-Function_002einvoke-2175"></a></var><br>
+&mdash; Function: <b>Function.invoke</b> (<var>*args</var>)<var><a name="index-Function_002einvoke-2191"></a></var><br>
 <blockquote><p>When a convenience function is evaluated, its arguments are converted
 to instances of <code>gdb.Value</code>, and then the function's
 <code>invoke</code> method is called.  Note that <span class="sc">gdb</span> does not

@@ -48,25 +48,25 @@ Up:&nbsp;<a rel="up" accesskey="u" href="C.html#C">C</a>
 
 <h5 class="subsubsection">15.4.1.7 <span class="sc">gdb</span> Features for C<tt>++</tt></h5>
 
-<p><a name="index-commands-for-C_0040t_007b_002b_002b_007d-985"></a>
+<p><a name="index-commands-for-C_0040t_007b_002b_002b_007d-987"></a>
 Some <span class="sc">gdb</span> commands are particularly useful with C<tt>++</tt>, and some are
 designed specifically for use with C<tt>++</tt>.  Here is a summary:
 
      
-<a name="index-break-in-overloaded-functions-986"></a>
+<a name="index-break-in-overloaded-functions-988"></a>
 <dl><dt><span class="roman">breakpoint menus</span><dd>When you want a breakpoint in a function whose name is overloaded,
 <span class="sc">gdb</span> has the capability to display a menu of possible breakpoint
 locations to help you specify which function definition you want. 
 See <a href="Ambiguous-Expressions.html#Ambiguous-Expressions">Ambiguous Expressions</a>.
 
-     <p><a name="index-overloading-in-C_0040t_007b_002b_002b_007d-987"></a><br><dt><code>rbreak </code><var>regex</var><dd>Setting breakpoints using regular expressions is helpful for setting
+     <p><a name="index-overloading-in-C_0040t_007b_002b_002b_007d-989"></a><br><dt><code>rbreak </code><var>regex</var><dd>Setting breakpoints using regular expressions is helpful for setting
 breakpoints on overloaded functions that are not members of any special
 classes. 
 See <a href="Set-Breaks.html#Set-Breaks">Setting Breakpoints</a>.
 
-     <p><a name="index-C_0040t_007b_002b_002b_007d-exception-handling-988"></a><br><dt><code>catch throw</code><dt><code>catch rethrow</code><dt><code>catch catch</code><dd>Debug C<tt>++</tt> exception handling using these commands.  See <a href="Set-Catchpoints.html#Set-Catchpoints">Setting Catchpoints</a>.
+     <p><a name="index-C_0040t_007b_002b_002b_007d-exception-handling-990"></a><br><dt><code>catch throw</code><dt><code>catch rethrow</code><dt><code>catch catch</code><dd>Debug C<tt>++</tt> exception handling using these commands.  See <a href="Set-Catchpoints.html#Set-Catchpoints">Setting Catchpoints</a>.
 
-     <p><a name="index-inheritance-989"></a><br><dt><code>ptype </code><var>typename</var><dd>Print inheritance relationships as well as other information for type
+     <p><a name="index-inheritance-991"></a><br><dt><code>ptype </code><var>typename</var><dd>Print inheritance relationships as well as other information for type
 <var>typename</var>. 
 See <a href="Symbols.html#Symbols">Examining the Symbol Table</a>.
 
@@ -75,10 +75,10 @@ method tables of the object computed by <var>expression</var>.  This shows
 one entry per virtual table; there may be multiple virtual tables when
 multiple inheritance is in use.
 
-     <p><a name="index-C_0040t_007b_002b_002b_007d-demangling-990"></a><br><dt><code>demangle </code><var>name</var><dd>Demangle <var>name</var>. 
+     <p><a name="index-C_0040t_007b_002b_002b_007d-demangling-992"></a><br><dt><code>demangle </code><var>name</var><dd>Demangle <var>name</var>. 
 See <a href="Symbols.html#Symbols">Symbols</a>, for a more complete description of the <code>demangle</code> command.
 
-     <p><a name="index-C_0040t_007b_002b_002b_007d-symbol-display-991"></a><br><dt><code>set print demangle</code><dt><code>show print demangle</code><dt><code>set print asm-demangle</code><dt><code>show print asm-demangle</code><dd>Control whether C<tt>++</tt> symbols display in their source form, both when
+     <p><a name="index-C_0040t_007b_002b_002b_007d-symbol-display-993"></a><br><dt><code>set print demangle</code><dt><code>show print demangle</code><dt><code>set print asm-demangle</code><dt><code>show print asm-demangle</code><dd>Control whether C<tt>++</tt> symbols display in their source form, both when
 displaying code as C<tt>++</tt> source and when displaying disassemblies. 
 See <a href="Print-Settings.html#Print-Settings">Print Settings</a>.
 
@@ -90,7 +90,7 @@ See <a href="Print-Settings.html#Print-Settings">Print Settings</a>.
 (The <code>vtbl</code> commands do not work on programs compiled with the HP
 ANSI C<tt>++</tt> compiler (<code>aCC</code>).)
 
-     <p><a name="index-set-overload_002dresolution-992"></a><a name="index-overloaded-functions_002c-overload-resolution-993"></a><br><dt><code>set overload-resolution on</code><dd>Enable overload resolution for C<tt>++</tt> expression evaluation.  The default
+     <p><a name="index-set-overload_002dresolution-994"></a><a name="index-overloaded-functions_002c-overload-resolution-995"></a><br><dt><code>set overload-resolution on</code><dd>Enable overload resolution for C<tt>++</tt> expression evaluation.  The default
 is on.  For overloaded functions, <span class="sc">gdb</span> evaluates the arguments
 and searches for a function whose signature matches the argument types,
 using the standard C<tt>++</tt> conversion rules (see <a href="C-Plus-Plus-Expressions.html#C-Plus-Plus-Expressions">C<tt>++</tt> Expressions</a>, for details). 
@@ -104,7 +104,7 @@ overloaded functions that are class member functions, <span class="sc">gdb</span
 searches for a function whose signature <em>exactly</em> matches the
 argument types.
 
-     <p><a name="index-show-overload_002dresolution-994"></a><br><dt><code>show overload-resolution</code><dd>Show the current setting of overload resolution.
+     <p><a name="index-show-overload_002dresolution-996"></a><br><dt><code>show overload-resolution</code><dd>Show the current setting of overload resolution.
 
      <br><dt><span class="roman">Overloaded symbol names</span><dd>You can specify a particular definition of an overloaded symbol, using
 the same notation that is used to declare such symbols in C<tt>++</tt>: type

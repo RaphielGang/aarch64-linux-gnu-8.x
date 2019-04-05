@@ -12,7 +12,7 @@
 <!--
 This file documents the GNU Assembler "as".
 
-Copyright (C) 1991-2018 Free Software Foundation, Inc.
+Copyright (C) 1991-2019 Free Software Foundation, Inc.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3
@@ -45,7 +45,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="MIPS_002dDependent.html#MIPS_002dDepend
 <hr>
 </div>
 
-<h4 class="subsection">9.27.2 High-level assembly macros</h4>
+<h4 class="subsection">9.26.2 High-level assembly macros</h4>
 
 <p>MIPS assemblers have traditionally provided a wider range of
 instructions than the MIPS architecture itself.  These extra
@@ -72,19 +72,19 @@ such as whether the assembler is generating SVR4-style PIC (selected by
 (see <a href="MIPS-Symbol-Sizes.html#MIPS-Symbol-Sizes">Directives to override the size of symbols</a>),
 and the small data limit (see <a href="MIPS-Small-Data.html#MIPS-Small-Data">Controlling the use of small data accesses</a>).
 
-   <p><a name="index-g_t_0040code_007b_002eset-macro_007d-1517"></a><a name="index-g_t_0040code_007b_002eset-nomacro_007d-1518"></a>Sometimes it is undesirable to have one assembly instruction expand
+   <p><a name="index-g_t_0040code_007b_002eset-macro_007d-1547"></a><a name="index-g_t_0040code_007b_002eset-nomacro_007d-1548"></a>Sometimes it is undesirable to have one assembly instruction expand
 to several machine instructions.  The directive <code>.set nomacro</code>
 tells the assembler to warn when this happens.  <code>.set macro</code>
 restores the default behavior.
 
-   <p><a name="index-g_t_0040code_007bat_007d-register_002c-MIPS-1519"></a><a name="index-g_t_0040code_007b_002eset-at_003d_0040var_007breg_007d_007d-1520"></a>Some macro instructions need a temporary register to store intermediate
+   <p><a name="index-g_t_0040code_007bat_007d-register_002c-MIPS-1549"></a><a name="index-g_t_0040code_007b_002eset-at_003d_0040var_007breg_007d_007d-1550"></a>Some macro instructions need a temporary register to store intermediate
 results.  This register is usually <code>$1</code>, also known as <code>$at</code>,
 but it can be changed to any core register <var>reg</var> using
 <code>.set at=</code><var>reg</var>.  Note that <code>$at</code> always refers
 to <code>$1</code> regardless of which register is being used as the
 temporary register.
 
-   <p><a name="index-g_t_0040code_007b_002eset-at_007d-1521"></a><a name="index-g_t_0040code_007b_002eset-noat_007d-1522"></a>Implicit uses of the temporary register in macros could interfere with
+   <p><a name="index-g_t_0040code_007b_002eset-at_007d-1551"></a><a name="index-g_t_0040code_007b_002eset-noat_007d-1552"></a>Implicit uses of the temporary register in macros could interfere with
 explicit uses in the assembly code.  The assembler therefore warns
 whenever it sees an explicit use of the temporary register.  The directive
 <code>.set noat</code> silences this warning while <code>.set at</code> restores

@@ -48,7 +48,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Python-API.html#Python-API">Python API<
 
 <h5 class="subsubsection">23.2.2.23 Program Spaces In Python</h5>
 
-<p><a name="index-progspaces-in-python-2176"></a><a name="index-gdb_002eProgspace-2177"></a><a name="index-Progspace-2178"></a>A program space, or <dfn>progspace</dfn>, represents a symbolic view
+<p><a name="index-progspaces-in-python-2192"></a><a name="index-gdb_002eProgspace-2193"></a><a name="index-Progspace-2194"></a>A program space, or <dfn>progspace</dfn>, represents a symbolic view
 of an address space. 
 It consists of all of the objfiles of the program. 
 See <a href="Objfiles-In-Python.html#Objfiles-In-Python">Objfiles In Python</a>. 
@@ -58,18 +58,18 @@ about program spaces.
    <p>The following progspace-related functions are available in the
 <code>gdb</code> module:
 
-   <p><a name="index-gdb_002ecurrent_005fprogspace-2179"></a>
+   <p><a name="index-gdb_002ecurrent_005fprogspace-2195"></a>
 
 <div class="defun">
-&mdash; Function: <b>gdb.current_progspace</b> ()<var><a name="index-gdb_002ecurrent_005fprogspace-2180"></a></var><br>
+&mdash; Function: <b>gdb.current_progspace</b> ()<var><a name="index-gdb_002ecurrent_005fprogspace-2196"></a></var><br>
 <blockquote><p>This function returns the program space of the currently selected inferior. 
 See <a href="Inferiors-and-Programs.html#Inferiors-and-Programs">Inferiors and Programs</a>. 
 </p></blockquote></div>
 
-   <p><a name="index-gdb_002eprogspaces-2181"></a>
+   <p><a name="index-gdb_002eprogspaces-2197"></a>
 
 <div class="defun">
-&mdash; Function: <b>gdb.progspaces</b> ()<var><a name="index-gdb_002eprogspaces-2182"></a></var><br>
+&mdash; Function: <b>gdb.progspaces</b> ()<var><a name="index-gdb_002eprogspaces-2198"></a></var><br>
 <blockquote><p>Return a sequence of all the progspaces currently known to <span class="sc">gdb</span>. 
 </p></blockquote></div>
 
@@ -77,12 +77,12 @@ See <a href="Inferiors-and-Programs.html#Inferiors-and-Programs">Inferiors and P
 class.
 
 <div class="defun">
-&mdash; Variable: <b>Progspace.filename</b><var><a name="index-Progspace_002efilename-2183"></a></var><br>
+&mdash; Variable: <b>Progspace.filename</b><var><a name="index-Progspace_002efilename-2199"></a></var><br>
 <blockquote><p>The file name of the progspace as a string. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Variable: <b>Progspace.pretty_printers</b><var><a name="index-Progspace_002epretty_005fprinters-2184"></a></var><br>
+&mdash; Variable: <b>Progspace.pretty_printers</b><var><a name="index-Progspace_002epretty_005fprinters-2200"></a></var><br>
 <blockquote><p>The <code>pretty_printers</code> attribute is a list of functions.  It is
 used to look up pretty-printers.  A <code>Value</code> is passed to each
 function in order; if the function returns <code>None</code>, then the
@@ -92,13 +92,13 @@ information.
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Variable: <b>Progspace.type_printers</b><var><a name="index-Progspace_002etype_005fprinters-2185"></a></var><br>
+&mdash; Variable: <b>Progspace.type_printers</b><var><a name="index-Progspace_002etype_005fprinters-2201"></a></var><br>
 <blockquote><p>The <code>type_printers</code> attribute is a list of type printer objects. 
 See <a href="Type-Printing-API.html#Type-Printing-API">Type Printing API</a>, for more information. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Variable: <b>Progspace.frame_filters</b><var><a name="index-Progspace_002eframe_005ffilters-2186"></a></var><br>
+&mdash; Variable: <b>Progspace.frame_filters</b><var><a name="index-Progspace_002eframe_005ffilters-2202"></a></var><br>
 <blockquote><p>The <code>frame_filters</code> attribute is a dictionary of frame filter
 objects.  See <a href="Frame-Filter-API.html#Frame-Filter-API">Frame Filter API</a>, for more information. 
 </p></blockquote></div>

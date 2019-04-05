@@ -48,7 +48,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Target-Descriptions.html#Target-Descrip
 
 <h3 class="section">G.2 Target Description Format</h3>
 
-<p><a name="index-target-descriptions_002c-XML-format-3575"></a>
+<p><a name="index-target-descriptions_002c-XML-format-3595"></a>
 A target description annex is an <a href="http://www.w3.org/XML/">XML</a>
 document which complies with the Document Type Definition provided in
 the <span class="sc">gdb</span> sources in <samp><span class="file">gdb/features/gdb-target.dtd</span></samp>.  This
@@ -97,7 +97,7 @@ the version mismatch.
 
 <h4 class="subsection">G.2.1 Inclusion</h4>
 
-<p><a name="index-target-descriptions_002c-inclusion-3576"></a><a name="index-XInclude-3577"></a><a name="index-g_t_003cxi_003ainclude_003e-3578"></a>
+<p><a name="index-target-descriptions_002c-inclusion-3596"></a><a name="index-XInclude-3597"></a><a name="index-g_t_003cxi_003ainclude_003e-3598"></a>
 It can sometimes be valuable to split a target description up into
 several different annexes, either for organizational purposes, or to
 share files between different possible target descriptions.  You can
@@ -117,7 +117,7 @@ original description.
 
 <h4 class="subsection">G.2.2 Architecture</h4>
 
-<p><a name="index-g_t_003carchitecture_003e-3579"></a>
+<p><a name="index-g_t_003carchitecture_003e-3599"></a>
 An &lsquo;<samp><span class="samp">&lt;architecture&gt;</span></samp>&rsquo; element has this form:
 
 <pre class="smallexample">       &lt;architecture&gt;<var>arch</var>&lt;/architecture&gt;
@@ -127,7 +127,7 @@ An &lsquo;<samp><span class="samp">&lt;architecture&gt;</span></samp>&rsquo; ele
 
 <h4 class="subsection">G.2.3 OS ABI</h4>
 
-<p><a name="index-g_t_0040code_007b_003cosabi_003e_007d-3580"></a>
+<p><a name="index-g_t_0040code_007b_003cosabi_003e_007d-3600"></a>
 This optional field was introduced in <span class="sc">gdb</span> version 7.0. 
 Previous versions of <span class="sc">gdb</span> ignore it.
 
@@ -140,7 +140,7 @@ Previous versions of <span class="sc">gdb</span> ignore it.
 
 <h4 class="subsection">G.2.4 Compatible Architecture</h4>
 
-<p><a name="index-g_t_0040code_007b_003ccompatible_003e_007d-3581"></a>
+<p><a name="index-g_t_0040code_007b_003ccompatible_003e_007d-3601"></a>
 This optional field was introduced in <span class="sc">gdb</span> version 7.0. 
 Previous versions of <span class="sc">gdb</span> ignore it.
 
@@ -164,7 +164,7 @@ capability with &lsquo;<samp><span class="samp">&lt;compatible&gt;</span></samp>
 </pre>
    <h4 class="subsection">G.2.5 Features</h4>
 
-<p><a name="index-g_t_003cfeature_003e-3582"></a>
+<p><a name="index-g_t_003cfeature_003e-3602"></a>
 Each &lsquo;<samp><span class="samp">&lt;feature&gt;</span></samp>&rsquo; describes some logical portion of the target
 system.  Features are currently used to describe available CPU
 registers and the types of their contents.  A &lsquo;<samp><span class="samp">&lt;feature&gt;</span></samp>&rsquo; element
@@ -192,14 +192,14 @@ and enum types.
 a unique (within the containing &lsquo;<samp><span class="samp">&lt;feature&gt;</span></samp>&rsquo;) name to the type. 
 Types must be defined before they are used.
 
-   <p><a name="index-g_t_003cvector_003e-3583"></a>Some targets offer vector registers, which can be treated as arrays
+   <p><a name="index-g_t_003cvector_003e-3603"></a>Some targets offer vector registers, which can be treated as arrays
 of scalar elements.  These types are written as &lsquo;<samp><span class="samp">&lt;vector&gt;</span></samp>&rsquo; elements,
 specifying the array element type, <var>type</var>, and the number of elements,
 <var>count</var>:
 
 <pre class="smallexample">     &lt;vector id="<var>id</var>" type="<var>type</var>" count="<var>count</var>"/&gt;
 </pre>
-   <p><a name="index-g_t_003cunion_003e-3584"></a>If a register's value is usefully viewed in multiple ways, define it
+   <p><a name="index-g_t_003cunion_003e-3604"></a>If a register's value is usefully viewed in multiple ways, define it
 with a union type containing the useful representations.  The
 &lsquo;<samp><span class="samp">&lt;union&gt;</span></samp>&rsquo; element contains one or more &lsquo;<samp><span class="samp">&lt;field&gt;</span></samp>&rsquo; elements,
 each of which has a <var>name</var> and a <var>type</var>:
@@ -209,7 +209,7 @@ each of which has a <var>name</var> and a <var>type</var>:
        ...
      &lt;/union&gt;
 </pre>
-   <p><a name="index-g_t_003cstruct_003e-3585"></a><a name="index-g_t_003cflags_003e-3586"></a>If a register's value is composed from several separate values, define
+   <p><a name="index-g_t_003cstruct_003e-3605"></a><a name="index-g_t_003cflags_003e-3606"></a>If a register's value is composed from several separate values, define
 it with either a structure type or a flags type. 
 A flags type may only contain bitfields. 
 A structure type may either contain only bitfields or contain no bitfields. 
@@ -274,7 +274,7 @@ defining them with &lsquo;<samp><span class="samp">flags</span></samp>&rsquo;:
 
 <h4 class="subsection">G.2.7 Registers</h4>
 
-<p><a name="index-g_t_003creg_003e-3587"></a>
+<p><a name="index-g_t_003creg_003e-3607"></a>
 Each register is represented as an element with this form:
 
 <pre class="smallexample">     &lt;reg name="<var>name</var>"

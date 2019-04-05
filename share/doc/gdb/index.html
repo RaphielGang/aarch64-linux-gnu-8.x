@@ -38,8 +38,8 @@ This file documents the <span class="sc">gnu</span> debugger <span class="sc">gd
 
    <p>This is the Tenth Edition, of <cite>Debugging with
 </cite><span class="sc">gdb</span><cite>: the </cite><span class="sc">gnu</span><cite> Source-Level Debugger</cite> for <span class="sc">gdb</span>
-(GNU Toolchain for the A-profile Architecture 8.2-2019.01 (arm-rel-8.28))
-Version 8.1.1.20180704-git.
+(GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36))
+Version 8.2.1.20190227-git.
 
 <!-- man begin COPYRIGHT -->
    <p>Copyright &copy; 1988-2018 Free Software Foundation, Inc.
@@ -70,8 +70,8 @@ Up:&nbsp;<a rel="up" accesskey="u" href="../index.html#dir">(dir)</a>
 <p>This file describes <span class="sc">gdb</span>, the <span class="sc">gnu</span> symbolic debugger.
 
    <p>This is the Tenth Edition, for <span class="sc">gdb</span>
-(GNU Toolchain for the A-profile Architecture 8.2-2019.01 (arm-rel-8.28))
-Version 8.1.1.20180704-git.
+(GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36))
+Version 8.2.1.20190227-git.
 
    <p>Copyright (C) 1988-2018 Free Software Foundation, Inc.
 
@@ -392,7 +392,8 @@ software in general.  We will miss him.
 <li><a href="Ada-Tasks.html#Ada-Tasks">15.4.10.7 Extensions for Ada Tasks</a>
 <li><a href="Ada-Tasks-and-Core-Files.html#Ada-Tasks-and-Core-Files">15.4.10.8 Tasking Support when Debugging Core Files</a>
 <li><a href="Ravenscar-Profile.html#Ravenscar-Profile">15.4.10.9 Tasking Support when using the Ravenscar Profile</a>
-<li><a href="Ada-Glitches.html#Ada-Glitches">15.4.10.10 Known Peculiarities of Ada Mode</a>
+<li><a href="Ada-Settings.html#Ada-Settings">15.4.10.10 Ada Settings</a>
+<li><a href="Ada-Glitches.html#Ada-Glitches">15.4.10.11 Known Peculiarities of Ada Mode</a>
 </li></ul>
 </li></ul>
 <li><a href="Unsupported-Languages.html#Unsupported-Languages">15.5 Unsupported Languages</a>
@@ -466,7 +467,7 @@ software in general.  We will miss him.
 <li><a href="Native.html#Native">21.1 Native</a>
 <ul>
 <li><a href="BSD-libkvm-Interface.html#BSD-libkvm-Interface">21.1.1 BSD libkvm Interface</a>
-<li><a href="SVR4-Process-Information.html#SVR4-Process-Information">21.1.2 SVR4 Process Information</a>
+<li><a href="Process-Information.html#Process-Information">21.1.2 Process Information</a>
 <li><a href="DJGPP-Native.html#DJGPP-Native">21.1.3 Features for Debugging <span class="sc">djgpp</span> Programs</a>
 <li><a href="Cygwin-Native.html#Cygwin-Native">21.1.4 Features for Debugging MS Windows PE Executables</a>
 <ul>
@@ -494,6 +495,9 @@ software in general.  We will miss him.
 <li><a href="Architectures.html#Architectures">21.4 Architectures</a>
 <ul>
 <li><a href="AArch64.html#AArch64">21.4.1 AArch64</a>
+<ul>
+<li><a href="AArch64.html#AArch64">21.4.1.1 AArch64 SVE.</a>
+</li></ul>
 <li><a href="i386.html#i386">21.4.2 x86 Architecture-specific Issues</a>
 <ul>
 <li><a href="i386.html#i386">21.4.2.1 Intel <dfn>Memory Protection Extensions</dfn> (MPX).</a>

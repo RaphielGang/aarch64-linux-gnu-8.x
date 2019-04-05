@@ -47,24 +47,24 @@ Up:&nbsp;<a rel="up" accesskey="u" href="GDB_002fMI-Output-Records.html#GDB_002f
 
 <h4 class="subsection">27.5.1 <span class="sc">gdb/mi</span> Result Records</h4>
 
-<p><a name="index-result-records-in-_0040sc_007bgdb_002fmi_007d-2909"></a><a name="index-g_t_0040sc_007bgdb_002fmi_007d_002c-result-records-2910"></a>In addition to a number of out-of-band notifications, the response to a
+<p><a name="index-result-records-in-_0040sc_007bgdb_002fmi_007d-2925"></a><a name="index-g_t_0040sc_007bgdb_002fmi_007d_002c-result-records-2926"></a>In addition to a number of out-of-band notifications, the response to a
 <span class="sc">gdb/mi</span> command includes one of the following result indications:
 
      
-<a name="index-g_t_005edone-2911"></a>
+<a name="index-g_t_005edone-2927"></a>
 <dl><dt><code>"^done" [ "," </code><var>results</var><code> ]</code><dd>The synchronous operation was successful, <var>results</var> are the return
 values.
 
-     <br><dt><code>"^running"</code><dd><a name="index-g_t_005erunning-2912"></a>This result record is equivalent to &lsquo;<samp><span class="samp">^done</span></samp>&rsquo;.  Historically, it
+     <br><dt><code>"^running"</code><dd><a name="index-g_t_005erunning-2928"></a>This result record is equivalent to &lsquo;<samp><span class="samp">^done</span></samp>&rsquo;.  Historically, it
 was output instead of &lsquo;<samp><span class="samp">^done</span></samp>&rsquo; if the command has resumed the
 target.  This behaviour is maintained for backward compatibility, but
 all frontends should treat &lsquo;<samp><span class="samp">^done</span></samp>&rsquo; and &lsquo;<samp><span class="samp">^running</span></samp>&rsquo;
 identically and rely on the &lsquo;<samp><span class="samp">*running</span></samp>&rsquo; output record to determine
 which threads are resumed.
 
-     <br><dt><code>"^connected"</code><dd><a name="index-g_t_005econnected-2913"></a><span class="sc">gdb</span> has connected to a remote target.
+     <br><dt><code>"^connected"</code><dd><a name="index-g_t_005econnected-2929"></a><span class="sc">gdb</span> has connected to a remote target.
 
-     <br><dt><code>"^error" "," "msg=" </code><var>c-string</var><code> [ "," "code=" </code><var>c-string</var><code> ]</code><dd><a name="index-g_t_005eerror-2914"></a>The operation failed.  The <code>msg=</code><var>c-string</var> variable contains
+     <br><dt><code>"^error" "," "msg=" </code><var>c-string</var><code> [ "," "code=" </code><var>c-string</var><code> ]</code><dd><a name="index-g_t_005eerror-2930"></a>The operation failed.  The <code>msg=</code><var>c-string</var> variable contains
 the corresponding error message.
 
      <p>If present, the <code>code=</code><var>c-string</var> variable provides an error
@@ -75,7 +75,7 @@ error condition.  At present, only one error code is defined:
 <dt>&lsquo;<samp><span class="samp">"undefined-command"</span></samp>&rsquo;<dd>Indicates that the command causing the error does not exist. 
 </dl>
 
-     <br><dt><code>"^exit"</code><dd><a name="index-g_t_005eexit-2915"></a><span class="sc">gdb</span> has terminated.
+     <br><dt><code>"^exit"</code><dd><a name="index-g_t_005eexit-2931"></a><span class="sc">gdb</span> has terminated.
 
    </dl>
 

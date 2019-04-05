@@ -48,7 +48,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Python-API.html#Python-API">Python API<
 
 <h5 class="subsubsection">23.2.2.12 Unwinding Frames in Python</h5>
 
-<p><a name="index-unwinding-frames-in-Python-1994"></a>
+<p><a name="index-unwinding-frames-in-Python-2006"></a>
 In <span class="sc">gdb</span> terminology &ldquo;unwinding&rdquo; is the process of finding
 the previous frame (that is, caller's) from the current one.  An
 unwinder has three methods.  The first one checks if it can handle
@@ -80,7 +80,7 @@ frame registers when <span class="sc">gdb</span> core asks for them.
 provides a method to read frame's registers:
 
 <div class="defun">
-&mdash; Function: <b>PendingFrame.read_register</b> (<var>reg</var>)<var><a name="index-PendingFrame_002eread_005fregister-1995"></a></var><br>
+&mdash; Function: <b>PendingFrame.read_register</b> (<var>reg</var>)<var><a name="index-PendingFrame_002eread_005fregister-2007"></a></var><br>
 <blockquote><p>This method returns the contents of the register <var>regn</var> in the
 frame as a <code>gdb.Value</code> object.  <var>reg</var> can be either a
 register number or a register name; the values are platform-specific. 
@@ -92,7 +92,7 @@ They are usually found in the corresponding
 instance to be returned to <span class="sc">gdb</span>:
 
 <div class="defun">
-&mdash; Function: <b>PendingFrame.create_unwind_info</b> (<var>frame_id</var>)<var><a name="index-PendingFrame_002ecreate_005funwind_005finfo-1996"></a></var><br>
+&mdash; Function: <b>PendingFrame.create_unwind_info</b> (<var>frame_id</var>)<var><a name="index-PendingFrame_002ecreate_005funwind_005finfo-2008"></a></var><br>
 <blockquote><p>Returns a new <code>gdb.UnwindInfo</code> instance identified by given
 <var>frame_id</var>.  The argument is used to build <span class="sc">gdb</span>'s frame ID
 using one of functions provided by <span class="sc">gdb</span>.  <var>frame_id</var>'s attributes
@@ -118,7 +118,7 @@ create a <code>gdb.UnwindInfo</code> instance.  Use the following method to
 specify caller registers that have been saved in this frame:
 
 <div class="defun">
-&mdash; Function: <b>gdb.UnwindInfo.add_saved_register</b> (<var>reg, value</var>)<var><a name="index-gdb_002eUnwindInfo_002eadd_005fsaved_005fregister-1997"></a></var><br>
+&mdash; Function: <b>gdb.UnwindInfo.add_saved_register</b> (<var>reg, value</var>)<var><a name="index-gdb_002eUnwindInfo_002eadd_005fsaved_005fregister-2009"></a></var><br>
 <blockquote><p><var>reg</var> identifies the register.  It can be a number or a name, just
 as for the <code>PendingFrame.read_register</code> method above. 
 <var>value</var> is a register value (a <code>gdb.Value</code> object). 
@@ -169,7 +169,7 @@ unwinders registered with it.
 unwinder:
 
 <div class="defun">
-&mdash; Function: <b>gdb.unwinder.register_unwinder</b> (<var>locus, unwinder, replace=False</var>)<var><a name="index-gdb_002eunwinder_002eregister_005funwinder-1998"></a></var><br>
+&mdash; Function: <b>gdb.unwinder.register_unwinder</b> (<var>locus, unwinder, replace=False</var>)<var><a name="index-gdb_002eunwinder_002eregister_005funwinder-2010"></a></var><br>
 <blockquote><p><var>locus</var> is specifies an object file or a program space to which
 <var>unwinder</var> is added.  Passing <code>None</code> or <code>gdb</code> adds
 <var>unwinder</var> to the <span class="sc">gdb</span>'s global unwinder list.  The newly

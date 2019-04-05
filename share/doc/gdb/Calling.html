@@ -49,13 +49,13 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Altering.html#Altering">Altering</a>
 <h3 class="section">17.5 Calling Program Functions</h3>
 
      
-<a name="index-calling-functions-1155"></a>
-<a name="index-inferior-functions_002c-calling-1156"></a>
+<a name="index-calling-functions-1160"></a>
+<a name="index-inferior-functions_002c-calling-1161"></a>
 <dl><dt><code>print </code><var>expr</var><dd>Evaluate the expression <var>expr</var> and display the resulting value. 
 The expression may include calls to functions in the program being
 debugged.
 
-     <p><a name="index-call-1157"></a><br><dt><code>call </code><var>expr</var><dd>Evaluate the expression <var>expr</var> without displaying <code>void</code>
+     <p><a name="index-call-1162"></a><br><dt><code>call </code><var>expr</var><dd>Evaluate the expression <var>expr</var> without displaying <code>void</code>
 returned values.
 
      <p>You can use this variant of the <code>print</code> command if you want to
@@ -82,31 +82,31 @@ in that case is controlled by the
 <code>set unwind-on-terminating-exception</code> command.
 
      <dl>
-<dt><code>set unwindonsignal</code><dd><a name="index-set-unwindonsignal-1158"></a><a name="index-unwind-stack-in-called-functions-1159"></a><a name="index-call-dummy-stack-unwinding-1160"></a>Set unwinding of the stack if a signal is received while in a function
+<dt><code>set unwindonsignal</code><dd><a name="index-set-unwindonsignal-1163"></a><a name="index-unwind-stack-in-called-functions-1164"></a><a name="index-call-dummy-stack-unwinding-1165"></a>Set unwinding of the stack if a signal is received while in a function
 that <span class="sc">gdb</span> called in the program being debugged.  If set to on,
 <span class="sc">gdb</span> unwinds the stack it created for the call and restores
 the context to what it was before the call.  If set to off (the
 default), <span class="sc">gdb</span> stops in the frame where the signal was
 received.
 
-     <br><dt><code>show unwindonsignal</code><dd><a name="index-show-unwindonsignal-1161"></a>Show the current setting of stack unwinding in the functions called by
+     <br><dt><code>show unwindonsignal</code><dd><a name="index-show-unwindonsignal-1166"></a>Show the current setting of stack unwinding in the functions called by
 <span class="sc">gdb</span>.
 
-     <br><dt><code>set unwind-on-terminating-exception</code><dd><a name="index-set-unwind_002don_002dterminating_002dexception-1162"></a><a name="index-unwind-stack-in-called-functions-with-unhandled-exceptions-1163"></a><a name="index-call-dummy-stack-unwinding-on-unhandled-exception_002e-1164"></a>Set unwinding of the stack if a C<tt>++</tt> exception is raised, but left
+     <br><dt><code>set unwind-on-terminating-exception</code><dd><a name="index-set-unwind_002don_002dterminating_002dexception-1167"></a><a name="index-unwind-stack-in-called-functions-with-unhandled-exceptions-1168"></a><a name="index-call-dummy-stack-unwinding-on-unhandled-exception_002e-1169"></a>Set unwinding of the stack if a C<tt>++</tt> exception is raised, but left
 unhandled while in a function that <span class="sc">gdb</span> called in the program being
 debugged.  If set to on (the default), <span class="sc">gdb</span> unwinds the stack
 it created for the call and restores the context to what it was before
 the call.  If set to off, <span class="sc">gdb</span> the exception is delivered to
 the default C<tt>++</tt> exception handler and the inferior terminated.
 
-     <br><dt><code>show unwind-on-terminating-exception</code><dd><a name="index-show-unwind_002don_002dterminating_002dexception-1165"></a>Show the current setting of stack unwinding in the functions called by
+     <br><dt><code>show unwind-on-terminating-exception</code><dd><a name="index-show-unwind_002don_002dterminating_002dexception-1170"></a>Show the current setting of stack unwinding in the functions called by
 <span class="sc">gdb</span>.
 
    </dl>
 
 <h4 class="subsection">17.5.1 Calling functions with no debug info</h4>
 
-<p><a name="index-no-debug-info-functions-1166"></a>Sometimes, a function you wish to call is missing debug information. 
+<p><a name="index-no-debug-info-functions-1171"></a>Sometimes, a function you wish to call is missing debug information. 
 In such case, <span class="sc">gdb</span> does not know the type of the function,
 including the types of the function's parameters.  To avoid calling
 the inferior function incorrectly, which could result in the called

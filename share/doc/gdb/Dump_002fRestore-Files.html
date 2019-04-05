@@ -49,7 +49,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Data.html#Data">Data</a>
 
 <h3 class="section">10.18 Copy Between Memory and a File</h3>
 
-<p><a name="index-dump_002frestore-files-774"></a><a name="index-append-data-to-a-file-775"></a><a name="index-dump-data-to-a-file-776"></a><a name="index-restore-data-from-a-file-777"></a>
+<p><a name="index-dump_002frestore-files-776"></a><a name="index-append-data-to-a-file-777"></a><a name="index-dump-data-to-a-file-778"></a><a name="index-restore-data-from-a-file-779"></a>
 You can use the commands <code>dump</code>, <code>append</code>, and
 <code>restore</code> to copy data between target memory and a file.  The
 <code>dump</code> and <code>append</code> commands write data to a file, and the
@@ -59,7 +59,7 @@ Tektronix Hex, or Verilog Hex format; however, <span class="sc">gdb</span> can o
 append to binary files, and cannot read from Verilog Hex files.
 
      
-<a name="index-dump-778"></a>
+<a name="index-dump-780"></a>
 <dl><dt><code>dump </code><span class="roman">[</span><var>format</var><span class="roman">]</span><code> memory </code><var>filename</var> <var>start_addr</var> <var>end_addr</var><dt><code>dump </code><span class="roman">[</span><var>format</var><span class="roman">]</span><code> value </code><var>filename</var> <var>expr</var><dd>Dump the contents of memory from <var>start_addr</var> to <var>end_addr</var>,
 or the value of <var>expr</var>, to <var>filename</var> in the given format.
 
@@ -77,11 +77,11 @@ or the value of <var>expr</var>, to <var>filename</var> in the given format.
 <var>format</var> is omitted, <span class="sc">gdb</span> dumps the data in raw binary
 form.
 
-     <p><a name="index-append-779"></a><br><dt><code>append </code><span class="roman">[</span><code>binary</code><span class="roman">]</span><code> memory </code><var>filename</var> <var>start_addr</var> <var>end_addr</var><dt><code>append </code><span class="roman">[</span><code>binary</code><span class="roman">]</span><code> value </code><var>filename</var> <var>expr</var><dd>Append the contents of memory from <var>start_addr</var> to <var>end_addr</var>,
+     <p><a name="index-append-781"></a><br><dt><code>append </code><span class="roman">[</span><code>binary</code><span class="roman">]</span><code> memory </code><var>filename</var> <var>start_addr</var> <var>end_addr</var><dt><code>append </code><span class="roman">[</span><code>binary</code><span class="roman">]</span><code> value </code><var>filename</var> <var>expr</var><dd>Append the contents of memory from <var>start_addr</var> to <var>end_addr</var>,
 or the value of <var>expr</var>, to the file <var>filename</var>, in raw binary form. 
 (<span class="sc">gdb</span> can only append data to files in raw binary form.)
 
-     <p><a name="index-restore-780"></a><br><dt><code>restore </code><var>filename</var> <span class="roman">[</span><code>binary</code><span class="roman">]</span> <var>bias</var> <var>start</var> <var>end</var><dd>Restore the contents of file <var>filename</var> into memory.  The
+     <p><a name="index-restore-782"></a><br><dt><code>restore </code><var>filename</var> <span class="roman">[</span><code>binary</code><span class="roman">]</span> <var>bias</var> <var>start</var> <var>end</var><dd>Restore the contents of file <var>filename</var> into memory.  The
 <code>restore</code> command can automatically recognize any known <span class="sc">bfd</span>
 file format, except for raw binary.  To restore a raw binary file you
 must specify the optional keyword <code>binary</code> after the filename.

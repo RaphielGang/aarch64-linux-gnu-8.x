@@ -46,13 +46,13 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Stack.html#Stack">Stack</a>
 
 <h3 class="section">8.1 Stack Frames</h3>
 
-<p><a name="index-frame_002c-definition-497"></a><a name="index-stack-frame-498"></a>The call stack is divided up into contiguous pieces called <dfn>stack
+<p><a name="index-frame_002c-definition-498"></a><a name="index-stack-frame-499"></a>The call stack is divided up into contiguous pieces called <dfn>stack
 frames</dfn>, or <dfn>frames</dfn> for short; each frame is the data associated
 with one call to one function.  The frame contains the arguments given
 to the function, the function's local variables, and the address at
 which the function is executing.
 
-   <p><a name="index-initial-frame-499"></a><a name="index-outermost-frame-500"></a><a name="index-innermost-frame-501"></a>When your program is started, the stack has only one frame, that of the
+   <p><a name="index-initial-frame-500"></a><a name="index-outermost-frame-501"></a><a name="index-innermost-frame-502"></a>When your program is started, the stack has only one frame, that of the
 function <code>main</code>.  This is called the <dfn>initial</dfn> frame or the
 <dfn>outermost</dfn> frame.  Each time a function is called, a new frame is
 made.  Each time a function returns, the frame for that function invocation
@@ -61,14 +61,14 @@ the same function.  The frame for the function in which execution is
 actually occurring is called the <dfn>innermost</dfn> frame.  This is the most
 recently created of all the stack frames that still exist.
 
-   <p><a name="index-frame-pointer-502"></a>Inside your program, stack frames are identified by their addresses.  A
+   <p><a name="index-frame-pointer-503"></a>Inside your program, stack frames are identified by their addresses.  A
 stack frame consists of many bytes, each of which has its own address; each
 kind of computer has a convention for choosing one byte whose
 address serves as the address of the frame.  Usually this address is kept
 in a register called the <dfn>frame pointer register</dfn>
 (see <a href="Registers.html#Registers">$fp</a>) while execution is going on in that frame.
 
-   <p><a name="index-frame-number-503"></a><span class="sc">gdb</span> assigns numbers to all existing stack frames, starting with
+   <p><a name="index-frame-number-504"></a><span class="sc">gdb</span> assigns numbers to all existing stack frames, starting with
 zero for the innermost frame, one for the frame that called it,
 and so on upward.  These numbers do not really exist in your program;
 they are assigned by <span class="sc">gdb</span> to give you a way of designating stack
@@ -76,7 +76,7 @@ frames in <span class="sc">gdb</span> commands.
 
 <!-- The -fomit-frame-pointer below perennially causes hbox overflow -->
 <!-- underflow problems. -->
-   <p><a name="index-frameless-execution-504"></a>Some compilers provide a way to compile functions so that they operate
+   <p><a name="index-frameless-execution-505"></a>Some compilers provide a way to compile functions so that they operate
 without stack frames.  (For example, the <span class="sc">gcc</span> option
 <pre class="smallexample">     &lsquo;<samp><span class="samp">-fomit-frame-pointer</span></samp>&rsquo;
 </pre>

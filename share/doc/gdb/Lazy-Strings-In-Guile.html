@@ -48,7 +48,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Guile-API.html#Guile-API">Guile API</a>
 
 <h5 class="subsubsection">23.3.3.20 Guile representation of lazy strings.</h5>
 
-<p><a name="index-lazy-strings-in-guile-2746"></a><a name="index-g_t_003cgdb_003alazy_002dstring_003e-2747"></a>
+<p><a name="index-lazy-strings-in-guile-2762"></a><a name="index-g_t_003cgdb_003alazy_002dstring_003e-2763"></a>
 A <dfn>lazy string</dfn> is a string whose contents is not retrieved or
 encoded until it is needed.
 
@@ -66,25 +66,25 @@ wrapping a string is immediately retrieved and encoded on creation.
 <code>(gdb)</code> module:
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>lazy-string?</b><var> object<a name="index-lazy_002dstring_003f-2748"></a></var><br>
+&mdash; Scheme Procedure: <b>lazy-string?</b><var> object<a name="index-lazy_002dstring_003f-2764"></a></var><br>
 <blockquote><p>Return <code>#t</code> if <var>object</var> is an object of type <code>&lt;gdb:lazy-string&gt;</code>. 
 Otherwise return <code>#f</code>. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>lazy-string-address</b><var> lazy-sring<a name="index-lazy_002dstring_002daddress-2749"></a></var><br>
+&mdash; Scheme Procedure: <b>lazy-string-address</b><var> lazy-sring<a name="index-lazy_002dstring_002daddress-2765"></a></var><br>
 <blockquote><p>Return the address of <var>lazy-string</var>. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>lazy-string-length</b><var> lazy-string<a name="index-lazy_002dstring_002dlength-2750"></a></var><br>
+&mdash; Scheme Procedure: <b>lazy-string-length</b><var> lazy-string<a name="index-lazy_002dstring_002dlength-2766"></a></var><br>
 <blockquote><p>Return the length of <var>lazy-string</var> in characters.  If the
 length is -1, then the string will be fetched and encoded up to the
 first null of appropriate width. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>lazy-string-encoding</b><var> lazy-string<a name="index-lazy_002dstring_002dencoding-2751"></a></var><br>
+&mdash; Scheme Procedure: <b>lazy-string-encoding</b><var> lazy-string<a name="index-lazy_002dstring_002dencoding-2767"></a></var><br>
 <blockquote><p>Return the encoding that will be applied to <var>lazy-string</var>
 when the string is printed by <span class="sc">gdb</span>.  If the encoding is not
 set, or contains an empty string,  then <span class="sc">gdb</span> will select the
@@ -92,7 +92,7 @@ most appropriate encoding when the string is printed.
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>lazy-string-type</b><var> lazy-string<a name="index-lazy_002dstring_002dtype-2752"></a></var><br>
+&mdash; Scheme Procedure: <b>lazy-string-type</b><var> lazy-string<a name="index-lazy_002dstring_002dtype-2768"></a></var><br>
 <blockquote><p>Return the type that is represented by <var>lazy-string</var>'s type. 
 For a lazy string this is a pointer or array type.  To
 resolve this to the lazy string's character type, use <code>type-target-type</code>. 
@@ -100,7 +100,7 @@ See <a href="Types-In-Guile.html#Types-In-Guile">Types In Guile</a>.
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Scheme Procedure: <b>lazy-string-&gt;value</b><var> lazy-string<a name="index-lazy_002dstring_002d_003evalue-2753"></a></var><br>
+&mdash; Scheme Procedure: <b>lazy-string-&gt;value</b><var> lazy-string<a name="index-lazy_002dstring_002d_003evalue-2769"></a></var><br>
 <blockquote><p>Convert the <code>&lt;gdb:lazy-string&gt;</code> to a <code>&lt;gdb:value&gt;</code>.  This value
 will point to the string in memory, but will lose all the delayed
 retrieval, encoding and handling that <span class="sc">gdb</span> applies to a

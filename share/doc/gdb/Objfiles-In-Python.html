@@ -48,7 +48,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Python-API.html#Python-API">Python API<
 
 <h5 class="subsubsection">23.2.2.24 Objfiles In Python</h5>
 
-<p><a name="index-objfiles-in-python-2187"></a><a name="index-gdb_002eObjfile-2188"></a><a name="index-Objfile-2189"></a><span class="sc">gdb</span> loads symbols for an inferior from various
+<p><a name="index-objfiles-in-python-2203"></a><a name="index-gdb_002eObjfile-2204"></a><a name="index-Objfile-2205"></a><span class="sc">gdb</span> loads symbols for an inferior from various
 symbol-containing files (see <a href="Files.html#Files">Files</a>).  These include the primary
 executable file, any shared libraries used by the inferior, and any
 separate debug info files (see <a href="Separate-Debug-Files.html#Separate-Debug-Files">Separate Debug Files</a>). 
@@ -57,28 +57,28 @@ separate debug info files (see <a href="Separate-Debug-Files.html#Separate-Debug
    <p>The following objfile-related functions are available in the
 <code>gdb</code> module:
 
-   <p><a name="index-gdb_002ecurrent_005fobjfile-2190"></a>
+   <p><a name="index-gdb_002ecurrent_005fobjfile-2206"></a>
 
 <div class="defun">
-&mdash; Function: <b>gdb.current_objfile</b> ()<var><a name="index-gdb_002ecurrent_005fobjfile-2191"></a></var><br>
+&mdash; Function: <b>gdb.current_objfile</b> ()<var><a name="index-gdb_002ecurrent_005fobjfile-2207"></a></var><br>
 <blockquote><p>When auto-loading a Python script (see <a href="Python-Auto_002dloading.html#Python-Auto_002dloading">Python Auto-loading</a>), <span class="sc">gdb</span>
 sets the &ldquo;current objfile&rdquo; to the corresponding objfile.  This
 function returns the current objfile.  If there is no current objfile,
 this function returns <code>None</code>. 
 </p></blockquote></div>
 
-   <p><a name="index-gdb_002eobjfiles-2192"></a>
+   <p><a name="index-gdb_002eobjfiles-2208"></a>
 
 <div class="defun">
-&mdash; Function: <b>gdb.objfiles</b> ()<var><a name="index-gdb_002eobjfiles-2193"></a></var><br>
+&mdash; Function: <b>gdb.objfiles</b> ()<var><a name="index-gdb_002eobjfiles-2209"></a></var><br>
 <blockquote><p>Return a sequence of all the objfiles current known to <span class="sc">gdb</span>. 
 See <a href="Objfiles-In-Python.html#Objfiles-In-Python">Objfiles In Python</a>. 
 </p></blockquote></div>
 
-   <p><a name="index-gdb_002elookup_005fobjfile-2194"></a>
+   <p><a name="index-gdb_002elookup_005fobjfile-2210"></a>
 
 <div class="defun">
-&mdash; Function: <b>gdb.lookup_objfile</b> (<var>name </var><span class="roman">[</span><var>, by_build_id</var>])<var><a name="index-gdb_002elookup_005fobjfile-2195"></a></var><br>
+&mdash; Function: <b>gdb.lookup_objfile</b> (<var>name </var><span class="roman">[</span><var>, by_build_id</var>])<var><a name="index-gdb_002elookup_005fobjfile-2211"></a></var><br>
 <blockquote><p>Look up <var>name</var>, a file name or build ID, in the list of objfiles
 for the current program space (see <a href="Progspaces-In-Python.html#Progspaces-In-Python">Progspaces In Python</a>). 
 If the objfile is not found throw the Python <code>ValueError</code> exception.
@@ -101,7 +101,7 @@ command-line option in <a href="../ld/Options.html#Options">Command Line Options
 class.
 
 <div class="defun">
-&mdash; Variable: <b>Objfile.filename</b><var><a name="index-Objfile_002efilename-2196"></a></var><br>
+&mdash; Variable: <b>Objfile.filename</b><var><a name="index-Objfile_002efilename-2212"></a></var><br>
 <blockquote><p>The file name of the objfile as a string, with symbolic links resolved.
 
         <p>The value is <code>None</code> if the objfile is no longer valid. 
@@ -109,7 +109,7 @@ See the <code>gdb.Objfile.is_valid</code> method, described below.
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Variable: <b>Objfile.username</b><var><a name="index-Objfile_002eusername-2197"></a></var><br>
+&mdash; Variable: <b>Objfile.username</b><var><a name="index-Objfile_002eusername-2213"></a></var><br>
 <blockquote><p>The file name of the objfile as specified by the user as a string.
 
         <p>The value is <code>None</code> if the objfile is no longer valid. 
@@ -117,7 +117,7 @@ See the <code>gdb.Objfile.is_valid</code> method, described below.
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Variable: <b>Objfile.owner</b><var><a name="index-Objfile_002eowner-2198"></a></var><br>
+&mdash; Variable: <b>Objfile.owner</b><var><a name="index-Objfile_002eowner-2214"></a></var><br>
 <blockquote><p>For separate debug info objfiles this is the corresponding <code>gdb.Objfile</code>
 object that debug info is being provided for. 
 Otherwise this is <code>None</code>. 
@@ -126,7 +126,7 @@ Separate debug info objfiles are added with the
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Variable: <b>Objfile.build_id</b><var><a name="index-Objfile_002ebuild_005fid-2199"></a></var><br>
+&mdash; Variable: <b>Objfile.build_id</b><var><a name="index-Objfile_002ebuild_005fid-2215"></a></var><br>
 <blockquote><p>The build ID of the objfile as a string. 
 If the objfile does not have a build ID then the value is <code>None</code>.
 
@@ -137,13 +137,13 @@ command-line option in <a href="../ld/Options.html#Options">Command Line Options
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Variable: <b>Objfile.progspace</b><var><a name="index-Objfile_002eprogspace-2200"></a></var><br>
+&mdash; Variable: <b>Objfile.progspace</b><var><a name="index-Objfile_002eprogspace-2216"></a></var><br>
 <blockquote><p>The containing program space of the objfile as a <code>gdb.Progspace</code>
 object.  See <a href="Progspaces-In-Python.html#Progspaces-In-Python">Progspaces In Python</a>. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Variable: <b>Objfile.pretty_printers</b><var><a name="index-Objfile_002epretty_005fprinters-2201"></a></var><br>
+&mdash; Variable: <b>Objfile.pretty_printers</b><var><a name="index-Objfile_002epretty_005fprinters-2217"></a></var><br>
 <blockquote><p>The <code>pretty_printers</code> attribute is a list of functions.  It is
 used to look up pretty-printers.  A <code>Value</code> is passed to each
 function in order; if the function returns <code>None</code>, then the
@@ -153,13 +153,13 @@ information.
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Variable: <b>Objfile.type_printers</b><var><a name="index-Objfile_002etype_005fprinters-2202"></a></var><br>
+&mdash; Variable: <b>Objfile.type_printers</b><var><a name="index-Objfile_002etype_005fprinters-2218"></a></var><br>
 <blockquote><p>The <code>type_printers</code> attribute is a list of type printer objects. 
 See <a href="Type-Printing-API.html#Type-Printing-API">Type Printing API</a>, for more information. 
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Variable: <b>Objfile.frame_filters</b><var><a name="index-Objfile_002eframe_005ffilters-2203"></a></var><br>
+&mdash; Variable: <b>Objfile.frame_filters</b><var><a name="index-Objfile_002eframe_005ffilters-2219"></a></var><br>
 <blockquote><p>The <code>frame_filters</code> attribute is a dictionary of frame filter
 objects.  See <a href="Frame-Filter-API.html#Frame-Filter-API">Frame Filter API</a>, for more information. 
 </p></blockquote></div>
@@ -187,7 +187,7 @@ loaded the objfile.
    <p>A <code>gdb.Objfile</code> object has the following methods:
 
 <div class="defun">
-&mdash; Function: <b>Objfile.is_valid</b> ()<var><a name="index-Objfile_002eis_005fvalid-2204"></a></var><br>
+&mdash; Function: <b>Objfile.is_valid</b> ()<var><a name="index-Objfile_002eis_005fvalid-2220"></a></var><br>
 <blockquote><p>Returns <code>True</code> if the <code>gdb.Objfile</code> object is valid,
 <code>False</code> if not.  A <code>gdb.Objfile</code> object can become invalid
 if the object file it refers to is not loaded in <span class="sc">gdb</span> any
@@ -196,7 +196,7 @@ if it is invalid at the time the method is called.
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Function: <b>Objfile.add_separate_debug_file</b> (<var>file</var>)<var><a name="index-Objfile_002eadd_005fseparate_005fdebug_005ffile-2205"></a></var><br>
+&mdash; Function: <b>Objfile.add_separate_debug_file</b> (<var>file</var>)<var><a name="index-Objfile_002eadd_005fseparate_005fdebug_005ffile-2221"></a></var><br>
 <blockquote><p>Add <var>file</var> to the list of files that <span class="sc">gdb</span> will search for
 debug information for the objfile. 
 This is useful when the debug info has been removed from the program

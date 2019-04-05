@@ -11,7 +11,7 @@
 <!--
 This file documents the GNU Assembler "as".
 
-Copyright (C) 1991-2018 Free Software Foundation, Inc.
+Copyright (C) 1991-2019 Free Software Foundation, Inc.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3
@@ -50,17 +50,23 @@ Up:&nbsp;<a rel="up" accesskey="u" href="RISC_002dV_002dDependent.html#RISC_002d
 
 <!-- man begin OPTIONS -->
      
-<a name="index-g_t_0040samp_007b_002dfpic_007d-option_002c-RISC_002dV-1886"></a>
+<a name="index-g_t_0040samp_007b_002dfpic_007d-option_002c-RISC_002dV-1959"></a>
 <dl><dt><code>-fpic</code><dt><code>-fPIC</code><dd>Generate position-independent code
 
-     <p><a name="index-g_t_0040samp_007b_002dfno_002dpic_007d-option_002c-RISC_002dV-1887"></a><br><dt><code>-fno-pic</code><dd>Don't generate position-independent code (default)
+     <p><a name="index-g_t_0040samp_007b_002dfno_002dpic_007d-option_002c-RISC_002dV-1960"></a><br><dt><code>-fno-pic</code><dd>Don't generate position-independent code (default)
 
-     <p><a name="index-g_t_0040samp_007b_002dmarch_003dISA_007d-option_002c-RISC_002dV-1888"></a><br><dt><code>-march=ISA</code><dd>Select the base isa, as specified by ISA.  For example -march=rv32ima.
+     <p><a name="index-g_t_0040samp_007b_002dmarch_003dISA_007d-option_002c-RISC_002dV-1961"></a><br><dt><code>-march=ISA</code><dd>Select the base isa, as specified by ISA.  For example -march=rv32ima.
 
-     <p><a name="index-g_t_0040samp_007b_002dmabi_003dABI_007d-option_002c-RISC_002dV-1889"></a><br><dt><code>-mabi=ABI</code><dd>Selects the ABI, which is either "ilp32" or "lp64", optionally followed
+     <p><a name="index-g_t_0040samp_007b_002dmabi_003dABI_007d-option_002c-RISC_002dV-1962"></a><br><dt><code>-mabi=ABI</code><dd>Selects the ABI, which is either "ilp32" or "lp64", optionally followed
 by "f", "d", or "q" to indicate single-precision, double-precision, or
 quad-precision floating-point calling convention, or none to indicate
-the soft-float calling convention.
+the soft-float calling convention.  Also, "ilp32" can optionally be followed
+by "e" to indicate the RVE ABI, which is always soft-float.
+
+     <p><a name="index-g_t_0040samp_007b_002dmrelax_007d-option_002c-RISC_002dV-1963"></a><br><dt><code>-mrelax</code><dd>Take advantage of linker relaxations to reduce the number of instructions
+required to materialize symbol addresses. (default)
+
+     <p><a name="index-g_t_0040samp_007b_002dmno_002drelax_007d-option_002c-RISC_002dV-1964"></a><br><dt><code>-mno-relax</code><dd>Don't do linker relaxations.
 
    </dl>
    <!-- man end -->

@@ -46,7 +46,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Optimized-Code.html#Optimized-Code">Opt
 
 <h3 class="section">11.2 Tail Call Frames</h3>
 
-<p><a name="index-tail-call-frames_002c-debugging-820"></a>
+<p><a name="index-tail-call-frames_002c-debugging-822"></a>
 Function <code>B</code> can call function <code>C</code> in its very last statement.  In
 unoptimized compilation the call of <code>C</code> is immediately followed by return
 instruction at the end of <code>B</code> code.  Optimizing compiler may replace the
@@ -87,13 +87,13 @@ tries to show at least all the unambiguous top tail callers and all the
 unambiguous bottom tail calees, if any.
 
      <dl>
-<a name="set-debug-entry_002dvalues"></a><dt><code>set debug entry-values</code><dd><a name="index-set-debug-entry_002dvalues-821"></a>When set to on, enables printing of analysis messages for both frame argument
+<a name="set-debug-entry_002dvalues"></a><dt><code>set debug entry-values</code><dd><a name="index-set-debug-entry_002dvalues-823"></a>When set to on, enables printing of analysis messages for both frame argument
 values at function entry and tail calls.  It will show all the possible valid
 tail calls code paths it has considered.  It will also print the intersection
 of them with the final unambiguous (possibly partial or even empty) code path
 result.
 
-     <br><dt><code>show debug entry-values</code><dd><a name="index-show-debug-entry_002dvalues-822"></a>Show the current state of analysis messages printing for both frame argument
+     <br><dt><code>show debug entry-values</code><dd><a name="index-show-debug-entry_002dvalues-824"></a>Show the current state of analysis messages printing for both frame argument
 values at function entry and tail calls. 
 </dl>
 

@@ -11,7 +11,7 @@
 <!--
 This file documents the GNU Assembler "as".
 
-Copyright (C) 1991-2018 Free Software Foundation, Inc.
+Copyright (C) 1991-2019 Free Software Foundation, Inc.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3
@@ -46,18 +46,18 @@ Up:&nbsp;<a rel="up" accesskey="u" href="i386_002dDependent.html#i386_002dDepend
 
 <h4 class="subsection">9.15.1 Options</h4>
 
-<p><a name="index-options-for-i386-1009"></a><a name="index-options-for-x86_002d64-1010"></a><a name="index-i386-options-1011"></a><a name="index-x86_002d64-options-1012"></a>
+<p><a name="index-options-for-i386-1055"></a><a name="index-options-for-x86_002d64-1056"></a><a name="index-i386-options-1057"></a><a name="index-x86_002d64-options-1058"></a>
 The i386 version of <code>as</code> has a few machine
 dependent options:
 
 <!-- man begin OPTIONS -->
      
-<a name="index-g_t_0040samp_007b_002d_002d32_007d-option_002c-i386-1013"></a>
-<a name="index-g_t_0040samp_007b_002d_002d32_007d-option_002c-x86_002d64-1014"></a>
-<a name="index-g_t_0040samp_007b_002d_002dx32_007d-option_002c-i386-1015"></a>
-<a name="index-g_t_0040samp_007b_002d_002dx32_007d-option_002c-x86_002d64-1016"></a>
-<a name="index-g_t_0040samp_007b_002d_002d64_007d-option_002c-i386-1017"></a>
-<a name="index-g_t_0040samp_007b_002d_002d64_007d-option_002c-x86_002d64-1018"></a>
+<a name="index-g_t_0040samp_007b_002d_002d32_007d-option_002c-i386-1059"></a>
+<a name="index-g_t_0040samp_007b_002d_002d32_007d-option_002c-x86_002d64-1060"></a>
+<a name="index-g_t_0040samp_007b_002d_002dx32_007d-option_002c-i386-1061"></a>
+<a name="index-g_t_0040samp_007b_002d_002dx32_007d-option_002c-x86_002d64-1062"></a>
+<a name="index-g_t_0040samp_007b_002d_002d64_007d-option_002c-i386-1063"></a>
+<a name="index-g_t_0040samp_007b_002d_002d64_007d-option_002c-x86_002d64-1064"></a>
 <dl><dt><code>--32 | --x32 | --64</code><dd>Select the word size, either 32 bits or 64 bits.  &lsquo;<samp><span class="samp">--32</span></samp>&rsquo;
 implies Intel i386 architecture, while &lsquo;<samp><span class="samp">--x32</span></samp>&rsquo; and &lsquo;<samp><span class="samp">--64</span></samp>&rsquo;
 imply AMD x86-64 architecture with 32-bit or 64-bit word-size
@@ -73,13 +73,13 @@ alignment within code sections with multi-byte nop instructions such
 as leal 0(%esi,1),%esi.  This switch disables the optimization if a single
 byte nop (0x90) is explicitly specified as the fill byte for alignment.
 
-     <p><a name="index-g_t_0040samp_007b_002d_002ddivide_007d-option_002c-i386-1019"></a><br><dt><code>--divide</code><dd>On SVR4-derived platforms, the character &lsquo;<samp><span class="samp">/</span></samp>&rsquo; is treated as a comment
+     <p><a name="index-g_t_0040samp_007b_002d_002ddivide_007d-option_002c-i386-1065"></a><br><dt><code>--divide</code><dd>On SVR4-derived platforms, the character &lsquo;<samp><span class="samp">/</span></samp>&rsquo; is treated as a comment
 character, which means that it cannot be used in expressions.  The
 &lsquo;<samp><span class="samp">--divide</span></samp>&rsquo; option turns &lsquo;<samp><span class="samp">/</span></samp>&rsquo; into a normal character.  This does
 not disable &lsquo;<samp><span class="samp">/</span></samp>&rsquo; at the beginning of a line starting a comment, or
 affect using &lsquo;<samp><span class="samp">#</span></samp>&rsquo; for starting a comment.
 
-     <p><a name="index-g_t_0040samp_007b_002dmarch_003d_007d-option_002c-i386-1020"></a><a name="index-g_t_0040samp_007b_002dmarch_003d_007d-option_002c-x86_002d64-1021"></a><br><dt><code>-march=</code><var>CPU</var><code>[+</code><var>EXTENSION</var><code>...]</code><dd>This option specifies the target processor.  The assembler will
+     <p><a name="index-g_t_0040samp_007b_002dmarch_003d_007d-option_002c-i386-1066"></a><a name="index-g_t_0040samp_007b_002dmarch_003d_007d-option_002c-x86_002d64-1067"></a><br><dt><code>-march=</code><var>CPU</var><code>[+</code><var>EXTENSION</var><code>...]</code><dd>This option specifies the target processor.  The assembler will
 issue an error message if an attempt is made to assemble an instruction
 which will not execute on the target processor.  The following
 processor names are recognized:
@@ -114,6 +114,7 @@ processor names are recognized:
 <code>bdver3</code>,
 <code>bdver4</code>,
 <code>znver1</code>,
+<code>znver2</code>,
 <code>btver1</code>,
 <code>btver2</code>,
 <code>generic32</code> and
@@ -131,6 +132,10 @@ accept various extension mnemonics.  For example,
 <code>no287</code>,
 <code>no387</code>,
 <code>no687</code>,
+<code>cmov</code>,
+<code>nocmov</code>,
+<code>fxsr</code>,
+<code>nofxsr</code>,
 <code>mmx</code>,
 <code>nommx</code>,
 <code>sse</code>,
@@ -167,6 +172,8 @@ accept various extension mnemonics.  For example,
 <code>clflushopt</code>,
 <code>se1</code>,
 <code>clwb</code>,
+<code>movdiri</code>,
+<code>movdir64b</code>,
 <code>avx512f</code>,
 <code>avx512cd</code>,
 <code>avx512er</code>,
@@ -220,6 +227,10 @@ accept various extension mnemonics.  For example,
 <code>clflush</code>,
 <code>mwaitx</code>,
 <code>clzero</code>,
+<code>wbnoinvd</code>,
+<code>pconfig</code>,
+<code>waitpkg</code>,
+<code>cldemote</code>,
 <code>lwp</code>,
 <code>fma4</code>,
 <code>xop</code>,
@@ -239,7 +250,7 @@ mnemonics starting with <code>no</code> revoke the respective functionality.
      <p>When the <code>.arch</code> directive is used with <samp><span class="option">-march</span></samp>, the
 <code>.arch</code> directive will take precedent.
 
-     <p><a name="index-g_t_0040samp_007b_002dmtune_003d_007d-option_002c-i386-1022"></a><a name="index-g_t_0040samp_007b_002dmtune_003d_007d-option_002c-x86_002d64-1023"></a><br><dt><code>-mtune=</code><var>CPU</var><dd>This option specifies a processor to optimize for. When used in
+     <p><a name="index-g_t_0040samp_007b_002dmtune_003d_007d-option_002c-i386-1068"></a><a name="index-g_t_0040samp_007b_002dmtune_003d_007d-option_002c-x86_002d64-1069"></a><br><dt><code>-mtune=</code><var>CPU</var><dd>This option specifies a processor to optimize for. When used in
 conjunction with the <samp><span class="option">-march</span></samp> option, only instructions
 of the processor specified by the <samp><span class="option">-march</span></samp> option will be
 generated.
@@ -247,50 +258,56 @@ generated.
      <p>Valid <var>CPU</var> values are identical to the processor list of
 <samp><span class="option">-march=</span><var>CPU</var></samp>.
 
-     <p><a name="index-g_t_0040samp_007b_002dmsse2avx_007d-option_002c-i386-1024"></a><a name="index-g_t_0040samp_007b_002dmsse2avx_007d-option_002c-x86_002d64-1025"></a><br><dt><code>-msse2avx</code><dd>This option specifies that the assembler should encode SSE instructions
+     <p><a name="index-g_t_0040samp_007b_002dmsse2avx_007d-option_002c-i386-1070"></a><a name="index-g_t_0040samp_007b_002dmsse2avx_007d-option_002c-x86_002d64-1071"></a><br><dt><code>-msse2avx</code><dd>This option specifies that the assembler should encode SSE instructions
 with VEX prefix.
 
-     <p><a name="index-g_t_0040samp_007b_002dmsse_002dcheck_003d_007d-option_002c-i386-1026"></a><a name="index-g_t_0040samp_007b_002dmsse_002dcheck_003d_007d-option_002c-x86_002d64-1027"></a><br><dt><code>-msse-check=</code><var>none</var><dt><code>-msse-check=</code><var>warning</var><dt><code>-msse-check=</code><var>error</var><dd>These options control if the assembler should check SSE instructions. 
+     <p><a name="index-g_t_0040samp_007b_002dmsse_002dcheck_003d_007d-option_002c-i386-1072"></a><a name="index-g_t_0040samp_007b_002dmsse_002dcheck_003d_007d-option_002c-x86_002d64-1073"></a><br><dt><code>-msse-check=</code><var>none</var><dt><code>-msse-check=</code><var>warning</var><dt><code>-msse-check=</code><var>error</var><dd>These options control if the assembler should check SSE instructions. 
 <samp><span class="option">-msse-check=</span><var>none</var></samp> will make the assembler not to check SSE
 instructions,  which is the default.  <samp><span class="option">-msse-check=</span><var>warning</var></samp>
 will make the assembler issue a warning for any SSE instruction. 
 <samp><span class="option">-msse-check=</span><var>error</var></samp> will make the assembler issue an error
 for any SSE instruction.
 
-     <p><a name="index-g_t_0040samp_007b_002dmavxscalar_003d_007d-option_002c-i386-1028"></a><a name="index-g_t_0040samp_007b_002dmavxscalar_003d_007d-option_002c-x86_002d64-1029"></a><br><dt><code>-mavxscalar=</code><var>128</var><dt><code>-mavxscalar=</code><var>256</var><dd>These options control how the assembler should encode scalar AVX
+     <p><a name="index-g_t_0040samp_007b_002dmavxscalar_003d_007d-option_002c-i386-1074"></a><a name="index-g_t_0040samp_007b_002dmavxscalar_003d_007d-option_002c-x86_002d64-1075"></a><br><dt><code>-mavxscalar=</code><var>128</var><dt><code>-mavxscalar=</code><var>256</var><dd>These options control how the assembler should encode scalar AVX
 instructions.  <samp><span class="option">-mavxscalar=</span><var>128</var></samp> will encode scalar
 AVX instructions with 128bit vector length, which is the default. 
 <samp><span class="option">-mavxscalar=</span><var>256</var></samp> will encode scalar AVX instructions
 with 256bit vector length.
 
-     <p><a name="index-g_t_0040samp_007b_002dmevexlig_003d_007d-option_002c-i386-1030"></a><a name="index-g_t_0040samp_007b_002dmevexlig_003d_007d-option_002c-x86_002d64-1031"></a><br><dt><code>-mevexlig=</code><var>128</var><dt><code>-mevexlig=</code><var>256</var><dt><code>-mevexlig=</code><var>512</var><dd>These options control how the assembler should encode length-ignored
+     <p><a name="index-g_t_0040samp_007b_002dmvexwig_003d_007d-option_002c-i386-1076"></a><a name="index-g_t_0040samp_007b_002dmvexwig_003d_007d-option_002c-x86_002d64-1077"></a><br><dt><code>-mvexwig=</code><var>0</var><dt><code>-mvexwig=</code><var>1</var><dd>These options control how the assembler should encode VEX.W-ignored (WIG)
+VEX instructions.  <samp><span class="option">-mvexwig=</span><var>0</var></samp> will encode WIG VEX
+instructions with vex.w = 0, which is the default. 
+<samp><span class="option">-mvexwig=</span><var>1</var></samp> will encode WIG EVEX instructions with
+vex.w = 1.
+
+     <p><a name="index-g_t_0040samp_007b_002dmevexlig_003d_007d-option_002c-i386-1078"></a><a name="index-g_t_0040samp_007b_002dmevexlig_003d_007d-option_002c-x86_002d64-1079"></a><br><dt><code>-mevexlig=</code><var>128</var><dt><code>-mevexlig=</code><var>256</var><dt><code>-mevexlig=</code><var>512</var><dd>These options control how the assembler should encode length-ignored
 (LIG) EVEX instructions.  <samp><span class="option">-mevexlig=</span><var>128</var></samp> will encode LIG
 EVEX instructions with 128bit vector length, which is the default. 
 <samp><span class="option">-mevexlig=</span><var>256</var></samp> and <samp><span class="option">-mevexlig=</span><var>512</var></samp> will
 encode LIG EVEX instructions with 256bit and 512bit vector length,
 respectively.
 
-     <p><a name="index-g_t_0040samp_007b_002dmevexwig_003d_007d-option_002c-i386-1032"></a><a name="index-g_t_0040samp_007b_002dmevexwig_003d_007d-option_002c-x86_002d64-1033"></a><br><dt><code>-mevexwig=</code><var>0</var><dt><code>-mevexwig=</code><var>1</var><dd>These options control how the assembler should encode w-ignored (WIG)
+     <p><a name="index-g_t_0040samp_007b_002dmevexwig_003d_007d-option_002c-i386-1080"></a><a name="index-g_t_0040samp_007b_002dmevexwig_003d_007d-option_002c-x86_002d64-1081"></a><br><dt><code>-mevexwig=</code><var>0</var><dt><code>-mevexwig=</code><var>1</var><dd>These options control how the assembler should encode w-ignored (WIG)
 EVEX instructions.  <samp><span class="option">-mevexwig=</span><var>0</var></samp> will encode WIG
 EVEX instructions with evex.w = 0, which is the default. 
 <samp><span class="option">-mevexwig=</span><var>1</var></samp> will encode WIG EVEX instructions with
 evex.w = 1.
 
-     <p><a name="index-g_t_0040samp_007b_002dmmnemonic_003d_007d-option_002c-i386-1034"></a><a name="index-g_t_0040samp_007b_002dmmnemonic_003d_007d-option_002c-x86_002d64-1035"></a><br><dt><code>-mmnemonic=</code><var>att</var><dt><code>-mmnemonic=</code><var>intel</var><dd>This option specifies instruction mnemonic for matching instructions. 
+     <p><a name="index-g_t_0040samp_007b_002dmmnemonic_003d_007d-option_002c-i386-1082"></a><a name="index-g_t_0040samp_007b_002dmmnemonic_003d_007d-option_002c-x86_002d64-1083"></a><br><dt><code>-mmnemonic=</code><var>att</var><dt><code>-mmnemonic=</code><var>intel</var><dd>This option specifies instruction mnemonic for matching instructions. 
 The <code>.att_mnemonic</code> and <code>.intel_mnemonic</code> directives will
 take precedent.
 
-     <p><a name="index-g_t_0040samp_007b_002dmsyntax_003d_007d-option_002c-i386-1036"></a><a name="index-g_t_0040samp_007b_002dmsyntax_003d_007d-option_002c-x86_002d64-1037"></a><br><dt><code>-msyntax=</code><var>att</var><dt><code>-msyntax=</code><var>intel</var><dd>This option specifies instruction syntax when processing instructions. 
+     <p><a name="index-g_t_0040samp_007b_002dmsyntax_003d_007d-option_002c-i386-1084"></a><a name="index-g_t_0040samp_007b_002dmsyntax_003d_007d-option_002c-x86_002d64-1085"></a><br><dt><code>-msyntax=</code><var>att</var><dt><code>-msyntax=</code><var>intel</var><dd>This option specifies instruction syntax when processing instructions. 
 The <code>.att_syntax</code> and <code>.intel_syntax</code> directives will
 take precedent.
 
-     <p><a name="index-g_t_0040samp_007b_002dmnaked_002dreg_007d-option_002c-i386-1038"></a><a name="index-g_t_0040samp_007b_002dmnaked_002dreg_007d-option_002c-x86_002d64-1039"></a><br><dt><code>-mnaked-reg</code><dd>This option specifies that registers don't require a &lsquo;<samp><span class="samp">%</span></samp>&rsquo; prefix. 
+     <p><a name="index-g_t_0040samp_007b_002dmnaked_002dreg_007d-option_002c-i386-1086"></a><a name="index-g_t_0040samp_007b_002dmnaked_002dreg_007d-option_002c-x86_002d64-1087"></a><br><dt><code>-mnaked-reg</code><dd>This option specifies that registers don't require a &lsquo;<samp><span class="samp">%</span></samp>&rsquo; prefix. 
 The <code>.att_syntax</code> and <code>.intel_syntax</code> directives will take precedent.
 
-     <p><a name="index-g_t_0040samp_007b_002dmadd_002dbnd_002dprefix_007d-option_002c-i386-1040"></a><a name="index-g_t_0040samp_007b_002dmadd_002dbnd_002dprefix_007d-option_002c-x86_002d64-1041"></a><br><dt><code>-madd-bnd-prefix</code><dd>This option forces the assembler to add BND prefix to all branches, even
+     <p><a name="index-g_t_0040samp_007b_002dmadd_002dbnd_002dprefix_007d-option_002c-i386-1088"></a><a name="index-g_t_0040samp_007b_002dmadd_002dbnd_002dprefix_007d-option_002c-x86_002d64-1089"></a><br><dt><code>-madd-bnd-prefix</code><dd>This option forces the assembler to add BND prefix to all branches, even
 if such prefix was not explicitly specified in the source code.
 
-     <p><a name="index-g_t_0040samp_007b_002dmshared_007d-option_002c-i386-1042"></a><a name="index-g_t_0040samp_007b_002dmshared_007d-option_002c-x86_002d64-1043"></a><br><dt><code>-mno-shared</code><dd>On ELF target, the assembler normally optimizes out non-PLT relocations
+     <p><a name="index-g_t_0040samp_007b_002dmshared_007d-option_002c-i386-1090"></a><a name="index-g_t_0040samp_007b_002dmshared_007d-option_002c-x86_002d64-1091"></a><br><dt><code>-mno-shared</code><dd>On ELF target, the assembler normally optimizes out non-PLT relocations
 against defined non-weak global branch targets with default visibility. 
 The &lsquo;<samp><span class="samp">-mshared</span></samp>&rsquo; option tells the assembler to generate code which
 may go into a shared library where all non-weak global branch targets
@@ -298,10 +315,10 @@ with default visibility can be preempted.  The resulting code is
 slightly bigger.  This option only affects the handling of branch
 instructions.
 
-     <p><a name="index-g_t_0040samp_007b_002dmbig_002dobj_007d-option_002c-x86_002d64-1044"></a><br><dt><code>-mbig-obj</code><dd>On x86-64 PE/COFF target this option forces the use of big object file
+     <p><a name="index-g_t_0040samp_007b_002dmbig_002dobj_007d-option_002c-x86_002d64-1092"></a><br><dt><code>-mbig-obj</code><dd>On x86-64 PE/COFF target this option forces the use of big object file
 format, which allows more than 32768 sections.
 
-     <p><a name="index-g_t_0040samp_007b_002dmomit_002dlock_002dprefix_003d_007d-option_002c-i386-1045"></a><a name="index-g_t_0040samp_007b_002dmomit_002dlock_002dprefix_003d_007d-option_002c-x86_002d64-1046"></a><br><dt><code>-momit-lock-prefix=</code><var>no</var><dt><code>-momit-lock-prefix=</code><var>yes</var><dd>These options control how the assembler should encode lock prefix. 
+     <p><a name="index-g_t_0040samp_007b_002dmomit_002dlock_002dprefix_003d_007d-option_002c-i386-1093"></a><a name="index-g_t_0040samp_007b_002dmomit_002dlock_002dprefix_003d_007d-option_002c-x86_002d64-1094"></a><br><dt><code>-momit-lock-prefix=</code><var>no</var><dt><code>-momit-lock-prefix=</code><var>yes</var><dd>These options control how the assembler should encode lock prefix. 
 This option is intended as a workaround for processors, that fail on
 lock prefix. This option can only be safely used with single-core,
 single-thread computers
@@ -309,7 +326,7 @@ single-thread computers
 <samp><span class="option">-momit-lock-prefix=</span><var>no</var></samp> will encode lock prefix as usual,
 which is the default.
 
-     <p><a name="index-g_t_0040samp_007b_002dmfence_002das_002dlock_002dadd_003d_007d-option_002c-i386-1047"></a><a name="index-g_t_0040samp_007b_002dmfence_002das_002dlock_002dadd_003d_007d-option_002c-x86_002d64-1048"></a><br><dt><code>-mfence-as-lock-add=</code><var>no</var><dt><code>-mfence-as-lock-add=</code><var>yes</var><dd>These options control how the assembler should encode lfence, mfence and
+     <p><a name="index-g_t_0040samp_007b_002dmfence_002das_002dlock_002dadd_003d_007d-option_002c-i386-1095"></a><a name="index-g_t_0040samp_007b_002dmfence_002das_002dlock_002dadd_003d_007d-option_002c-x86_002d64-1096"></a><br><dt><code>-mfence-as-lock-add=</code><var>no</var><dt><code>-mfence-as-lock-add=</code><var>yes</var><dd>These options control how the assembler should encode lfence, mfence and
 sfence. 
 <samp><span class="option">-mfence-as-lock-add=</span><var>yes</var></samp> will encode lfence, mfence and
 sfence as &lsquo;<samp><span class="samp">lock addl $0x0, (%rsp)</span></samp>&rsquo; in 64-bit mode and
@@ -317,7 +334,7 @@ sfence as &lsquo;<samp><span class="samp">lock addl $0x0, (%rsp)</span></samp>&r
 <samp><span class="option">-mfence-as-lock-add=</span><var>no</var></samp> will encode lfence, mfence and
 sfence as usual, which is the default.
 
-     <p><a name="index-g_t_0040samp_007b_002dmrelax_002drelocations_003d_007d-option_002c-i386-1049"></a><a name="index-g_t_0040samp_007b_002dmrelax_002drelocations_003d_007d-option_002c-x86_002d64-1050"></a><br><dt><code>-mrelax-relocations=</code><var>no</var><dt><code>-mrelax-relocations=</code><var>yes</var><dd>These options control whether the assembler should generate relax
+     <p><a name="index-g_t_0040samp_007b_002dmrelax_002drelocations_003d_007d-option_002c-i386-1097"></a><a name="index-g_t_0040samp_007b_002dmrelax_002drelocations_003d_007d-option_002c-x86_002d64-1098"></a><br><dt><code>-mrelax-relocations=</code><var>no</var><dt><code>-mrelax-relocations=</code><var>yes</var><dd>These options control whether the assembler should generate relax
 relocations, R_386_GOT32X, in 32-bit mode, or R_X86_64_GOTPCRELX and
 R_X86_64_REX_GOTPCRELX, in 64-bit mode. 
 <samp><span class="option">-mrelax-relocations=</span><var>yes</var></samp> will generate relax relocations. 
@@ -325,15 +342,31 @@ R_X86_64_REX_GOTPCRELX, in 64-bit mode.
 relocations.  The default can be controlled by a configure option
 <samp><span class="option">--enable-x86-relax-relocations</span></samp>.
 
-     <p><a name="index-g_t_0040samp_007b_002dmevexrcig_003d_007d-option_002c-i386-1051"></a><a name="index-g_t_0040samp_007b_002dmevexrcig_003d_007d-option_002c-x86_002d64-1052"></a><br><dt><code>-mevexrcig=</code><var>rne</var><dt><code>-mevexrcig=</code><var>rd</var><dt><code>-mevexrcig=</code><var>ru</var><dt><code>-mevexrcig=</code><var>rz</var><dd>These options control how the assembler should encode SAE-only
+     <p><a name="index-g_t_0040samp_007b_002dmx86_002dused_002dnote_003d_007d-option_002c-i386-1099"></a><a name="index-g_t_0040samp_007b_002dmx86_002dused_002dnote_003d_007d-option_002c-x86_002d64-1100"></a><br><dt><code>-mx86-used-note=</code><var>no</var><dt><code>-mx86-used-note=</code><var>yes</var><dd>These options control whether the assembler should generate
+GNU_PROPERTY_X86_ISA_1_USED and GNU_PROPERTY_X86_FEATURE_2_USED
+GNU property notes.  The default can be controlled by the
+<samp><span class="option">--enable-x86-used-note</span></samp> configure option.
+
+     <p><a name="index-g_t_0040samp_007b_002dmevexrcig_003d_007d-option_002c-i386-1101"></a><a name="index-g_t_0040samp_007b_002dmevexrcig_003d_007d-option_002c-x86_002d64-1102"></a><br><dt><code>-mevexrcig=</code><var>rne</var><dt><code>-mevexrcig=</code><var>rd</var><dt><code>-mevexrcig=</code><var>ru</var><dt><code>-mevexrcig=</code><var>rz</var><dd>These options control how the assembler should encode SAE-only
 EVEX instructions.  <samp><span class="option">-mevexrcig=</span><var>rne</var></samp> will encode RC bits
 of EVEX instruction with 00, which is the default. 
 <samp><span class="option">-mevexrcig=</span><var>rd</var></samp>, <samp><span class="option">-mevexrcig=</span><var>ru</var></samp>
 and <samp><span class="option">-mevexrcig=</span><var>rz</var></samp> will encode SAE-only EVEX instructions
 with 01, 10 and 11 RC bits, respectively.
 
-     <p><a name="index-g_t_0040samp_007b_002dmamd64_007d-option_002c-x86_002d64-1053"></a><a name="index-g_t_0040samp_007b_002dmintel64_007d-option_002c-x86_002d64-1054"></a><br><dt><code>-mamd64</code><dt><code>-mintel64</code><dd>This option specifies that the assembler should accept only AMD64 or
+     <p><a name="index-g_t_0040samp_007b_002dmamd64_007d-option_002c-x86_002d64-1103"></a><a name="index-g_t_0040samp_007b_002dmintel64_007d-option_002c-x86_002d64-1104"></a><br><dt><code>-mamd64</code><dt><code>-mintel64</code><dd>This option specifies that the assembler should accept only AMD64 or
 Intel64 ISA in 64-bit mode.  The default is to accept both.
+
+     <p><a name="index-g_t_0040samp_007b_002dO0_007d-option_002c-i386-1105"></a><a name="index-g_t_0040samp_007b_002dO0_007d-option_002c-x86_002d64-1106"></a><a name="index-g_t_0040samp_007b_002dO_007d-option_002c-i386-1107"></a><a name="index-g_t_0040samp_007b_002dO_007d-option_002c-x86_002d64-1108"></a><a name="index-g_t_0040samp_007b_002dO1_007d-option_002c-i386-1109"></a><a name="index-g_t_0040samp_007b_002dO1_007d-option_002c-x86_002d64-1110"></a><a name="index-g_t_0040samp_007b_002dO2_007d-option_002c-i386-1111"></a><a name="index-g_t_0040samp_007b_002dO2_007d-option_002c-x86_002d64-1112"></a><a name="index-g_t_0040samp_007b_002dOs_007d-option_002c-i386-1113"></a><a name="index-g_t_0040samp_007b_002dOs_007d-option_002c-x86_002d64-1114"></a><br><dt><code>-O0 | -O | -O1 | -O2 | -Os</code><dd>Optimize instruction encoding with smaller instruction size.  &lsquo;<samp><span class="samp">-O</span></samp>&rsquo;
+and &lsquo;<samp><span class="samp">-O1</span></samp>&rsquo; encode 64-bit register load instructions with 64-bit
+immediate as 32-bit register load instructions with 31-bit or 32-bits
+immediates and encode 64-bit register clearing instructions with 32-bit
+register clearing instructions.  &lsquo;<samp><span class="samp">-O2</span></samp>&rsquo; includes &lsquo;<samp><span class="samp">-O1</span></samp>&rsquo;
+optimization plus encodes 256-bit and 512-bit vector register clearing
+instructions with 128-bit vector register clearing instructions. 
+&lsquo;<samp><span class="samp">-Os</span></samp>&rsquo; includes &lsquo;<samp><span class="samp">-O2</span></samp>&rsquo; optimization plus encodes 16-bit, 32-bit
+and 64-bit register tests with immediate as 8-bit register test with
+immediate.  &lsquo;<samp><span class="samp">-O0</span></samp>&rsquo; turns off this optimization.
 
    </dl>
    <!-- man end -->

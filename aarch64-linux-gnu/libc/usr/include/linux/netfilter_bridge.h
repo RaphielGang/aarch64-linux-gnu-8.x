@@ -11,8 +11,6 @@
 #include <linux/if_vlan.h>
 #include <linux/if_pppox.h>
 
-#include <limits.h> /* for INT_MIN, INT_MAX */
-
 /* Bridge Hooks */
 /* After promisc drops, checksum checks. */
 #define NF_BR_PRE_ROUTING	0

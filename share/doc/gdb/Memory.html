@@ -51,9 +51,9 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Data.html#Data">Data</a>
 <p>You can use the command <code>x</code> (for &ldquo;examine&rdquo;) to examine memory in
 any of several formats, independently of your program's data types.
 
-   <p><a name="index-examining-memory-639"></a>
+   <p><a name="index-examining-memory-641"></a>
      
-<a name="index-x-_0040r_007b_0028examine-memory_0029_007d-640"></a>
+<a name="index-x-_0040r_007b_0028examine-memory_0029_007d-642"></a>
 <dl><dt><code>x/</code><var>nfu</var> <var>addr</var><dt><code>x </code><var>addr</var><dt><code>x</code><dd>Use the <code>x</code> command to examine memory. 
 </dl>
 
@@ -159,7 +159,7 @@ counter is shown with a <code>=&gt;</code> marker. For example:
      =&gt; 0x8048385 &lt;main+17&gt;: movl   $0x8048460,(%esp)
         0x804838c &lt;main+24&gt;: call   0x80482d4 &lt;puts@plt&gt;
 </pre>
-   <p><a name="index-g_t_0040code_007b_0024_005f_007d_002c-_0040code_007b_0024_005f_005f_007d_002c-and-value-history-641"></a>The addresses and contents printed by the <code>x</code> command are not saved
+   <p><a name="index-g_t_0040code_007b_0024_005f_007d_002c-_0040code_007b_0024_005f_005f_007d_002c-and-value-history-643"></a>The addresses and contents printed by the <code>x</code> command are not saved
 in the value history because there is often too much of them and they
 would get in the way.  Instead, <span class="sc">gdb</span> makes these values available for
 subsequent use in expressions as values of the convenience variables
@@ -172,7 +172,7 @@ the convenience variable <code>$__</code>.
 are from the last memory unit printed; this is not the same as the last
 address printed if several units were printed on the last line of output.
 
-   <p><a name="addressable-memory-unit"></a><a name="index-addressable-memory-unit-642"></a>Most targets have an addressable memory unit size of 8 bits.  This means
+   <p><a name="addressable-memory-unit"></a><a name="index-addressable-memory-unit-644"></a>Most targets have an addressable memory unit size of 8 bits.  This means
 that to each memory address are associated 8 bits of data.  Some
 targets, however, have other addressable memory unit sizes. 
 Within <span class="sc">gdb</span> and this document, the term
@@ -182,7 +182,7 @@ when explicitly referring to a chunk of data of that size.  The word
 the addressable memory unit size of the target.  For most systems,
 addressable memory unit is a synonym of byte.
 
-   <p><a name="index-remote-memory-comparison-643"></a><a name="index-target-memory-comparison-644"></a><a name="index-verify-remote-memory-image-645"></a><a name="index-verify-target-memory-image-646"></a>When you are debugging a program running on a remote target machine
+   <p><a name="index-remote-memory-comparison-645"></a><a name="index-target-memory-comparison-646"></a><a name="index-verify-remote-memory-image-647"></a><a name="index-verify-target-memory-image-648"></a>When you are debugging a program running on a remote target machine
 (see <a href="Remote-Debugging.html#Remote-Debugging">Remote Debugging</a>), you may wish to verify the program's image
 in the remote machine's memory against the executable file you
 downloaded to the target.  Or, on any target, you may want to check
@@ -190,7 +190,7 @@ whether the program has corrupted its own read-only sections.  The
 <code>compare-sections</code> command is provided for such situations.
 
      
-<a name="index-compare_002dsections-647"></a>
+<a name="index-compare_002dsections-649"></a>
 <dl><dt><code>compare-sections </code><span class="roman">[</span><var>section-name</var><span class="roman">|</span><code>-r</code><span class="roman">]</span><dd>Compare the data of a loadable section <var>section-name</var> in the
 executable file of the program being debugged with the same section in
 the target machine's memory, and report any mismatches.  With no

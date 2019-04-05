@@ -48,7 +48,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Installing-GDB.html#Installing-GDB">Ins
 
 <h3 class="section">C.2 Invoking the <span class="sc">gdb</span> <samp><span class="file">configure</span></samp> Script</h3>
 
-<p><a name="index-configuring-_0040value_007bGDBN_007d-3241"></a><span class="sc">gdb</span> comes with a <samp><span class="file">configure</span></samp> script that automates the process
+<p><a name="index-configuring-_0040value_007bGDBN_007d-3258"></a><span class="sc">gdb</span> comes with a <samp><span class="file">configure</span></samp> script that automates the process
 of preparing <span class="sc">gdb</span> for installation; you can then use <code>make</code> to
 build the <code>gdb</code> program.
 
@@ -56,32 +56,32 @@ build the <code>gdb</code> program.
 <span class="sc">gdb</span> in a single directory, whose name is usually composed by
 appending the version number to &lsquo;<samp><span class="samp">gdb</span></samp>&rsquo;.
 
-   <p>For example, the <span class="sc">gdb</span> version 8.1.1.20180704-git distribution is in the
-<samp><span class="file">gdb-8.1.1.20180704-git</span></samp> directory.  That directory contains:
+   <p>For example, the <span class="sc">gdb</span> version 8.2.1.20190227-git distribution is in the
+<samp><span class="file">gdb-8.2.1.20190227-git</span></samp> directory.  That directory contains:
 
      <dl>
-<dt><code>gdb-8.1.1.20180704-git/configure </code><span class="roman">(and supporting files)</span><dd>script for configuring <span class="sc">gdb</span> and all its supporting libraries
+<dt><code>gdb-8.2.1.20190227-git/configure </code><span class="roman">(and supporting files)</span><dd>script for configuring <span class="sc">gdb</span> and all its supporting libraries
 
-     <br><dt><code>gdb-8.1.1.20180704-git/gdb</code><dd>the source specific to <span class="sc">gdb</span> itself
+     <br><dt><code>gdb-8.2.1.20190227-git/gdb</code><dd>the source specific to <span class="sc">gdb</span> itself
 
-     <br><dt><code>gdb-8.1.1.20180704-git/bfd</code><dd>source for the Binary File Descriptor library
+     <br><dt><code>gdb-8.2.1.20190227-git/bfd</code><dd>source for the Binary File Descriptor library
 
-     <br><dt><code>gdb-8.1.1.20180704-git/include</code><dd><span class="sc">gnu</span> include files
+     <br><dt><code>gdb-8.2.1.20190227-git/include</code><dd><span class="sc">gnu</span> include files
 
-     <br><dt><code>gdb-8.1.1.20180704-git/libiberty</code><dd>source for the &lsquo;<samp><span class="samp">-liberty</span></samp>&rsquo; free software library
+     <br><dt><code>gdb-8.2.1.20190227-git/libiberty</code><dd>source for the &lsquo;<samp><span class="samp">-liberty</span></samp>&rsquo; free software library
 
-     <br><dt><code>gdb-8.1.1.20180704-git/opcodes</code><dd>source for the library of opcode tables and disassemblers
+     <br><dt><code>gdb-8.2.1.20190227-git/opcodes</code><dd>source for the library of opcode tables and disassemblers
 
-     <br><dt><code>gdb-8.1.1.20180704-git/readline</code><dd>source for the <span class="sc">gnu</span> command-line interface
+     <br><dt><code>gdb-8.2.1.20190227-git/readline</code><dd>source for the <span class="sc">gnu</span> command-line interface
 
-     <br><dt><code>gdb-8.1.1.20180704-git/glob</code><dd>source for the <span class="sc">gnu</span> filename pattern-matching subroutine
+     <br><dt><code>gdb-8.2.1.20190227-git/glob</code><dd>source for the <span class="sc">gnu</span> filename pattern-matching subroutine
 
-     <br><dt><code>gdb-8.1.1.20180704-git/mmalloc</code><dd>source for the <span class="sc">gnu</span> memory-mapped malloc package
+     <br><dt><code>gdb-8.2.1.20190227-git/mmalloc</code><dd>source for the <span class="sc">gnu</span> memory-mapped malloc package
 </dl>
 
    <p>The simplest way to configure and build <span class="sc">gdb</span> is to run <samp><span class="file">configure</span></samp>
 from the <samp><span class="file">gdb-</span><var>version-number</var></samp> source directory, which in
-this example is the <samp><span class="file">gdb-8.1.1.20180704-git</span></samp> directory.
+this example is the <samp><span class="file">gdb-8.2.1.20190227-git</span></samp> directory.
 
    <p>First switch to the <samp><span class="file">gdb-</span><var>version-number</var></samp> source directory
 if you are not already in it; then run <samp><span class="file">configure</span></samp>.  Pass the
@@ -90,7 +90,7 @@ argument.
 
    <p>For example:
 
-<pre class="smallexample">     cd gdb-8.1.1.20180704-git
+<pre class="smallexample">     cd gdb-8.2.1.20190227-git
      ./configure <var>host</var>
      make
 </pre>
@@ -112,7 +112,7 @@ shell, you may need to run <code>sh</code> on it explicitly:
 </pre>
    <p>If you run <samp><span class="file">configure</span></samp> from a directory that contains source
 directories for multiple libraries or programs, such as the
-<samp><span class="file">gdb-8.1.1.20180704-git</span></samp> source directory for version 8.1.1.20180704-git,
+<samp><span class="file">gdb-8.2.1.20190227-git</span></samp> source directory for version 8.2.1.20190227-git,
 <samp><span class="file">configure</span></samp>
 creates configuration files for every directory level underneath (unless
 you tell it not to, with the &lsquo;<samp><span class="samp">--norecursion</span></samp>&rsquo; option).

@@ -9,7 +9,7 @@
 <link rel="next" href="elfedit.html#elfedit" title="elfedit">
 <link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
 <!--
-Copyright (C) 1991-2018 Free Software Foundation, Inc.
+Copyright (C) 1991-2019 Free Software Foundation, Inc.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3
@@ -42,9 +42,9 @@ Up:&nbsp;<a rel="up" accesskey="u" href="index.html#Top">Top</a>
 <hr>
 </div>
 
-<h2 class="chapter">15 readelf</h2>
+<h2 class="chapter">14 readelf</h2>
 
-<p><a name="index-ELF-file-information-147"></a><a name="index-readelf-148"></a>
+<p><a name="index-ELF-file-information-148"></a><a name="index-readelf-149"></a>
 <!-- man title readelf Displays information about ELF files. -->
 
 <pre class="smallexample">     <!-- man begin SYNOPSIS readelf -->
@@ -109,21 +109,21 @@ given.
 if that option is not present on the command line then dynamic symbols
 and dynamic relocs will not be displayed.
 
-     <br><dt><samp><span class="env">-h</span></samp><dt><samp><span class="env">--file-header</span></samp><dd><a name="index-ELF-file-header-information-149"></a>Displays the information contained in the ELF header at the start of the
+     <br><dt><samp><span class="env">-h</span></samp><dt><samp><span class="env">--file-header</span></samp><dd><a name="index-ELF-file-header-information-150"></a>Displays the information contained in the ELF header at the start of the
 file.
 
-     <br><dt><samp><span class="env">-l</span></samp><dt><samp><span class="env">--program-headers</span></samp><dt><samp><span class="env">--segments</span></samp><dd><a name="index-ELF-program-header-information-150"></a><a name="index-ELF-segment-information-151"></a>Displays the information contained in the file's segment headers, if it
+     <br><dt><samp><span class="env">-l</span></samp><dt><samp><span class="env">--program-headers</span></samp><dt><samp><span class="env">--segments</span></samp><dd><a name="index-ELF-program-header-information-151"></a><a name="index-ELF-segment-information-152"></a>Displays the information contained in the file's segment headers, if it
 has any.
 
-     <br><dt><samp><span class="env">-S</span></samp><dt><samp><span class="env">--sections</span></samp><dt><samp><span class="env">--section-headers</span></samp><dd><a name="index-ELF-section-information-152"></a>Displays the information contained in the file's section headers, if it
+     <br><dt><samp><span class="env">-S</span></samp><dt><samp><span class="env">--sections</span></samp><dt><samp><span class="env">--section-headers</span></samp><dd><a name="index-ELF-section-information-153"></a>Displays the information contained in the file's section headers, if it
 has any.
 
-     <br><dt><samp><span class="env">-g</span></samp><dt><samp><span class="env">--section-groups</span></samp><dd><a name="index-ELF-section-group-information-153"></a>Displays the information contained in the file's section groups, if it
+     <br><dt><samp><span class="env">-g</span></samp><dt><samp><span class="env">--section-groups</span></samp><dd><a name="index-ELF-section-group-information-154"></a>Displays the information contained in the file's section groups, if it
 has any.
 
-     <br><dt><samp><span class="env">-t</span></samp><dt><samp><span class="env">--section-details</span></samp><dd><a name="index-ELF-section-information-154"></a>Displays the detailed section information. Implies <samp><span class="option">-S</span></samp>.
+     <br><dt><samp><span class="env">-t</span></samp><dt><samp><span class="env">--section-details</span></samp><dd><a name="index-ELF-section-information-155"></a>Displays the detailed section information. Implies <samp><span class="option">-S</span></samp>.
 
-     <br><dt><samp><span class="env">-s</span></samp><dt><samp><span class="env">--symbols</span></samp><dt><samp><span class="env">--syms</span></samp><dd><a name="index-ELF-symbol-table-information-155"></a>Displays the entries in symbol table section of the file, if it has one. 
+     <br><dt><samp><span class="env">-s</span></samp><dt><samp><span class="env">--symbols</span></samp><dt><samp><span class="env">--syms</span></samp><dd><a name="index-ELF-symbol-table-information-156"></a>Displays the entries in symbol table section of the file, if it has one. 
 If a symbol has version information associated with it then this is
 displayed as well.  The version string is displayed as a suffix to the
 symbol name, preceeded by an @ character.  For example
@@ -132,23 +132,27 @@ when resolving unversioned references to the symbol then it is
 displayed as a suffix preceeded by two @ characters.  For example
 &lsquo;<samp><span class="samp">foo@@VER_2</span></samp>&rsquo;.
 
-     <br><dt><samp><span class="env">--dyn-syms</span></samp><dd><a name="index-ELF-dynamic-symbol-table-information-156"></a>Displays the entries in dynamic symbol table section of the file, if it
+     <br><dt><samp><span class="env">--dyn-syms</span></samp><dd><a name="index-ELF-dynamic-symbol-table-information-157"></a>Displays the entries in dynamic symbol table section of the file, if it
 has one.  The output format is the same as the format used by the
 <samp><span class="option">--syms</span></samp> option.
 
      <br><dt><samp><span class="env">-e</span></samp><dt><samp><span class="env">--headers</span></samp><dd>Display all the headers in the file.  Equivalent to <samp><span class="option">-h -l -S</span></samp>.
 
-     <br><dt><samp><span class="env">-n</span></samp><dt><samp><span class="env">--notes</span></samp><dd><a name="index-ELF-notes-157"></a>Displays the contents of the NOTE segments and/or sections, if any.
+     <br><dt><samp><span class="env">-n</span></samp><dt><samp><span class="env">--notes</span></samp><dd><a name="index-ELF-notes-158"></a>Displays the contents of the NOTE segments and/or sections, if any.
 
-     <br><dt><samp><span class="env">-r</span></samp><dt><samp><span class="env">--relocs</span></samp><dd><a name="index-ELF-reloc-information-158"></a>Displays the contents of the file's relocation section, if it has one.
+     <br><dt><samp><span class="env">-r</span></samp><dt><samp><span class="env">--relocs</span></samp><dd><a name="index-ELF-reloc-information-159"></a>Displays the contents of the file's relocation section, if it has one.
 
-     <br><dt><samp><span class="env">-u</span></samp><dt><samp><span class="env">--unwind</span></samp><dd><a name="index-unwind-information-159"></a>Displays the contents of the file's unwind section, if it has one.  Only
+     <br><dt><samp><span class="env">-u</span></samp><dt><samp><span class="env">--unwind</span></samp><dd><a name="index-unwind-information-160"></a>Displays the contents of the file's unwind section, if it has one.  Only
 the unwind sections for IA64 ELF files, as well as ARM unwind tables
-(<code>.ARM.exidx</code> / <code>.ARM.extab</code>) are currently supported.
+(<code>.ARM.exidx</code> / <code>.ARM.extab</code>) are currently supported.  If
+support is not yet implemented for your architecture you could try
+dumping the contents of the <var>.eh_frames</var> section using the
+<samp><span class="option">--debug-dump=frames</span></samp> or <samp><span class="option">--debug-dump=frames-interp</span></samp>
+options.
 
-     <br><dt><samp><span class="env">-d</span></samp><dt><samp><span class="env">--dynamic</span></samp><dd><a name="index-ELF-dynamic-section-information-160"></a>Displays the contents of the file's dynamic section, if it has one.
+     <br><dt><samp><span class="env">-d</span></samp><dt><samp><span class="env">--dynamic</span></samp><dd><a name="index-ELF-dynamic-section-information-161"></a>Displays the contents of the file's dynamic section, if it has one.
 
-     <br><dt><samp><span class="env">-V</span></samp><dt><samp><span class="env">--version-info</span></samp><dd><a name="index-ELF-version-sections-information-161"></a>Displays the contents of the version sections in the file, it they
+     <br><dt><samp><span class="env">-V</span></samp><dt><samp><span class="env">--version-info</span></samp><dd><a name="index-ELF-version-sections-information-162"></a>Displays the contents of the version sections in the file, it they
 exist.
 
      <br><dt><samp><span class="env">-A</span></samp><dt><samp><span class="env">--arch-specific</span></samp><dd>Displays architecture-specific information in the file, if there
@@ -179,7 +183,7 @@ any other string identifies all sections with that name in the object file.
 <samp><span class="option">p</span></samp> options are decompressed before being displayed.  If the
 section(s) are not compressed then they are displayed as is.
 
-     <br><dt><samp><span class="env">-c</span></samp><dt><samp><span class="env">--archive-index</span></samp><dd><a name="index-Archive-file-symbol-index-information-162"></a>Displays the file symbol index information contained in the header part
+     <br><dt><samp><span class="env">-c</span></samp><dt><samp><span class="env">--archive-index</span></samp><dd><a name="index-Archive-file-symbol-index-information-163"></a>Displays the file symbol index information contained in the header part
 of binary archives.  Performs the same function as the <samp><span class="option">t</span></samp>
 command to <samp><span class="command">ar</span></samp>, but without using the BFD library.  See <a href="ar.html#ar">ar</a>.
 
@@ -294,7 +298,7 @@ of the symbol tables.
 <samp><span class="command">readelf</span></samp> to print each section header resp. each segment one a
 single line, which is far more readable on terminals wider than 80 columns.
 
-     <br><dt><samp><span class="env">-H</span></samp><dt><samp><span class="env">--help</span></samp><dd>Display the command line options understood by <samp><span class="command">readelf</span></samp>.
+     <br><dt><samp><span class="env">-H</span></samp><dt><samp><span class="env">--help</span></samp><dd>Display the command-line options understood by <samp><span class="command">readelf</span></samp>.
 
    </dl>
 

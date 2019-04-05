@@ -48,7 +48,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Data.html#Data">Data</a>
 
 <h3 class="section">10.21 Caching Data of Targets</h3>
 
-<p><a name="index-caching-data-of-targets-799"></a>
+<p><a name="index-caching-data-of-targets-801"></a>
 <span class="sc">gdb</span> caches data exchanged between the debugger and a target. 
 Each cache is associated with the address space of the inferior. 
 See <a href="Inferiors-and-Programs.html#Inferiors-and-Programs">Inferiors and Programs</a>, about inferior and address space. 
@@ -67,25 +67,25 @@ Other regions of memory can be explicitly marked as
 cacheable; see <a href="Memory-Region-Attributes.html#Memory-Region-Attributes">Memory Region Attributes</a>.
 
      
-<a name="index-set-remotecache-800"></a>
+<a name="index-set-remotecache-802"></a>
 <dl><dt><code>set remotecache on</code><dt><code>set remotecache off</code><dd>This option no longer does anything; it exists for compatibility
 with old scripts.
 
-     <p><a name="index-show-remotecache-801"></a><br><dt><code>show remotecache</code><dd>Show the current state of the obsolete remotecache flag.
+     <p><a name="index-show-remotecache-803"></a><br><dt><code>show remotecache</code><dd>Show the current state of the obsolete remotecache flag.
 
-     <p><a name="index-set-stack_002dcache-802"></a><br><dt><code>set stack-cache on</code><dt><code>set stack-cache off</code><dd>Enable or disable caching of stack accesses.  When <code>on</code>, use
+     <p><a name="index-set-stack_002dcache-804"></a><br><dt><code>set stack-cache on</code><dt><code>set stack-cache off</code><dd>Enable or disable caching of stack accesses.  When <code>on</code>, use
 caching.  By default, this option is <code>on</code>.
 
-     <p><a name="index-show-stack_002dcache-803"></a><br><dt><code>show stack-cache</code><dd>Show the current state of data caching for memory accesses.
+     <p><a name="index-show-stack_002dcache-805"></a><br><dt><code>show stack-cache</code><dd>Show the current state of data caching for memory accesses.
 
-     <p><a name="index-set-code_002dcache-804"></a><br><dt><code>set code-cache on</code><dt><code>set code-cache off</code><dd>Enable or disable caching of code segment accesses.  When <code>on</code>,
+     <p><a name="index-set-code_002dcache-806"></a><br><dt><code>set code-cache on</code><dt><code>set code-cache off</code><dd>Enable or disable caching of code segment accesses.  When <code>on</code>,
 use caching.  By default, this option is <code>on</code>.  This improves
 performance of disassembly in remote debugging.
 
-     <p><a name="index-show-code_002dcache-805"></a><br><dt><code>show code-cache</code><dd>Show the current state of target memory cache for code segment
+     <p><a name="index-show-code_002dcache-807"></a><br><dt><code>show code-cache</code><dd>Show the current state of target memory cache for code segment
 accesses.
 
-     <p><a name="index-info-dcache-806"></a><br><dt><code>info dcache </code><span class="roman">[</span><code>line</code><span class="roman">]</span><dd>Print the information about the performance of data cache of the
+     <p><a name="index-info-dcache-808"></a><br><dt><code>info dcache </code><span class="roman">[</span><code>line</code><span class="roman">]</span><dd>Print the information about the performance of data cache of the
 current inferior's address space.  The information displayed
 includes the dcache width and depth, and for each cache line, its
 number, address, and how many times it was referenced.  This
@@ -94,14 +94,14 @@ command is useful for debugging the data cache operation.
      <p>If a line number is specified, the contents of that line will be
 printed in hex.
 
-     <br><dt><code>set dcache size </code><var>size</var><dd><a name="index-dcache-size-807"></a><a name="index-set-dcache-size-808"></a>Set maximum number of entries in dcache (dcache depth above).
+     <br><dt><code>set dcache size </code><var>size</var><dd><a name="index-dcache-size-809"></a><a name="index-set-dcache-size-810"></a>Set maximum number of entries in dcache (dcache depth above).
 
-     <br><dt><code>set dcache line-size </code><var>line-size</var><dd><a name="index-dcache-line_002dsize-809"></a><a name="index-set-dcache-line_002dsize-810"></a>Set number of bytes each dcache entry caches (dcache width above). 
+     <br><dt><code>set dcache line-size </code><var>line-size</var><dd><a name="index-dcache-line_002dsize-811"></a><a name="index-set-dcache-line_002dsize-812"></a>Set number of bytes each dcache entry caches (dcache width above). 
 Must be a power of 2.
 
-     <br><dt><code>show dcache size</code><dd><a name="index-show-dcache-size-811"></a>Show maximum number of dcache entries.  See <a href="Caching-Target-Data.html#Caching-Target-Data">info dcache</a>.
+     <br><dt><code>show dcache size</code><dd><a name="index-show-dcache-size-813"></a>Show maximum number of dcache entries.  See <a href="Caching-Target-Data.html#Caching-Target-Data">info dcache</a>.
 
-     <br><dt><code>show dcache line-size</code><dd><a name="index-show-dcache-line_002dsize-812"></a>Show default size of dcache lines.
+     <br><dt><code>show dcache line-size</code><dd><a name="index-show-dcache-line_002dsize-814"></a>Show default size of dcache lines.
 
    </dl>
 

@@ -46,7 +46,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Targets.html#Targets">Targets</a>
 
 <h3 class="section">19.3 Choosing Target Byte Order</h3>
 
-<p><a name="index-choosing-target-byte-order-1307"></a><a name="index-target-byte-order-1308"></a>
+<p><a name="index-choosing-target-byte-order-1312"></a><a name="index-target-byte-order-1313"></a>
 Some types of processors, such as the <acronym>MIPS</acronym>, PowerPC, and Renesas SH,
 offer the ability to run either big-endian or little-endian byte
 orders.  Usually the executable or symbol will include a bit to
@@ -55,7 +55,7 @@ which to use.  However, you may still find it useful to adjust
 <span class="sc">gdb</span>'s idea of processor endian-ness manually.
 
      
-<a name="index-set-endian-1309"></a>
+<a name="index-set-endian-1314"></a>
 <dl><dt><code>set endian big</code><dd>Instruct <span class="sc">gdb</span> to assume the target is big-endian.
 
      <br><dt><code>set endian little</code><dd>Instruct <span class="sc">gdb</span> to assume the target is little-endian.
@@ -66,6 +66,15 @@ executable.
      <br><dt><code>show endian</code><dd>Display <span class="sc">gdb</span>'s current idea of the target byte order.
 
    </dl>
+
+   <p>If the <code>set endian auto</code> mode is in effect and no executable has
+been selected, then the endianness used is the last one chosen either
+by one of the <code>set endian big</code> and <code>set endian little</code>
+commands or by inferring from the last executable used.  If no
+endianness has been previously chosen, then the default for this mode
+is inferred from the target <span class="sc">gdb</span> has been built for, and is
+<code>little</code> if the name of the target CPU has an <code>el</code> suffix
+and <code>big</code> otherwise.
 
    <p>Note that these commands merely adjust interpretation of symbolic
 data on the host, and that they have absolutely no effect on the

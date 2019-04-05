@@ -49,46 +49,46 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Bindable-Readline-Commands.html#Bindabl
 <h4 class="subsection">32.4.2 Commands For Manipulating The History</h4>
 
      <dl>
-<dt><code>accept-line (Newline or Return)</code><a name="index-accept_002dline-_0028Newline-or-Return_0029-3167"></a><dd>Accept the line regardless of where the cursor is. 
+<dt><code>accept-line (Newline or Return)</code><a name="index-accept_002dline-_0028Newline-or-Return_0029-3184"></a><dd>Accept the line regardless of where the cursor is. 
 If this line is
 non-empty, it may be added to the history list for future recall with
 <code>add_history()</code>. 
 If this line is a modified history line, the history line is restored
 to its original state.
 
-     <br><dt><code>previous-history (C-p)</code><a name="index-previous_002dhistory-_0028C_002dp_0029-3168"></a><dd>Move `back' through the history list, fetching the previous command.
+     <br><dt><code>previous-history (C-p)</code><a name="index-previous_002dhistory-_0028C_002dp_0029-3185"></a><dd>Move `back' through the history list, fetching the previous command.
 
-     <br><dt><code>next-history (C-n)</code><a name="index-next_002dhistory-_0028C_002dn_0029-3169"></a><dd>Move `forward' through the history list, fetching the next command.
+     <br><dt><code>next-history (C-n)</code><a name="index-next_002dhistory-_0028C_002dn_0029-3186"></a><dd>Move `forward' through the history list, fetching the next command.
 
-     <br><dt><code>beginning-of-history (M-&lt;)</code><a name="index-beginning_002dof_002dhistory-_0028M_002d_003c_0029-3170"></a><dd>Move to the first line in the history.
+     <br><dt><code>beginning-of-history (M-&lt;)</code><a name="index-beginning_002dof_002dhistory-_0028M_002d_003c_0029-3187"></a><dd>Move to the first line in the history.
 
-     <br><dt><code>end-of-history (M-&gt;)</code><a name="index-end_002dof_002dhistory-_0028M_002d_003e_0029-3171"></a><dd>Move to the end of the input history, i.e., the line currently
+     <br><dt><code>end-of-history (M-&gt;)</code><a name="index-end_002dof_002dhistory-_0028M_002d_003e_0029-3188"></a><dd>Move to the end of the input history, i.e., the line currently
 being entered.
 
-     <br><dt><code>reverse-search-history (C-r)</code><a name="index-reverse_002dsearch_002dhistory-_0028C_002dr_0029-3172"></a><dd>Search backward starting at the current line and moving `up' through
+     <br><dt><code>reverse-search-history (C-r)</code><a name="index-reverse_002dsearch_002dhistory-_0028C_002dr_0029-3189"></a><dd>Search backward starting at the current line and moving `up' through
 the history as necessary.  This is an incremental search.
 
-     <br><dt><code>forward-search-history (C-s)</code><a name="index-forward_002dsearch_002dhistory-_0028C_002ds_0029-3173"></a><dd>Search forward starting at the current line and moving `down' through
+     <br><dt><code>forward-search-history (C-s)</code><a name="index-forward_002dsearch_002dhistory-_0028C_002ds_0029-3190"></a><dd>Search forward starting at the current line and moving `down' through
 the the history as necessary.  This is an incremental search.
 
-     <br><dt><code>non-incremental-reverse-search-history (M-p)</code><a name="index-non_002dincremental_002dreverse_002dsearch_002dhistory-_0028M_002dp_0029-3174"></a><dd>Search backward starting at the current line and moving `up'
+     <br><dt><code>non-incremental-reverse-search-history (M-p)</code><a name="index-non_002dincremental_002dreverse_002dsearch_002dhistory-_0028M_002dp_0029-3191"></a><dd>Search backward starting at the current line and moving `up'
 through the history as necessary using a non-incremental search
 for a string supplied by the user.
 
-     <br><dt><code>non-incremental-forward-search-history (M-n)</code><a name="index-non_002dincremental_002dforward_002dsearch_002dhistory-_0028M_002dn_0029-3175"></a><dd>Search forward starting at the current line and moving `down'
+     <br><dt><code>non-incremental-forward-search-history (M-n)</code><a name="index-non_002dincremental_002dforward_002dsearch_002dhistory-_0028M_002dn_0029-3192"></a><dd>Search forward starting at the current line and moving `down'
 through the the history as necessary using a non-incremental search
 for a string supplied by the user.
 
-     <br><dt><code>history-search-forward ()</code><a name="index-history_002dsearch_002dforward-_0028_0029-3176"></a><dd>Search forward through the history for the string of characters
+     <br><dt><code>history-search-forward ()</code><a name="index-history_002dsearch_002dforward-_0028_0029-3193"></a><dd>Search forward through the history for the string of characters
 between the start of the current line and the point. 
 This is a non-incremental search. 
 By default, this command is unbound.
 
-     <br><dt><code>history-search-backward ()</code><a name="index-history_002dsearch_002dbackward-_0028_0029-3177"></a><dd>Search backward through the history for the string of characters
+     <br><dt><code>history-search-backward ()</code><a name="index-history_002dsearch_002dbackward-_0028_0029-3194"></a><dd>Search backward through the history for the string of characters
 between the start of the current line and the point.  This
 is a non-incremental search.  By default, this command is unbound.
 
-     <br><dt><code>yank-nth-arg (M-C-y)</code><a name="index-yank_002dnth_002darg-_0028M_002dC_002dy_0029-3178"></a><dd>Insert the first argument to the previous command (usually
+     <br><dt><code>yank-nth-arg (M-C-y)</code><a name="index-yank_002dnth_002darg-_0028M_002dC_002dy_0029-3195"></a><dd>Insert the first argument to the previous command (usually
 the second word on the previous line) at point. 
 With an argument <var>n</var>,
 insert the <var>n</var>th word from the previous command (the words
@@ -97,7 +97,7 @@ inserts the <var>n</var>th word from the end of the previous command.
 Once the argument <var>n</var> is computed, the argument is extracted
 as if the &lsquo;<samp><span class="samp">!</span><var>n</var></samp>&rsquo; history expansion had been specified.
 
-     <br><dt><code>yank-last-arg (M-. or M-_)</code><a name="index-yank_002dlast_002darg-_0028M_002d_002e-or-M_002d_005f_0029-3179"></a><dd>Insert last argument to the previous command (the last word of the
+     <br><dt><code>yank-last-arg (M-. or M-_)</code><a name="index-yank_002dlast_002darg-_0028M_002d_002e-or-M_002d_005f_0029-3196"></a><dd>Insert last argument to the previous command (the last word of the
 previous history entry). 
 With a numeric argument, behave exactly like <code>yank-nth-arg</code>. 
 Successive calls to <code>yank-last-arg</code> move back through the history

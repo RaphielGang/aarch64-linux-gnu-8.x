@@ -9,7 +9,7 @@
 <link rel="next" href="c_002b_002bfilt.html#c_002b_002bfilt" title="c++filt">
 <link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
 <!--
-Copyright (C) 1991-2018 Free Software Foundation, Inc.
+Copyright (C) 1991-2019 Free Software Foundation, Inc.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3
@@ -44,7 +44,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="index.html#Top">Top</a>
 
 <h2 class="chapter">8 strip</h2>
 
-<p><a name="index-strip-128"></a><a name="index-removing-symbols-129"></a><a name="index-discarding-symbols-130"></a><a name="index-symbols_002c-discarding-131"></a>
+<p><a name="index-strip-129"></a><a name="index-removing-symbols-130"></a><a name="index-discarding-symbols-131"></a><a name="index-symbols_002c-discarding-132"></a>
 <!-- man title strip Discard symbols from object files. -->
 
 <pre class="smallexample">     <!-- man begin SYNOPSIS strip -->
@@ -165,7 +165,7 @@ argument may be specified.
 
      <br><dt><samp><span class="env">-p</span></samp><dt><samp><span class="env">--preserve-dates</span></samp><dd>Preserve the access and modification dates of the file.
 
-     <br><dt><samp><span class="env">-D</span></samp><dt><samp><span class="env">--enable-deterministic-archives</span></samp><dd><a name="index-deterministic-archives-132"></a><a name="index-g_t_002d_002denable_002ddeterministic_002darchives-133"></a>Operate in <em>deterministic</em> mode.  When copying archive members
+     <br><dt><samp><span class="env">-D</span></samp><dt><samp><span class="env">--enable-deterministic-archives</span></samp><dd><a name="index-deterministic-archives-133"></a><a name="index-g_t_002d_002denable_002ddeterministic_002darchives-134"></a>Operate in <em>deterministic</em> mode.  When copying archive members
 and writing the archive index, use zero for UIDs, GIDs, timestamps,
 and use consistent file modes for all files.
 
@@ -173,7 +173,7 @@ and use consistent file modes for all files.
 <samp><span class="option">--enable-deterministic-archives</span></samp>, then this mode is on by default. 
 It can be disabled with the &lsquo;<samp><span class="samp">-U</span></samp>&rsquo; option, below.
 
-     <br><dt><samp><span class="env">-U</span></samp><dt><samp><span class="env">--disable-deterministic-archives</span></samp><dd><a name="index-deterministic-archives-134"></a><a name="index-g_t_002d_002denable_002ddeterministic_002darchives-135"></a>Do <em>not</em> operate in <em>deterministic</em> mode.  This is the
+     <br><dt><samp><span class="env">-U</span></samp><dt><samp><span class="env">--disable-deterministic-archives</span></samp><dd><a name="index-deterministic-archives-135"></a><a name="index-g_t_002d_002denable_002ddeterministic_002darchives-136"></a>Do <em>not</em> operate in <em>deterministic</em> mode.  This is the
 inverse of the <samp><span class="option">-D</span></samp> option, above: when copying archive members
 and writing the archive index, use their actual UID, GID, timestamp,
 and file mode values.
@@ -221,7 +221,7 @@ needed if debugging abilities are required.  The suggested procedure
 to create these files is as follows:
 
           <ol type=1 start=1>
-<li>Link the executable as normal.  Assuming that is is called
+<li>Link the executable as normal.  Assuming that it is called
 <code>foo</code> then... 
 <li>Run <code>objcopy --only-keep-debug foo foo.dbg</code> to
 create a file containing the debugging info. 

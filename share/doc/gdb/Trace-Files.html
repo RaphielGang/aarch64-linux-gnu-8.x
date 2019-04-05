@@ -46,7 +46,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Tracepoints.html#Tracepoints">Tracepoin
 
 <h3 class="section">13.4 Using Trace Files</h3>
 
-<p><a name="index-trace-files-926"></a>
+<p><a name="index-trace-files-928"></a>
 In some situations, the target running a trace experiment may no
 longer be available; perhaps it crashed, or the hardware was needed
 for a different activity.  To handle these cases, you can arrange to
@@ -54,7 +54,7 @@ dump the trace data into a file, and later use that file as a source
 of trace data, via the <code>target tfile</code> command.
 
      
-<a name="index-tsave-927"></a>
+<a name="index-tsave-929"></a>
 <dl><dt><code>tsave [ -r ] </code><var>filename</var><dt><code>tsave [-ctf] </code><var>dirname</var><dd>Save the trace data to <var>filename</var>.  By default, this command
 assumes that <var>filename</var> refers to the host filesystem, so if
 necessary <span class="sc">gdb</span> will copy raw trace data up from the target and
@@ -69,7 +69,7 @@ format.  The <dfn>Common Trace Format</dfn> (CTF) is proposed as a trace format
 that can be shared by multiple debugging and tracing tools.  Please go to
 &lt;<code>http://www.efficios.com/ctf</code>&gt; to get more information.
 
-     <p><a name="index-target-tfile-928"></a><a name="index-tfile-929"></a><a name="index-target-ctf-930"></a><a name="index-ctf-931"></a><br><dt><code>target tfile </code><var>filename</var><dt><code>target ctf </code><var>dirname</var><dd>Use the file named <var>filename</var> or directory named <var>dirname</var> as
+     <p><a name="index-target-tfile-930"></a><a name="index-tfile-931"></a><a name="index-target-ctf-932"></a><a name="index-ctf-933"></a><br><dt><code>target tfile </code><var>filename</var><dt><code>target ctf </code><var>dirname</var><dd>Use the file named <var>filename</var> or directory named <var>dirname</var> as
 a source of trace data.  Commands that examine data work as they do with
 a live target, but it is not possible to run any new trace experiments. 
 <code>tstatus</code> will report the state of the trace run at the moment

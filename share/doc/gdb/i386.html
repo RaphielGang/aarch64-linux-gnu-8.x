@@ -49,7 +49,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Architectures.html#Architectures">Archi
 <h4 class="subsection">21.4.2 x86 Architecture-specific Issues</h4>
 
      <dl>
-<dt><code>set struct-convention </code><var>mode</var><dd><a name="index-set-struct_002dconvention-1580"></a><a name="index-struct-return-convention-1581"></a><a name="index-struct_002funion-returned-in-registers-1582"></a>Set the convention used by the inferior to return <code>struct</code>s and
+<dt><code>set struct-convention </code><var>mode</var><dd><a name="index-set-struct_002dconvention-1586"></a><a name="index-struct-return-convention-1587"></a><a name="index-struct_002funion-returned-in-registers-1588"></a>Set the convention used by the inferior to return <code>struct</code>s and
 <code>union</code>s from functions to <var>mode</var>.  Possible values of
 <var>mode</var> are <code>"pcc"</code>, <code>"reg"</code>, and <code>"default"</code> (the
 default).  <code>"default"</code> or <code>"pcc"</code> means that <code>struct</code>s
@@ -57,13 +57,13 @@ are returned on the stack, while <code>"reg"</code> means that a
 <code>struct</code> or a <code>union</code> whose size is 1, 2, 4, or 8 bytes will
 be returned in a register.
 
-     <br><dt><code>show struct-convention</code><dd><a name="index-show-struct_002dconvention-1583"></a>Show the current setting of the convention to return <code>struct</code>s
+     <br><dt><code>show struct-convention</code><dd><a name="index-show-struct_002dconvention-1589"></a>Show the current setting of the convention to return <code>struct</code>s
 from functions. 
 </dl>
 
 <h5 class="subsubsection">21.4.2.1 Intel <dfn>Memory Protection Extensions</dfn> (MPX).</h5>
 
-<p><a name="index-Intel-Memory-Protection-Extensions-_0028MPX_0029_002e-1584"></a>
+<p><a name="index-Intel-Memory-Protection-Extensions-_0028MPX_0029_002e-1590"></a>
 Memory Protection Extension (MPX) adds the bound registers &lsquo;<samp><span class="samp">BND0</span></samp>&rsquo;
 <a rel="footnote" href="#fn-1" name="fnd-1"><sup>1</sup></a> through &lsquo;<samp><span class="samp">BND3</span></samp>&rsquo;.  Bound registers store a pair of 64-bit values
 which are the lower bound and upper bound.  Bounds are effective addresses or
@@ -98,9 +98,9 @@ bounds located in bound tables is therefore interesting while investigating
 bugs on MPX context.  <span class="sc">gdb</span> provides commands for this purpose:
 
      <dl>
-<dt><code>show mpx bound </code><var>pointer</var><dd><a name="index-show-mpx-bound-1585"></a>Display bounds of the given <var>pointer</var>.
+<dt><code>show mpx bound </code><var>pointer</var><dd><a name="index-show-mpx-bound-1591"></a>Display bounds of the given <var>pointer</var>.
 
-     <br><dt><code>set mpx bound </code><var>pointer</var><code>, </code><var>lbound</var><code>, </code><var>ubound</var><dd><a name="index-set-mpx-bound-1586"></a>Set the bounds of a pointer in the bound table. 
+     <br><dt><code>set mpx bound </code><var>pointer</var><code>, </code><var>lbound</var><code>, </code><var>ubound</var><dd><a name="index-set-mpx-bound-1592"></a>Set the bounds of a pointer in the bound table. 
 This command takes three parameters: <var>pointer</var> is the pointers
 whose bounds are to be changed, <var>lbound</var> and <var>ubound</var> are new values
 for lower and upper bounds respectively. 

@@ -124,7 +124,7 @@
 .\" ========================================================================
 .\"
 .IX Title "AR 1"
-.TH AR 1 "2019-01-10" "binutils-2.30.0" "GNU Development Tools"
+.TH AR 1 "2019-03-21" "binutils-2.32.0" "GNU Development Tools"
 .\" For nroff, turn off justification.  Always turn off hyphenation; it makes
 .\" way too many mistakes in technical documents.
 .if n .ad l
@@ -280,9 +280,10 @@ modifier.  In either case it does the same thing.
 .IX Item "t"
 Display a \fItable\fR listing the contents of \fIarchive\fR, or those
 of the files listed in \fImember\fR... that are present in the
-archive.  Normally only the member name is shown; if you also want to
-see the modes (permissions), timestamp, owner, group, and size, you can
-request that by also specifying the \fBv\fR modifier.
+archive.  Normally only the member name is shown, but if the modifier
+\&\fBO\fR is specified, then the corresponding offset of the member is also
+displayed.  Finally, in order to see the modes (permissions), timestamp,
+owner, group, and size the \fBv\fR modifier should be included.
 .Sp
 If you do not specify a \fImember\fR, all files in the archive
 are listed.
@@ -360,6 +361,10 @@ entries in the archive with the same name.  Extract or delete instance
 Preserve the \fIoriginal\fR dates of members when extracting them.  If
 you do not specify this modifier, files extracted from the archive
 are stamped with the time of extraction.
+.IP "\fBO\fR" 4
+.IX Item "O"
+Display member offsets inside the archive. Use together with the \fBt\fR
+option.
 .IP "\fBP\fR" 4
 .IX Item "P"
 Use the full path name when matching names in the archive.  \s-1GNU\s0
@@ -412,12 +417,12 @@ when the modifier \fBv\fR is appended.
 .IX Item "V"
 This modifier shows the version number of \fBar\fR.
 .PP
-The \fBar\fR program also supports some command line options which
+The \fBar\fR program also supports some command-line options which
 are neither modifiers nor actions, but which do change its behaviour
 in specific ways:
 .IP "\fB\-\-help\fR" 4
 .IX Item "--help"
-Displays the list of command line options supported by \fBar\fR
+Displays the list of command-line options supported by \fBar\fR
 and then exits.
 .IP "\fB\-\-version\fR" 4
 .IX Item "--version"
@@ -431,7 +436,7 @@ of the other \fB\-X\fR options; in particular, it does not support
 \&\fB\-X32\fR which is the default for \s-1AIX\s0 \fBar\fR.
 .IP "\fB\-\-plugin\fR \fIname\fR" 4
 .IX Item "--plugin name"
-The optional command line switch \fB\-\-plugin\fR \fIname\fR causes 
+The optional command-line switch \fB\-\-plugin\fR \fIname\fR causes
 \&\fBar\fR to load the plugin called \fIname\fR which adds support
 for more file formats, including object files with link-time
 optimization information.
@@ -454,7 +459,7 @@ is always backwards compatible with earlier versions, so it is
 sufficient to just copy the newest one.
 .IP "\fB\-\-target\fR \fItarget\fR" 4
 .IX Item "--target target"
-The optional command line switch \fB\-\-target\fR \fIbfdname\fR
+The optional command-line switch \fB\-\-target\fR \fIbfdname\fR
 specifies that the archive members are in an object code format
 different from your system's default format.  See
 .IP "\fB@\fR\fIfile\fR" 4
@@ -475,7 +480,7 @@ with a backslash.  The \fIfile\fR may itself contain additional
 \&\fInm\fR\|(1), \fIranlib\fR\|(1), and the Info entries for \fIbinutils\fR.
 .SH "COPYRIGHT"
 .IX Header "COPYRIGHT"
-Copyright (c) 1991\-2018 Free Software Foundation, Inc.
+Copyright (c) 1991\-2019 Free Software Foundation, Inc.
 .PP
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the \s-1GNU\s0 Free Documentation License, Version 1.3

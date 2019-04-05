@@ -47,12 +47,12 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Embedded-Processors.html#Embedded-Proce
 
 <h4 class="subsection">21.3.10 Renesas Super-H</h4>
 
-<p><a name="index-Super_002dH-1575"></a>
+<p><a name="index-Super_002dH-1580"></a>
 For the Renesas Super-H processor, <span class="sc">gdb</span> provides these
 commands:
 
      <dl>
-<dt><code>set sh calling-convention </code><var>convention</var><dd><a name="index-set-sh-calling_002dconvention-1576"></a>Set the calling-convention used when calling functions from <span class="sc">gdb</span>. 
+<dt><code>set sh calling-convention </code><var>convention</var><dd><a name="index-set-sh-calling_002dconvention-1581"></a>Set the calling-convention used when calling functions from <span class="sc">gdb</span>. 
 Allowed values are &lsquo;<samp><span class="samp">gcc</span></samp>&rsquo;, which is the default setting, and &lsquo;<samp><span class="samp">renesas</span></samp>&rsquo;. 
 With the &lsquo;<samp><span class="samp">gcc</span></samp>&rsquo; setting, functions are called using the <span class="sc">gcc</span> calling
 convention.  If the DWARF-2 information of the called function specifies
@@ -63,7 +63,7 @@ regardless of the DWARF-2 information.  This can be used to override the
 default of &lsquo;<samp><span class="samp">gcc</span></samp>&rsquo; if debug information is missing, or the compiler
 does not emit the DWARF-2 calling convention entry for a function.
 
-     <br><dt><code>show sh calling-convention</code><dd><a name="index-show-sh-calling_002dconvention-1577"></a>Show the current calling convention setting.
+     <br><dt><code>show sh calling-convention</code><dd><a name="index-show-sh-calling_002dconvention-1582"></a>Show the current calling convention setting.
 
    </dl>
 

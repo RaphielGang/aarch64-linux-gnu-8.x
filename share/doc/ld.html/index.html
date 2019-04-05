@@ -8,10 +8,10 @@
 <link href="http://www.gnu.org/software/texinfo/" rel="generator-home" title="Texinfo Homepage">
 <!--
 This file documents the GNU linker LD
-(GNU Toolchain for the A-profile Architecture 8.2-2019.01 (arm-rel-8.28))
-version 2.30.0.
+(GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36))
+version 2.32.0.
 
-Copyright (C) 1991-2018 Free Software Foundation, Inc.
+Copyright (C) 1991-2019 Free Software Foundation, Inc.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3
@@ -40,13 +40,14 @@ section entitled "GNU Free Documentation License".-->
 <li><a name="toc_Overview" href="Overview.html#Overview">1 Overview</a>
 <li><a name="toc_Invocation" href="Invocation.html#Invocation">2 Invocation</a>
 <ul>
-<li><a href="Options.html#Options">2.1 Command Line Options</a>
+<li><a href="Options.html#Options">2.1 Command-line Options</a>
 <ul>
 <li><a href="Options.html#Options">2.1.1 Options Specific to i386 PE Targets</a>
 <li><a href="Options.html#Options">2.1.2 Options specific to C6X uClinux targets</a>
-<li><a href="Options.html#Options">2.1.3 Options specific to Motorola 68HC11 and 68HC12 targets</a>
-<li><a href="Options.html#Options">2.1.4 Options specific to Motorola 68K target</a>
-<li><a href="Options.html#Options">2.1.5 Options specific to MIPS targets</a>
+<li><a href="Options.html#Options">2.1.3 Options specific to C-SKY targets</a>
+<li><a href="Options.html#Options">2.1.4 Options specific to Motorola 68HC11 and 68HC12 targets</a>
+<li><a href="Options.html#Options">2.1.5 Options specific to Motorola 68K target</a>
+<li><a href="Options.html#Options">2.1.6 Options specific to MIPS targets</a>
 </li></ul>
 <li><a href="Environment.html#Environment">2.2 Environment Variables</a>
 </li></ul>
@@ -120,27 +121,26 @@ section entitled "GNU Free Documentation License".-->
 <li><a name="toc_Machine-Dependent" href="Machine-Dependent.html#Machine-Dependent">4 Machine Dependent Features</a>
 <ul>
 <li><a href="H8_002f300.html#H8_002f300">4.1 <samp><span class="command">ld</span></samp> and the H8/300</a>
-<li><a href="i960.html#i960">4.2 <samp><span class="command">ld</span></samp> and the Intel 960 Family</a>
-<li><a href="M68HC11_002f68HC12.html#M68HC11_002f68HC12">4.3 <samp><span class="command">ld</span></samp> and the Motorola 68HC11 and 68HC12 families</a>
+<li><a href="M68HC11_002f68HC12.html#M68HC11_002f68HC12">4.2 <samp><span class="command">ld</span></samp> and the Motorola 68HC11 and 68HC12 families</a>
 <ul>
-<li><a href="M68HC11_002f68HC12.html#M68HC11_002f68HC12">4.3.1 Linker Relaxation</a>
-<li><a href="M68HC11_002f68HC12.html#M68HC11_002f68HC12">4.3.2 Trampoline Generation</a>
+<li><a href="M68HC11_002f68HC12.html#M68HC11_002f68HC12">4.2.1 Linker Relaxation</a>
+<li><a href="M68HC11_002f68HC12.html#M68HC11_002f68HC12">4.2.2 Trampoline Generation</a>
 </li></ul>
-<li><a href="ARM.html#ARM">4.4 <samp><span class="command">ld</span></samp> and the ARM family</a>
-<li><a href="HPPA-ELF32.html#HPPA-ELF32">4.5 <samp><span class="command">ld</span></samp> and HPPA 32-bit ELF Support</a>
-<li><a href="M68K.html#M68K">4.6 <samp><span class="command">ld</span></samp> and the Motorola 68K family</a>
-<li><a href="MIPS.html#MIPS">4.7 <samp><span class="command">ld</span></samp> and the MIPS family</a>
-<li><a href="MMIX.html#MMIX">4.8 <code>ld</code> and MMIX</a>
-<li><a href="MSP430.html#MSP430">4.9 <code>ld</code> and MSP430</a>
-<li><a href="NDS32.html#NDS32">4.10 <code>ld</code> and NDS32</a>
-<li><a href="Nios-II.html#Nios-II">4.11 <samp><span class="command">ld</span></samp> and the Altera Nios II</a>
-<li><a href="PowerPC-ELF32.html#PowerPC-ELF32">4.12 <samp><span class="command">ld</span></samp> and PowerPC 32-bit ELF Support</a>
-<li><a href="PowerPC64-ELF64.html#PowerPC64-ELF64">4.13 <samp><span class="command">ld</span></samp> and PowerPC64 64-bit ELF Support</a>
-<li><a href="S_002f390-ELF.html#S_002f390-ELF">4.14 <samp><span class="command">ld</span></samp> and S/390 ELF Support</a>
-<li><a href="SPU-ELF.html#SPU-ELF">4.15 <samp><span class="command">ld</span></samp> and SPU ELF Support</a>
-<li><a href="TI-COFF.html#TI-COFF">4.16 <samp><span class="command">ld</span></samp>'s Support for Various TI COFF Versions</a>
-<li><a href="WIN32.html#WIN32">4.17 <samp><span class="command">ld</span></samp> and WIN32 (cygwin/mingw)</a>
-<li><a href="Xtensa.html#Xtensa">4.18 <code>ld</code> and Xtensa Processors</a>
+<li><a href="ARM.html#ARM">4.3 <samp><span class="command">ld</span></samp> and the ARM family</a>
+<li><a href="HPPA-ELF32.html#HPPA-ELF32">4.4 <samp><span class="command">ld</span></samp> and HPPA 32-bit ELF Support</a>
+<li><a href="M68K.html#M68K">4.5 <samp><span class="command">ld</span></samp> and the Motorola 68K family</a>
+<li><a href="MIPS.html#MIPS">4.6 <samp><span class="command">ld</span></samp> and the MIPS family</a>
+<li><a href="MMIX.html#MMIX">4.7 <code>ld</code> and MMIX</a>
+<li><a href="MSP430.html#MSP430">4.8 <code>ld</code> and MSP430</a>
+<li><a href="NDS32.html#NDS32">4.9 <code>ld</code> and NDS32</a>
+<li><a href="Nios-II.html#Nios-II">4.10 <samp><span class="command">ld</span></samp> and the Altera Nios II</a>
+<li><a href="PowerPC-ELF32.html#PowerPC-ELF32">4.11 <samp><span class="command">ld</span></samp> and PowerPC 32-bit ELF Support</a>
+<li><a href="PowerPC64-ELF64.html#PowerPC64-ELF64">4.12 <samp><span class="command">ld</span></samp> and PowerPC64 64-bit ELF Support</a>
+<li><a href="S_002f390-ELF.html#S_002f390-ELF">4.13 <samp><span class="command">ld</span></samp> and S/390 ELF Support</a>
+<li><a href="SPU-ELF.html#SPU-ELF">4.14 <samp><span class="command">ld</span></samp> and SPU ELF Support</a>
+<li><a href="TI-COFF.html#TI-COFF">4.15 <samp><span class="command">ld</span></samp>'s Support for Various TI COFF Versions</a>
+<li><a href="WIN32.html#WIN32">4.16 <samp><span class="command">ld</span></samp> and WIN32 (cygwin/mingw)</a>
+<li><a href="Xtensa.html#Xtensa">4.17 <code>ld</code> and Xtensa Processors</a>
 </li></ul>
 <li><a name="toc_BFD" href="BFD.html#BFD">5 BFD</a>
 <ul>
@@ -175,8 +175,8 @@ Up:&nbsp;<a rel="up" accesskey="u" href="../index.html#dir">(dir)</a>
 <h2 class="unnumbered">LD</h2>
 
 <p>This file documents the <span class="sc">gnu</span> linker ld
-(GNU Toolchain for the A-profile Architecture 8.2-2019.01 (arm-rel-8.28))
-version 2.30.0.
+(GNU Toolchain for the A-profile Architecture 8.3-2019.03 (arm-rel-8.36))
+version 2.32.0.
 
    <p>This document is distributed under the terms of the GNU Free
 Documentation License version 1.3.  A copy of the license is included

@@ -48,60 +48,60 @@ Up:&nbsp;<a rel="up" accesskey="u" href="TUI.html#TUI">TUI</a>
 
 <h3 class="section">25.2 TUI Key Bindings</h3>
 
-<p><a name="index-TUI-key-bindings-2846"></a>
+<p><a name="index-TUI-key-bindings-2862"></a>
 The TUI installs several key bindings in the readline keymaps
 (see <a href="Command-Line-Editing.html#Command-Line-Editing">Command Line Editing</a>). 
 The following key bindings are installed for both TUI mode and the
 <span class="sc">gdb</span> standard mode.
 
      
-<a name="index-C_002dx-C_002da-2847"></a>
-<dl><dt><kbd>C-x C-a</kbd><dd><a name="index-C_002dx-a-2848"></a><dt><kbd>C-x a</kbd><dd><a name="index-C_002dx-A-2849"></a><dt><kbd>C-x A</kbd><dd>Enter or leave the TUI mode.  When leaving the TUI mode,
+<a name="index-C_002dx-C_002da-2863"></a>
+<dl><dt><kbd>C-x C-a</kbd><dd><a name="index-C_002dx-a-2864"></a><dt><kbd>C-x a</kbd><dd><a name="index-C_002dx-A-2865"></a><dt><kbd>C-x A</kbd><dd>Enter or leave the TUI mode.  When leaving the TUI mode,
 the curses window management stops and <span class="sc">gdb</span> operates using
 its standard mode, writing on the terminal directly.  When reentering
 the TUI mode, control is given back to the curses windows. 
 The screen is then refreshed.
 
-     <p><a name="index-C_002dx-1-2850"></a><br><dt><kbd>C-x 1</kbd><dd>Use a TUI layout with only one window.  The layout will
+     <p><a name="index-C_002dx-1-2866"></a><br><dt><kbd>C-x 1</kbd><dd>Use a TUI layout with only one window.  The layout will
 either be &lsquo;<samp><span class="samp">source</span></samp>&rsquo; or &lsquo;<samp><span class="samp">assembly</span></samp>&rsquo;.  When the TUI mode
 is not active, it will switch to the TUI mode.
 
      <p>Think of this key binding as the Emacs <kbd>C-x 1</kbd> binding.
 
-     <p><a name="index-C_002dx-2-2851"></a><br><dt><kbd>C-x 2</kbd><dd>Use a TUI layout with at least two windows.  When the current
+     <p><a name="index-C_002dx-2-2867"></a><br><dt><kbd>C-x 2</kbd><dd>Use a TUI layout with at least two windows.  When the current
 layout already has two windows, the next layout with two windows is used. 
 When a new layout is chosen, one window will always be common to the
 previous layout and the new one.
 
      <p>Think of it as the Emacs <kbd>C-x 2</kbd> binding.
 
-     <p><a name="index-C_002dx-o-2852"></a><br><dt><kbd>C-x o</kbd><dd>Change the active window.  The TUI associates several key bindings
+     <p><a name="index-C_002dx-o-2868"></a><br><dt><kbd>C-x o</kbd><dd>Change the active window.  The TUI associates several key bindings
 (like scrolling and arrow keys) with the active window.  This command
 gives the focus to the next TUI window.
 
      <p>Think of it as the Emacs <kbd>C-x o</kbd> binding.
 
-     <p><a name="index-C_002dx-s-2853"></a><br><dt><kbd>C-x s</kbd><dd>Switch in and out of the TUI SingleKey mode that binds single
+     <p><a name="index-C_002dx-s-2869"></a><br><dt><kbd>C-x s</kbd><dd>Switch in and out of the TUI SingleKey mode that binds single
 keys to <span class="sc">gdb</span> commands (see <a href="TUI-Single-Key-Mode.html#TUI-Single-Key-Mode">TUI Single Key Mode</a>). 
 </dl>
 
    <p>The following key bindings only work in the TUI mode:
 
      
-<a name="index-PgUp-2854"></a>
+<a name="index-PgUp-2870"></a>
 <dl><dt>&lt;PgUp&gt;<dd>Scroll the active window one page up.
 
-     <p><a name="index-PgDn-2855"></a><br><dt>&lt;PgDn&gt;<dd>Scroll the active window one page down.
+     <p><a name="index-PgDn-2871"></a><br><dt>&lt;PgDn&gt;<dd>Scroll the active window one page down.
 
-     <p><a name="index-Up-2856"></a><br><dt>&lt;Up&gt;<dd>Scroll the active window one line up.
+     <p><a name="index-Up-2872"></a><br><dt>&lt;Up&gt;<dd>Scroll the active window one line up.
 
-     <p><a name="index-Down-2857"></a><br><dt>&lt;Down&gt;<dd>Scroll the active window one line down.
+     <p><a name="index-Down-2873"></a><br><dt>&lt;Down&gt;<dd>Scroll the active window one line down.
 
-     <p><a name="index-Left-2858"></a><br><dt>&lt;Left&gt;<dd>Scroll the active window one column left.
+     <p><a name="index-Left-2874"></a><br><dt>&lt;Left&gt;<dd>Scroll the active window one column left.
 
-     <p><a name="index-Right-2859"></a><br><dt>&lt;Right&gt;<dd>Scroll the active window one column right.
+     <p><a name="index-Right-2875"></a><br><dt>&lt;Right&gt;<dd>Scroll the active window one column right.
 
-     <p><a name="index-C_002dL-2860"></a><br><dt><kbd>C-L</kbd><dd>Refresh the screen. 
+     <p><a name="index-C_002dL-2876"></a><br><dt><kbd>C-L</kbd><dd>Refresh the screen. 
 </dl>
 
    <p>Because the arrow keys scroll the active window in the TUI mode, they

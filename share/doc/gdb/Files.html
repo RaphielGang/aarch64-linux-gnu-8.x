@@ -46,7 +46,7 @@ Up:&nbsp;<a rel="up" accesskey="u" href="GDB-Files.html#GDB-Files">GDB Files</a>
 
 <h3 class="section">18.1 Commands to Specify Files</h3>
 
-<p><a name="index-symbol-table-1181"></a><a name="index-core-dump-file-1182"></a>
+<p><a name="index-symbol-table-1186"></a><a name="index-core-dump-file-1187"></a>
 You may want to specify executable and core dump file names.  The usual
 way to do this is at start-up time, using the arguments to
 <span class="sc">gdb</span>'s start-up commands (see <a href="Invocation.html#Invocation">Getting In and Out of <span class="sc">gdb</span></a>).
@@ -58,8 +58,8 @@ via <code>gdbserver</code> (see <a href="Server.html#Server">file</a>).  In thes
 new files are useful.
 
      
-<a name="index-executable-file-1183"></a>
-<a name="index-file-1184"></a>
+<a name="index-executable-file-1188"></a>
+<a name="index-file-1189"></a>
 <dl><dt><code>file </code><var>filename</var><dd>Use <var>filename</var> as the program to be debugged.  It is read for its
 symbols and for the contents of pure memory.  It is also the program
 executed when you use the <code>run</code> command.  If you do not specify a
@@ -69,7 +69,7 @@ directories to search, just as the shell does when looking for a program
 to run.  You can change the value of this variable, for both <span class="sc">gdb</span>
 and your program, using the <code>path</code> command.
 
-     <p><a name="index-unlinked-object-files-1185"></a><a name="index-patching-object-files-1186"></a>You can load unlinked object <samp><span class="file">.o</span></samp> files into <span class="sc">gdb</span> using
+     <p><a name="index-unlinked-object-files-1190"></a><a name="index-patching-object-files-1191"></a>You can load unlinked object <samp><span class="file">.o</span></samp> files into <span class="sc">gdb</span> using
 the <code>file</code> command.  You will not be able to &ldquo;run&rdquo; an object
 file, but you can disassemble functions and inspect variables.  Also,
 if the underlying BFD functionality supports it, you could use
@@ -81,14 +81,19 @@ the wrong place.  But this feature is still handy from time to time.
      <br><dt><code>file</code><dd><code>file</code> with no argument makes <span class="sc">gdb</span> discard any information it
 has on both executable file and the symbol table.
 
-     <p><a name="index-exec_002dfile-1187"></a><br><dt><code>exec-file </code><span class="roman">[</span> <var>filename</var> <span class="roman">]</span><dd>Specify that the program to be run (but not the symbol table) is found
+     <p><a name="index-exec_002dfile-1192"></a><br><dt><code>exec-file </code><span class="roman">[</span> <var>filename</var> <span class="roman">]</span><dd>Specify that the program to be run (but not the symbol table) is found
 in <var>filename</var>.  <span class="sc">gdb</span> searches the environment variable <code>PATH</code>
 if necessary to locate your program.  Omitting <var>filename</var> means to
 discard information on the executable file.
 
-     <p><a name="index-symbol_002dfile-1188"></a><br><dt><code>symbol-file </code><span class="roman">[</span> <var>filename</var> <span class="roman">]</span><dd>Read symbol table information from file <var>filename</var>.  <code>PATH</code> is
+     <p><a name="index-symbol_002dfile-1193"></a><br><dt><code>symbol-file </code><span class="roman">[</span> <var>filename</var> <span class="roman">[</span><code> -o </code><var>offset</var> <span class="roman">]]</span><dd>Read symbol table information from file <var>filename</var>.  <code>PATH</code> is
 searched when necessary.  Use the <code>file</code> command to get both symbol
 table and program to run from the same file.
+
+     <p>If an optional <var>offset</var> is specified, it is added to the start
+address of each section in the symbol file.  This is useful if the
+program is relocated at runtime, such as the Linux kernel with kASLR
+enabled.
 
      <p><code>symbol-file</code> with no argument clears out <span class="sc">gdb</span> information on your
 program's symbol table.
@@ -128,12 +133,12 @@ symbol table data in full right away.  Note that &ldquo;stabs-in-COFF&rdquo;
 still does the two-stage strategy, since the debug info is actually
 in stabs format.
 
-     <p><a name="index-readnow-1189"></a><a name="index-reading-symbols-immediately-1190"></a><a name="index-symbols_002c-reading-immediately-1191"></a><br><dt><code>symbol-file </code><span class="roman">[</span><code> -readnow </code><span class="roman">]</span> <var>filename</var><dt><code>file </code><span class="roman">[</span><code> -readnow </code><span class="roman">]</span> <var>filename</var><dd>You can override the <span class="sc">gdb</span> two-stage strategy for reading symbol
+     <p><a name="index-readnow-1194"></a><a name="index-reading-symbols-immediately-1195"></a><a name="index-symbols_002c-reading-immediately-1196"></a><br><dt><code>symbol-file </code><span class="roman">[</span><code> -readnow </code><span class="roman">]</span> <var>filename</var><dt><code>file </code><span class="roman">[</span><code> -readnow </code><span class="roman">]</span> <var>filename</var><dd>You can override the <span class="sc">gdb</span> two-stage strategy for reading symbol
 tables by using the &lsquo;<samp><span class="samp">-readnow</span></samp>&rsquo; option with any of the commands that
 load symbol table information, if you want to be sure <span class="sc">gdb</span> has the
 entire symbol table available.
 
-     <p><a name="index-g_t_0040code_007b_002dreadnever_007d_002c-option-for-symbol_002dfile-command-1192"></a><a name="index-never-read-symbols-1193"></a><a name="index-symbols_002c-never-read-1194"></a><br><dt><code>symbol-file </code><span class="roman">[</span><code> -readnever </code><span class="roman">]</span> <var>filename</var><dt><code>file </code><span class="roman">[</span><code> -readnever </code><span class="roman">]</span> <var>filename</var><dd>You can instruct <span class="sc">gdb</span> to never read the symbolic information
+     <p><a name="index-g_t_0040code_007b_002dreadnever_007d_002c-option-for-symbol_002dfile-command-1197"></a><a name="index-never-read-symbols-1198"></a><a name="index-symbols_002c-never-read-1199"></a><br><dt><code>symbol-file </code><span class="roman">[</span><code> -readnever </code><span class="roman">]</span> <var>filename</var><dt><code>file </code><span class="roman">[</span><code> -readnever </code><span class="roman">]</span> <var>filename</var><dd>You can instruct <span class="sc">gdb</span> to never read the symbolic information
 contained in <var>filename</var> by using the &lsquo;<samp><span class="samp">-readnever</span></samp>&rsquo; option. 
 See <a href="_002d_002dreadnever.html#g_t_002d_002dreadnever">&ndash;readnever</a>.
 
@@ -144,7 +149,7 @@ See <a href="_002d_002dreadnever.html#g_t_002d_002dreadnever">&ndash;readnever</
      <!-- only current dir is used.  FFish says maybe a special GDB hierarchy -->
      <!-- (eg rooted in val of env var GDBSYMS) could exist for mappable symbol -->
      <!-- files. -->
-     <p><a name="index-core_002dfile-1195"></a><br><dt><code>core-file </code><span class="roman">[</span><var>filename</var><span class="roman">]</span><dt><code>core</code><dd>Specify the whereabouts of a core dump file to be used as the &ldquo;contents
+     <p><a name="index-core_002dfile-1200"></a><br><dt><code>core-file </code><span class="roman">[</span><var>filename</var><span class="roman">]</span><dt><code>core</code><dd>Specify the whereabouts of a core dump file to be used as the &ldquo;contents
 of memory&rdquo;.  Traditionally, core files contain only some parts of the
 address space of the process that generated them; <span class="sc">gdb</span> can access the
 executable file itself for other parts.
@@ -158,15 +163,20 @@ wish to debug a core file instead, you must kill the subprocess in which
 the program is running.  To do this, use the <code>kill</code> command
 (see <a href="Kill-Process.html#Kill-Process">Killing the Child Process</a>).
 
-     <p><a name="index-add_002dsymbol_002dfile-1196"></a><a name="index-dynamic-linking-1197"></a><br><dt><code>add-symbol-file </code><var>filename</var> <var>address</var><dt><code>add-symbol-file </code><var>filename</var> <var>address</var> <span class="roman">[</span><code> -readnow </code><span class="roman">|</span><code> -readnever </code><span class="roman">]</span><dt><code>add-symbol-file </code><var>filename</var> <var>address</var><code> -s </code><var>section</var> <var>address</var><code> ...</code><dd>The <code>add-symbol-file</code> command reads additional symbol table
+     <p><a name="index-add_002dsymbol_002dfile-1201"></a><a name="index-dynamic-linking-1202"></a><br><dt><code>add-symbol-file </code><var>filename</var> <span class="roman">[</span><code> -readnow </code><span class="roman">|</span><code> -readnever </code><span class="roman">]</span> <span class="roman">[</span><code> -o </code><var>offset</var> <span class="roman">]</span> <span class="roman">[</span> <var>textaddress</var> <span class="roman">]</span> <span class="roman">[</span><code> -s </code><var>section</var> <var>address</var><code> ... </code><span class="roman">]</span><dd>The <code>add-symbol-file</code> command reads additional symbol table
 information from the file <var>filename</var>.  You would use this command
 when <var>filename</var> has been dynamically loaded (by some other means)
-into the program that is running.  The <var>address</var> should give the memory
-address at which the file has been loaded; <span class="sc">gdb</span> cannot figure
-this out for itself.  You can additionally specify an arbitrary number
-of &lsquo;<samp><span class="samp">-s </span><var>section</var> <var>address</var></samp>&rsquo; pairs, to give an explicit
-section name and base address for that section.  You can specify any
-<var>address</var> as an expression.
+into the program that is running.  The <var>textaddress</var> parameter gives
+the memory address at which the file's text section has been loaded. 
+You can additionally specify the base address of other sections using
+an arbitrary number of &lsquo;<samp><span class="samp">-s </span><var>section</var> <var>address</var></samp>&rsquo; pairs. 
+If a section is omitted, <span class="sc">gdb</span> will use its default addresses
+as found in <var>filename</var>.  Any <var>address</var> or <var>textaddress</var>
+can be given as an expression.
+
+     <p>If an optional <var>offset</var> is specified, it is added to the start
+address of each section, except those for which the address was
+specified explicitly.
 
      <p>The symbol table of the file <var>filename</var> is added to the symbol table
 originally read with the <code>symbol-file</code> command.  You can use the
@@ -175,7 +185,7 @@ thus read is kept in addition to the old.
 
      <p>Changes can be reverted using the command <code>remove-symbol-file</code>.
 
-     <p><a name="index-relocatable-object-files_002c-reading-symbols-from-1198"></a><a name="index-object-files_002c-relocatable_002c-reading-symbols-from-1199"></a><a name="index-reading-symbols-from-relocatable-object-files-1200"></a><a name="index-symbols_002c-reading-from-relocatable-object-files-1201"></a><a name="index-g_t_0040file_007b_002eo_007d-files_002c-reading-symbols-from-1202"></a>Although <var>filename</var> is typically a shared library file, an
+     <p><a name="index-relocatable-object-files_002c-reading-symbols-from-1203"></a><a name="index-object-files_002c-relocatable_002c-reading-symbols-from-1204"></a><a name="index-reading-symbols-from-relocatable-object-files-1205"></a><a name="index-symbols_002c-reading-from-relocatable-object-files-1206"></a><a name="index-g_t_0040file_007b_002eo_007d-files_002c-reading-symbols-from-1207"></a>Although <var>filename</var> is typically a shared library file, an
 executable file, or some other object file which has been fully
 relocated for loading into a process, you can also load symbolic
 information from relocatable <samp><span class="file">.o</span></samp> files, as long as:
@@ -202,7 +212,7 @@ way.
 
      <p><code>add-symbol-file</code> does not repeat if you press &lt;RET&gt; after using it.
 
-     <p><a name="index-remove_002dsymbol_002dfile-1203"></a><br><dt><code>remove-symbol-file </code><var>filename</var><br><dt><code>remove-symbol-file -a </code><var>address</var><dd>Remove a symbol file added via the <code>add-symbol-file</code> command.  The
+     <p><a name="index-remove_002dsymbol_002dfile-1208"></a><br><dt><code>remove-symbol-file </code><var>filename</var><br><dt><code>remove-symbol-file -a </code><var>address</var><dd>Remove a symbol file added via the <code>add-symbol-file</code> command.  The
 file to remove can be identified by its <var>filename</var> or by an <var>address</var>
 that lies within the boundaries of this symbol file in memory.  Example:
 
@@ -217,7 +227,7 @@ that lies within the boundaries of this symbol file in memory.  Example:
 </pre>
      <p><code>remove-symbol-file</code> does not repeat if you press &lt;RET&gt; after using it.
 
-     <p><a name="index-add_002dsymbol_002dfile_002dfrom_002dmemory-1204"></a><a name="index-g_t_0040code_007bsyscall-DSO_007d-1205"></a><a name="index-load-symbols-from-memory-1206"></a><br><dt><code>add-symbol-file-from-memory </code><var>address</var><dd>Load symbols from the given <var>address</var> in a dynamically loaded
+     <p><a name="index-add_002dsymbol_002dfile_002dfrom_002dmemory-1209"></a><a name="index-g_t_0040code_007bsyscall-DSO_007d-1210"></a><a name="index-load-symbols-from-memory-1211"></a><br><dt><code>add-symbol-file-from-memory </code><var>address</var><dd>Load symbols from the given <var>address</var> in a dynamically loaded
 object file whose image is mapped directly into the inferior's memory. 
 For example, the Linux kernel maps a <code>syscall DSO</code> into each
 process's address space; this DSO provides kernel-specific code for
@@ -226,7 +236,7 @@ evaluation yields the address of the file's shared object file header.
 For this command to work, you must have used <code>symbol-file</code> or
 <code>exec-file</code> commands in advance.
 
-     <p><a name="index-section-1207"></a><br><dt><code>section </code><var>section</var> <var>addr</var><dd>The <code>section</code> command changes the base address of the named
+     <p><a name="index-section-1212"></a><br><dt><code>section </code><var>section</var> <var>addr</var><dd>The <code>section</code> command changes the base address of the named
 <var>section</var> of the exec file to <var>addr</var>.  This can be used if the
 exec file does not contain section addresses, (such as in the
 <code>a.out</code> format), or when the addresses specified in the file
@@ -234,14 +244,14 @@ itself are wrong.  Each section must be changed separately.  The
 <code>info files</code> command, described below, lists all the sections and
 their addresses.
 
-     <p><a name="index-info-files-1208"></a><a name="index-info-target-1209"></a><br><dt><code>info files</code><dt><code>info target</code><dd><code>info files</code> and <code>info target</code> are synonymous; both print the
+     <p><a name="index-info-files-1213"></a><a name="index-info-target-1214"></a><br><dt><code>info files</code><dt><code>info target</code><dd><code>info files</code> and <code>info target</code> are synonymous; both print the
 current target (see <a href="Targets.html#Targets">Specifying a Debugging Target</a>),
 including the names of the executable and core dump files currently in
 use by <span class="sc">gdb</span>, and the files from which symbols were loaded.  The
 command <code>help target</code> lists all possible targets rather than
 current ones.
 
-     <p><a name="index-maint-info-sections-1210"></a><br><dt><code>maint info sections</code><dd>Another command that can give you extra information about program sections
+     <p><a name="index-maint-info-sections-1215"></a><br><dt><code>maint info sections</code><dd>Another command that can give you extra information about program sections
 is <code>maint info sections</code>.  In addition to the section information
 displayed by <code>info files</code>, this command displays the flags and file
 offset of each section in the executable and core dump files.  In addition,
@@ -271,7 +281,7 @@ COFF shared library information.
 <br><dt><code>IS_COMMON</code><dd>Section contains common symbols. 
 </dl>
           </dl>
-     <a name="index-set-trust_002dreadonly_002dsections-1211"></a><a name="index-read_002donly-sections-1212"></a><br><dt><code>set trust-readonly-sections on</code><dd>Tell <span class="sc">gdb</span> that readonly sections in your object file
+     <a name="index-set-trust_002dreadonly_002dsections-1216"></a><a name="index-read_002donly-sections-1217"></a><br><dt><code>set trust-readonly-sections on</code><dd>Tell <span class="sc">gdb</span> that readonly sections in your object file
 really are read-only (i.e. that their contents will not change). 
 In that case, <span class="sc">gdb</span> can fetch values from these sections
 out of the object file, rather than from the target program. 
@@ -291,7 +301,7 @@ and must therefore be fetched from the target when needed.
 as arguments.  <span class="sc">gdb</span> always converts the file name to an absolute file
 name and remembers it that way.
 
-   <p><a name="index-shared-libraries-1213"></a><a name="Shared-Libraries"></a><span class="sc">gdb</span> supports <span class="sc">gnu</span>/Linux, MS-Windows, SunOS,
+   <p><a name="index-shared-libraries-1218"></a><a name="Shared-Libraries"></a><span class="sc">gdb</span> supports <span class="sc">gnu</span>/Linux, MS-Windows, SunOS,
 Darwin/Mach-O, SVr4, IBM RS/6000 AIX, QNX Neutrino, FDPIC (FR-V), and
 DSBT (TIC6X) shared libraries.
 
@@ -315,7 +325,7 @@ particularly large or there are many of them.
 commands:
 
      
-<a name="index-set-auto_002dsolib_002dadd-1214"></a>
+<a name="index-set-auto_002dsolib_002dadd-1219"></a>
 <dl><dt><code>set auto-solib-add </code><var>mode</var><dd>If <var>mode</var> is <code>on</code>, symbols from all shared object libraries
 will be loaded automatically when the inferior begins execution, you
 attach to an independently started inferior, or when the dynamic linker
@@ -323,7 +333,7 @@ informs <span class="sc">gdb</span> that a new library has been loaded.  If <var
 is <code>off</code>, symbols must be loaded manually, using the
 <code>sharedlibrary</code> command.  The default value is <code>on</code>.
 
-     <p><a name="index-memory-used-for-symbol-tables-1215"></a>If your program uses lots of shared libraries with debug info that
+     <p><a name="index-memory-used-for-symbol-tables-1220"></a>If your program uses lots of shared libraries with debug info that
 takes large amounts of memory, you can decrease the <span class="sc">gdb</span>
 memory footprint by preventing it from automatically loading the
 symbols from shared libraries.  To that end, type <kbd>set
@@ -332,29 +342,29 @@ library whose debug symbols you do need with <kbd>sharedlibrary
 </kbd><var>regexp</var>, where <var>regexp</var> is a regular expression that matches
 the libraries whose symbols you want to be loaded.
 
-     <p><a name="index-show-auto_002dsolib_002dadd-1216"></a><br><dt><code>show auto-solib-add</code><dd>Display the current autoloading mode. 
+     <p><a name="index-show-auto_002dsolib_002dadd-1221"></a><br><dt><code>show auto-solib-add</code><dd>Display the current autoloading mode. 
 </dl>
 
-   <p><a name="index-load-shared-library-1217"></a>To explicitly load shared library symbols, use the <code>sharedlibrary</code>
+   <p><a name="index-load-shared-library-1222"></a>To explicitly load shared library symbols, use the <code>sharedlibrary</code>
 command:
 
      
-<a name="index-info-sharedlibrary-1218"></a>
-<a name="index-info-share-1219"></a>
+<a name="index-info-sharedlibrary-1223"></a>
+<a name="index-info-share-1224"></a>
 <dl><dt><code>info share </code><var>regex</var><dt><code>info sharedlibrary </code><var>regex</var><dd>Print the names of the shared libraries which are currently loaded
 that match <var>regex</var>.  If <var>regex</var> is omitted then print
 all shared libraries that are loaded.
 
-     <p><a name="index-info-dll-1220"></a><br><dt><code>info dll </code><var>regex</var><dd>This is an alias of <code>info sharedlibrary</code>.
+     <p><a name="index-info-dll-1225"></a><br><dt><code>info dll </code><var>regex</var><dd>This is an alias of <code>info sharedlibrary</code>.
 
-     <p><a name="index-sharedlibrary-1221"></a><a name="index-share-1222"></a><br><dt><code>sharedlibrary </code><var>regex</var><dt><code>share </code><var>regex</var><dd>Load shared object library symbols for files matching a
+     <p><a name="index-sharedlibrary-1226"></a><a name="index-share-1227"></a><br><dt><code>sharedlibrary </code><var>regex</var><dt><code>share </code><var>regex</var><dd>Load shared object library symbols for files matching a
 Unix regular expression. 
 As with files loaded automatically, it only loads shared libraries
 required by your program for a core file or after typing <code>run</code>.  If
 <var>regex</var> is omitted all shared libraries required by your program are
 loaded.
 
-     <br><dt><code>nosharedlibrary</code><dd><a name="index-nosharedlibrary-1223"></a><a name="index-unload-symbols-from-shared-libraries-1224"></a>Unload all shared object library symbols.  This discards all symbols
+     <br><dt><code>nosharedlibrary</code><dd><a name="index-nosharedlibrary-1228"></a><a name="index-unload-symbols-from-shared-libraries-1229"></a>Unload all shared object library symbols.  This discards all symbols
 that have been loaded from all shared libraries.  Symbols from shared
 libraries that were loaded by explicit user requests are not
 discarded. 
@@ -370,12 +380,12 @@ less useful than setting a catchpoint, because it does not allow for
 conditions or commands as a catchpoint does.
 
      <dl>
-<dt><code>set stop-on-solib-events</code><dd><a name="index-set-stop_002don_002dsolib_002devents-1225"></a>This command controls whether <span class="sc">gdb</span> should give you control
+<dt><code>set stop-on-solib-events</code><dd><a name="index-set-stop_002don_002dsolib_002devents-1230"></a>This command controls whether <span class="sc">gdb</span> should give you control
 when the dynamic linker notifies it about some shared library event. 
 The most common event of interest is loading or unloading of a new
 shared library.
 
-     <br><dt><code>show stop-on-solib-events</code><dd><a name="index-show-stop_002don_002dsolib_002devents-1226"></a>Show whether <span class="sc">gdb</span> stops and gives you control when shared
+     <br><dt><code>show stop-on-solib-events</code><dd><a name="index-show-stop_002don_002dsolib_002devents-1231"></a>Show whether <span class="sc">gdb</span> stops and gives you control when shared
 library events happen. 
 </dl>
 
@@ -388,16 +398,16 @@ provided, they need to be the same as the target libraries, although the
 copies on the target can be stripped as long as the copies on the host are
 not.
 
-   <p><a name="index-where-to-look-for-shared-libraries-1227"></a>For remote debugging, you need to tell <span class="sc">gdb</span> where the target
+   <p><a name="index-where-to-look-for-shared-libraries-1232"></a>For remote debugging, you need to tell <span class="sc">gdb</span> where the target
 libraries are, so that it can load the correct copies&mdash;otherwise, it
 may try to load the host's libraries.  <span class="sc">gdb</span> has two variables
 to specify the search directories for target libraries.
 
      
-<a name="index-prefix-for-executable-and-shared-library-file-names-1228"></a>
-<a name="index-system-root_002c-alternate-1229"></a>
-<a name="index-set-solib_002dabsolute_002dprefix-1230"></a>
-<a name="index-set-sysroot-1231"></a>
+<a name="index-prefix-for-executable-and-shared-library-file-names-1233"></a>
+<a name="index-system-root_002c-alternate-1234"></a>
+<a name="index-set-solib_002dabsolute_002dprefix-1235"></a>
+<a name="index-set-sysroot-1236"></a>
 <dl><dt><code>set sysroot </code><var>path</var><dd>Use <var>path</var> as the system root for the program being debugged.  Any
 absolute shared library paths will be prefixed with <var>path</var>; many
 runtime loaders store the absolute paths to the shared library in the
@@ -467,16 +477,16 @@ if you don't want or need to.
      <p>The <code>set solib-absolute-prefix</code> command is an alias for <code>set
 sysroot</code>.
 
-     <p><a name="index-default-system-root-1232"></a><a name="index-g_t_0040samp_007b_002d_002dwith_002dsysroot_007d-1233"></a>You can set the default system root by using the configure-time
+     <p><a name="index-default-system-root-1237"></a><a name="index-g_t_0040samp_007b_002d_002dwith_002dsysroot_007d-1238"></a>You can set the default system root by using the configure-time
 &lsquo;<samp><span class="samp">--with-sysroot</span></samp>&rsquo; option.  If the system root is inside
 <span class="sc">gdb</span>'s configured binary prefix (set with &lsquo;<samp><span class="samp">--prefix</span></samp>&rsquo; or
 &lsquo;<samp><span class="samp">--exec-prefix</span></samp>&rsquo;), then the default system root will be updated
 automatically if the installed <span class="sc">gdb</span> is moved to a new
 location.
 
-     <p><a name="index-show-sysroot-1234"></a><br><dt><code>show sysroot</code><dd>Display the current executable and shared library prefix.
+     <p><a name="index-show-sysroot-1239"></a><br><dt><code>show sysroot</code><dd>Display the current executable and shared library prefix.
 
-     <p><a name="index-set-solib_002dsearch_002dpath-1235"></a><br><dt><code>set solib-search-path </code><var>path</var><dd>If this variable is set, <var>path</var> is a colon-separated list of
+     <p><a name="index-set-solib_002dsearch_002dpath-1240"></a><br><dt><code>set solib-search-path </code><var>path</var><dd>If this variable is set, <var>path</var> is a colon-separated list of
 directories to search for shared libraries.  &lsquo;<samp><span class="samp">solib-search-path</span></samp>&rsquo;
 is used after &lsquo;<samp><span class="samp">sysroot</span></samp>&rsquo; fails to locate the library, or if the
 path to the library is relative instead of absolute.  If you want to
@@ -486,9 +496,9 @@ finding your host's libraries.  &lsquo;<samp><span class="samp">sysroot</span></
 it to a nonexistent directory may interfere with automatic loading
 of shared library symbols.
 
-     <p><a name="index-show-solib_002dsearch_002dpath-1236"></a><br><dt><code>show solib-search-path</code><dd>Display the current shared library search path.
+     <p><a name="index-show-solib_002dsearch_002dpath-1241"></a><br><dt><code>show solib-search-path</code><dd>Display the current shared library search path.
 
-     <p><a name="index-DOS-file_002dname-semantics-of-file-names_002e-1237"></a><a name="index-set-target_002dfile_002dsystem_002dkind-_0028unix_007cdos_002dbased_007cauto_0029-1238"></a><a name="index-show-target_002dfile_002dsystem_002dkind-1239"></a><br><dt><code>set target-file-system-kind </code><var>kind</var><dd>Set assumed file system kind for target reported file names.
+     <p><a name="index-DOS-file_002dname-semantics-of-file-names_002e-1242"></a><a name="index-set-target_002dfile_002dsystem_002dkind-_0028unix_007cdos_002dbased_007cauto_0029-1243"></a><a name="index-show-target_002dfile_002dsystem_002dkind-1244"></a><br><dt><code>set target-file-system-kind </code><var>kind</var><dd>Set assumed file system kind for target reported file names.
 
      <p>Shared library file names as reported by the target system may not
 make sense as is on the system <span class="sc">gdb</span> is running on.  For
@@ -530,7 +540,7 @@ This is the default.
 </dl>
      </dl>
 
-   <p><a name="index-file-name-canonicalization-1240"></a><a name="index-base-name-differences-1241"></a>When processing file names provided by the user, <span class="sc">gdb</span>
+   <p><a name="index-file-name-canonicalization-1245"></a><a name="index-base-name-differences-1246"></a>When processing file names provided by the user, <span class="sc">gdb</span>
 frequently needs to compare them to the file names recorded in the
 program's debug info.  Normally, <span class="sc">gdb</span> compares just the
 <dfn>base names</dfn> of the files as strings, which is reasonably fast
@@ -547,9 +557,9 @@ pair of file names it needs to compare.  This will make file-name
 comparisons accurate, but at a price of a significant slowdown.
 
      <dl>
-<dt><code>set basenames-may-differ</code><dd><a name="index-set-basenames_002dmay_002ddiffer-1242"></a>Set whether a source file may have multiple base names.
+<dt><code>set basenames-may-differ</code><dd><a name="index-set-basenames_002dmay_002ddiffer-1247"></a>Set whether a source file may have multiple base names.
 
-     <br><dt><code>show basenames-may-differ</code><dd><a name="index-show-basenames_002dmay_002ddiffer-1243"></a>Show whether a source file may have multiple base names. 
+     <br><dt><code>show basenames-may-differ</code><dd><a name="index-show-basenames_002dmay_002ddiffer-1248"></a>Show whether a source file may have multiple base names. 
 </dl>
 
    <div class="footnote">

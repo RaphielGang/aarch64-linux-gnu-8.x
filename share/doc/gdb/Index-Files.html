@@ -48,13 +48,24 @@ Up:&nbsp;<a rel="up" accesskey="u" href="GDB-Files.html#GDB-Files">GDB Files</a>
 
 <h3 class="section">18.5 Index Files Speed Up <span class="sc">gdb</span></h3>
 
-<p><a name="index-index-files-1271"></a><a name="index-g_t_0040samp_007b_002egdb_005findex_007d-section-1272"></a>
+<p><a name="index-index-files-1276"></a><a name="index-g_t_0040samp_007b_002egdb_005findex_007d-section-1277"></a>
 When <span class="sc">gdb</span> finds a symbol file, it scans the symbols in the
 file in order to construct an internal symbol table.  This lets most
 <span class="sc">gdb</span> operations work quickly&mdash;at the cost of a delay early
 on.  For large programs, this delay can be quite lengthy, so
 <span class="sc">gdb</span> provides a way to build an index, which speeds up
 startup.
+
+   <p>For convenience, <span class="sc">gdb</span> comes with a program,
+<samp><span class="command">gdb-add-index</span></samp>, which can be used to add the index to a
+symbol file.  It takes the symbol file as its only argument:
+
+<pre class="smallexample">     $ gdb-add-index symfile
+</pre>
+   <p>See <a href="gdb_002dadd_002dindex.html#gdb_002dadd_002dindex">gdb-add-index</a>.
+
+   <p>It is also possible to do the work manually.  Here is what
+<samp><span class="command">gdb-add-index</span></samp> does behind the curtains.
 
    <p>The index is stored as a section in the symbol file.  <span class="sc">gdb</span> can
 write the index to a file, then you can put it into the symbol file
@@ -63,7 +74,7 @@ using <samp><span class="command">objcopy</span></samp>.
    <p>To create an index file, use the <code>save gdb-index</code> command:
 
      <dl>
-<dt><code>save gdb-index [-dwarf-5] </code><var>directory</var><dd><a name="index-save-gdb_002dindex-1273"></a>Create index files for all symbol files currently known by
+<dt><code>save gdb-index [-dwarf-5] </code><var>directory</var><dd><a name="index-save-gdb_002dindex-1278"></a>Create index files for all symbol files currently known by
 <span class="sc">gdb</span>.  For each known <var>symbol-file</var>, this command by
 default creates it produces a single file
 <samp><var>symbol-file</var><span class="file">.gdb-index</span></samp>.  If you invoke this command with

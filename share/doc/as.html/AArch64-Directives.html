@@ -12,7 +12,7 @@
 <!--
 This file documents the GNU Assembler "as".
 
-Copyright (C) 1991-2018 Free Software Foundation, Inc.
+Copyright (C) 1991-2019 Free Software Foundation, Inc.
 
 Permission is granted to copy, distribute and/or modify this document
 under the terms of the GNU Free Documentation License, Version 1.3
@@ -47,48 +47,48 @@ Up:&nbsp;<a rel="up" accesskey="u" href="AArch64_002dDependent.html#AArch64_002d
 
 <h4 class="subsection">9.1.5 AArch64 Machine Directives</h4>
 
-<p><a name="index-machine-directives_002c-AArch64-558"></a><a name="index-AArch64-machine-directives-559"></a>
+<p><a name="index-machine-directives_002c-AArch64-563"></a><a name="index-AArch64-machine-directives-564"></a>
      <dl>
 <!-- AAAAAAAAAAAAAAAAAAAAAAAAA -->
 
-     <p><a name="index-g_t_0040code_007b_002earch_007d-directive_002c-AArch64-560"></a><dt><code>.arch </code><var>name</var><dd>Select the target architecture.  Valid values for <var>name</var> are the same as
-for the <samp><span class="option">-march</span></samp> commandline option.
+     <p><a name="index-g_t_0040code_007b_002earch_007d-directive_002c-AArch64-565"></a><dt><code>.arch </code><var>name</var><dd>Select the target architecture.  Valid values for <var>name</var> are the same as
+for the <samp><span class="option">-march</span></samp> command-line option.
 
      <p>Specifying <code>.arch</code> clears any previously selected architecture
 extensions.
 
-     <p><a name="index-g_t_0040code_007b_002earch_005fextension_007d-directive_002c-AArch64-561"></a><br><dt><code>.arch_extension </code><var>name</var><dd>Add or remove an architecture extension to the target architecture.  Valid
+     <p><a name="index-g_t_0040code_007b_002earch_005fextension_007d-directive_002c-AArch64-566"></a><br><dt><code>.arch_extension </code><var>name</var><dd>Add or remove an architecture extension to the target architecture.  Valid
 values for <var>name</var> are the same as those accepted as architectural
-extensions by the <samp><span class="option">-mcpu</span></samp> commandline option.
+extensions by the <samp><span class="option">-mcpu</span></samp> command-line option.
 
      <p><code>.arch_extension</code> may be used multiple times to add or remove extensions
 incrementally to the architecture being compiled for.
 
      <!-- BBBBBBBBBBBBBBBBBBBBBBBBBB -->
-     <p><a name="index-g_t_0040code_007b_002ebss_007d-directive_002c-AArch64-562"></a><br><dt><code>.bss</code><dd>This directive switches to the <code>.bss</code> section.
+     <p><a name="index-g_t_0040code_007b_002ebss_007d-directive_002c-AArch64-567"></a><br><dt><code>.bss</code><dd>This directive switches to the <code>.bss</code> section.
 
      <!-- CCCCCCCCCCCCCCCCCCCCCCCCCC -->
-     <p><a name="index-g_t_0040code_007b_002ecpu_007d-directive_002c-AArch64-563"></a><br><dt><code>.cpu </code><var>name</var><dd>Set the target processor.  Valid values for <var>name</var> are the same as
-those accepted by the <samp><span class="option">-mcpu=</span></samp> command line option.
+     <p><a name="index-g_t_0040code_007b_002ecpu_007d-directive_002c-AArch64-568"></a><br><dt><code>.cpu </code><var>name</var><dd>Set the target processor.  Valid values for <var>name</var> are the same as
+those accepted by the <samp><span class="option">-mcpu=</span></samp> command-line option.
 
      <!-- DDDDDDDDDDDDDDDDDDDDDDDDDD -->
-     <p><a name="index-g_t_0040code_007b_002edword_007d-directive_002c-AArch64-564"></a><br><dt><code>.dword </code><var>expressions</var><dd>The <code>.dword</code> directive produces 64 bit values.
+     <p><a name="index-g_t_0040code_007b_002edword_007d-directive_002c-AArch64-569"></a><br><dt><code>.dword </code><var>expressions</var><dd>The <code>.dword</code> directive produces 64 bit values.
 
      <!-- EEEEEEEEEEEEEEEEEEEEEEEEEE -->
-     <p><a name="index-g_t_0040code_007b_002eeven_007d-directive_002c-AArch64-565"></a><br><dt><code>.even</code><dd>The <code>.even</code> directive aligns the output on the next even byte
+     <p><a name="index-g_t_0040code_007b_002eeven_007d-directive_002c-AArch64-570"></a><br><dt><code>.even</code><dd>The <code>.even</code> directive aligns the output on the next even byte
 boundary.
 
      <!-- FFFFFFFFFFFFFFFFFFFFFFFFFF -->
      <!-- GGGGGGGGGGGGGGGGGGGGGGGGGG -->
      <!-- HHHHHHHHHHHHHHHHHHHHHHHHHH -->
      <!-- IIIIIIIIIIIIIIIIIIIIIIIIII -->
-     <p><a name="index-g_t_0040code_007b_002einst_007d-directive_002c-AArch64-566"></a><br><dt><code>.inst </code><var>expressions</var><dd>Inserts the expressions into the output as if they were instructions,
+     <p><a name="index-g_t_0040code_007b_002einst_007d-directive_002c-AArch64-571"></a><br><dt><code>.inst </code><var>expressions</var><dd>Inserts the expressions into the output as if they were instructions,
 rather than data.
 
      <!-- JJJJJJJJJJJJJJJJJJJJJJJJJJ -->
      <!-- KKKKKKKKKKKKKKKKKKKKKKKKKK -->
      <!-- LLLLLLLLLLLLLLLLLLLLLLLLLL -->
-     <p><a name="index-g_t_0040code_007b_002eltorg_007d-directive_002c-AArch64-567"></a><br><dt><code>.ltorg</code><dd>This directive causes the current contents of the literal pool to be
+     <p><a name="index-g_t_0040code_007b_002eltorg_007d-directive_002c-AArch64-572"></a><br><dt><code>.ltorg</code><dd>This directive causes the current contents of the literal pool to be
 dumped into the current section (which is assumed to be the .text
 section) at the current location (aligned to a word boundary). 
 GAS maintains a separate literal pool for each section and each
@@ -104,11 +104,11 @@ it prevents accurate control of the placement of literal pools.
      <!-- NNNNNNNNNNNNNNNNNNNNNNNNNN -->
      <!-- OOOOOOOOOOOOOOOOOOOOOOOOOO -->
      <!-- PPPPPPPPPPPPPPPPPPPPPPPPPP -->
-     <p><a name="index-g_t_0040code_007b_002epool_007d-directive_002c-AArch64-568"></a><br><dt><code>.pool</code><dd>This is a synonym for .ltorg.
+     <p><a name="index-g_t_0040code_007b_002epool_007d-directive_002c-AArch64-573"></a><br><dt><code>.pool</code><dd>This is a synonym for .ltorg.
 
      <!-- QQQQQQQQQQQQQQQQQQQQQQQQQQ -->
      <!-- RRRRRRRRRRRRRRRRRRRRRRRRRR -->
-     <p><a name="index-g_t_0040code_007b_002ereq_007d-directive_002c-AArch64-569"></a><br><dt><var>name</var><code> .req </code><var>register name</var><dd>This creates an alias for <var>register name</var> called <var>name</var>.  For
+     <p><a name="index-g_t_0040code_007b_002ereq_007d-directive_002c-AArch64-574"></a><br><dt><var>name</var><code> .req </code><var>register name</var><dd>This creates an alias for <var>register name</var> called <var>name</var>.  For
 example:
 
      <pre class="smallexample">                  foo .req w0
@@ -118,14 +118,14 @@ alias to X16, X17, X30 and X29 respectively.
 
      <!-- SSSSSSSSSSSSSSSSSSSSSSSSSS -->
      <!-- TTTTTTTTTTTTTTTTTTTTTTTTTT -->
-     <p><a name="index-g_t_0040code_007b_002etlsdescadd_007d-directive_002c-AArch64-570"></a><br><dt><code>.tlsdescadd</code><dd>Emits a TLSDESC_ADD reloc on the next instruction.
+     <p><a name="index-g_t_0040code_007b_002etlsdescadd_007d-directive_002c-AArch64-575"></a><br><dt><code>.tlsdescadd</code><dd>Emits a TLSDESC_ADD reloc on the next instruction.
 
-     <p><a name="index-g_t_0040code_007b_002etlsdesccall_007d-directive_002c-AArch64-571"></a><br><dt><code>.tlsdesccall</code><dd>Emits a TLSDESC_CALL reloc on the next instruction.
+     <p><a name="index-g_t_0040code_007b_002etlsdesccall_007d-directive_002c-AArch64-576"></a><br><dt><code>.tlsdesccall</code><dd>Emits a TLSDESC_CALL reloc on the next instruction.
 
-     <p><a name="index-g_t_0040code_007b_002etlsdescldr_007d-directive_002c-AArch64-572"></a><br><dt><code>.tlsdescldr</code><dd>Emits a TLSDESC_LDR reloc on the next instruction.
+     <p><a name="index-g_t_0040code_007b_002etlsdescldr_007d-directive_002c-AArch64-577"></a><br><dt><code>.tlsdescldr</code><dd>Emits a TLSDESC_LDR reloc on the next instruction.
 
      <!-- UUUUUUUUUUUUUUUUUUUUUUUUUU -->
-     <p><a name="index-g_t_0040code_007b_002eunreq_007d-directive_002c-AArch64-573"></a><br><dt><code>.unreq </code><var>alias-name</var><dd>This undefines a register alias which was previously defined using the
+     <p><a name="index-g_t_0040code_007b_002eunreq_007d-directive_002c-AArch64-578"></a><br><dt><code>.unreq </code><var>alias-name</var><dd>This undefines a register alias which was previously defined using the
 <code>req</code> directive.  For example:
 
      <pre class="smallexample">                  foo .req w0
@@ -138,11 +138,17 @@ should only be done if it is really necessary.
      <!-- VVVVVVVVVVVVVVVVVVVVVVVVVV -->
      <!-- WWWWWWWWWWWWWWWWWWWWWWWWWW -->
      <!-- XXXXXXXXXXXXXXXXXXXXXXXXXX -->
-     <p><a name="index-g_t_0040code_007b_002exword_007d-directive_002c-AArch64-574"></a><br><dt><code>.xword </code><var>expressions</var><dd>The <code>.xword</code> directive produces 64 bit values.  This is the same
+     <p><a name="index-g_t_0040code_007b_002exword_007d-directive_002c-AArch64-579"></a><br><dt><code>.xword </code><var>expressions</var><dd>The <code>.xword</code> directive produces 64 bit values.  This is the same
 as the <code>.dword</code> directive.
 
      <!-- YYYYYYYYYYYYYYYYYYYYYYYYYY -->
      <!-- ZZZZZZZZZZZZZZZZZZZZZZZZZZ -->
+     <p><a name="index-g_t_0040code_007b_002ecfi_005fb_005fkey_005fframe_007d-directive_002c-AArch64-580"></a><br><dt><code>.cfi_b_key_frame</code><dd>The <code>.cfi_b_key_frame</code> directive inserts a 'B' character into the CIE
+corresponding to the current frame's FDE, meaning that its return address has
+been signed with the B-key.  If two frames are signed with differing keys then
+they will not share the same CIE.  This information is intended to be used by
+the stack unwinder in order to properly authenticate return addresses.
+
    </dl>
 
    </body></html>

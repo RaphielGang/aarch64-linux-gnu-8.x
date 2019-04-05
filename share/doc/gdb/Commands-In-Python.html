@@ -48,12 +48,12 @@ Up:&nbsp;<a rel="up" accesskey="u" href="Python-API.html#Python-API">Python API<
 
 <h5 class="subsubsection">23.2.2.20 Commands In Python</h5>
 
-<p><a name="index-commands-in-python-2094"></a><a name="index-python-commands-2095"></a>You can implement new <span class="sc">gdb</span> CLI commands in Python.  A CLI
+<p><a name="index-commands-in-python-2106"></a><a name="index-python-commands-2107"></a>You can implement new <span class="sc">gdb</span> CLI commands in Python.  A CLI
 command is implemented using an instance of the <code>gdb.Command</code>
 class, most commonly using a subclass.
 
 <div class="defun">
-&mdash; Function: <b>Command.__init__</b> (<var>name, command_class </var><span class="roman">[</span><var>, completer_class </var><span class="roman">[</span><var>, prefix</var><span class="roman">]]</span>)<var><a name="index-Command_002e_005f_005finit_005f_005f-2096"></a></var><br>
+&mdash; Function: <b>Command.__init__</b> (<var>name, command_class </var><span class="roman">[</span><var>, completer_class </var><span class="roman">[</span><var>, prefix</var><span class="roman">]]</span>)<var><a name="index-Command_002e_005f_005finit_005f_005f-2108"></a></var><br>
 <blockquote><p>The object initializer for <code>Command</code> registers the new command
 with <span class="sc">gdb</span>.  This initializer is normally invoked from the
 subclass' own <code>__init__</code> method.
@@ -86,10 +86,10 @@ documentation string is provided, the default value &ldquo;This command is
 not documented.&rdquo; is used. 
 </p></blockquote></div>
 
-   <p><a name="index-don_0027t-repeat-Python-command-2097"></a>
+   <p><a name="index-don_0027t-repeat-Python-command-2109"></a>
 
 <div class="defun">
-&mdash; Function: <b>Command.dont_repeat</b> ()<var><a name="index-Command_002edont_005frepeat-2098"></a></var><br>
+&mdash; Function: <b>Command.dont_repeat</b> ()<var><a name="index-Command_002edont_005frepeat-2110"></a></var><br>
 <blockquote><p>By default, a <span class="sc">gdb</span> command is repeated when the user enters a
 blank line at the command prompt.  A command can suppress this
 behavior by invoking the <code>dont_repeat</code> method.  This is similar
@@ -97,7 +97,7 @@ to the user command <code>dont-repeat</code>, see <a href="Define.html#Define">d
 </p></blockquote></div>
 
 <div class="defun">
-&mdash; Function: <b>Command.invoke</b> (<var>argument, from_tty</var>)<var><a name="index-Command_002einvoke-2099"></a></var><br>
+&mdash; Function: <b>Command.invoke</b> (<var>argument, from_tty</var>)<var><a name="index-Command_002einvoke-2111"></a></var><br>
 <blockquote><p>This method is called by <span class="sc">gdb</span> when this command is invoked.
 
         <p><var>argument</var> is a string.  It is the argument to the command, after
@@ -110,7 +110,7 @@ that the command came from elsewhere.
         <p>If this method throws an exception, it is turned into a <span class="sc">gdb</span>
 <code>error</code> call.  Otherwise, the return value is ignored.
 
-        <p><a name="index-gdb_002estring_005fto_005fargv-2100"></a>To break <var>argument</var> up into an argv-like string use
+        <p><a name="index-gdb_002estring_005fto_005fargv-2112"></a>To break <var>argument</var> up into an argv-like string use
 <code>gdb.string_to_argv</code>.  This function behaves identically to
 <span class="sc">gdb</span>'s internal argument lexer <code>buildargv</code>. 
 It is recommended to use this for consistency. 
@@ -122,10 +122,10 @@ Example:
 </pre>
         </blockquote></div>
 
-   <p><a name="index-completion-of-Python-commands-2101"></a>
+   <p><a name="index-completion-of-Python-commands-2113"></a>
 
 <div class="defun">
-&mdash; Function: <b>Command.complete</b> (<var>text, word</var>)<var><a name="index-Command_002ecomplete-2102"></a></var><br>
+&mdash; Function: <b>Command.complete</b> (<var>text, word</var>)<var><a name="index-Command_002ecomplete-2114"></a></var><br>
 <blockquote><p>This method is called by <span class="sc">gdb</span> when the user attempts
 completion on this command.  All forms of completion are handled by
 this method, that is, the &lt;TAB&gt; and &lt;M-?&gt; key bindings
@@ -162,66 +162,66 @@ command.  The available classifications are represented by constants
 defined in the <code>gdb</code> module:
 
      
-<a name="index-COMMAND_005fNONE-2103"></a>
-<a name="index-gdb_002eCOMMAND_005fNONE-2104"></a>
+<a name="index-COMMAND_005fNONE-2115"></a>
+<a name="index-gdb_002eCOMMAND_005fNONE-2116"></a>
 <dl><dt><code>gdb.COMMAND_NONE</code><dd>The command does not belong to any particular class.  A command in
 this category will not be displayed in any of the help categories.
 
-     <p><a name="index-COMMAND_005fRUNNING-2105"></a><a name="index-gdb_002eCOMMAND_005fRUNNING-2106"></a><br><dt><code>gdb.COMMAND_RUNNING</code><dd>The command is related to running the inferior.  For example,
+     <p><a name="index-COMMAND_005fRUNNING-2117"></a><a name="index-gdb_002eCOMMAND_005fRUNNING-2118"></a><br><dt><code>gdb.COMMAND_RUNNING</code><dd>The command is related to running the inferior.  For example,
 <code>start</code>, <code>step</code>, and <code>continue</code> are in this category. 
 Type <kbd>help running</kbd> at the <span class="sc">gdb</span> prompt to see a list of
 commands in this category.
 
-     <p><a name="index-COMMAND_005fDATA-2107"></a><a name="index-gdb_002eCOMMAND_005fDATA-2108"></a><br><dt><code>gdb.COMMAND_DATA</code><dd>The command is related to data or variables.  For example,
+     <p><a name="index-COMMAND_005fDATA-2119"></a><a name="index-gdb_002eCOMMAND_005fDATA-2120"></a><br><dt><code>gdb.COMMAND_DATA</code><dd>The command is related to data or variables.  For example,
 <code>call</code>, <code>find</code>, and <code>print</code> are in this category.  Type
 <kbd>help data</kbd> at the <span class="sc">gdb</span> prompt to see a list of commands
 in this category.
 
-     <p><a name="index-COMMAND_005fSTACK-2109"></a><a name="index-gdb_002eCOMMAND_005fSTACK-2110"></a><br><dt><code>gdb.COMMAND_STACK</code><dd>The command has to do with manipulation of the stack.  For example,
+     <p><a name="index-COMMAND_005fSTACK-2121"></a><a name="index-gdb_002eCOMMAND_005fSTACK-2122"></a><br><dt><code>gdb.COMMAND_STACK</code><dd>The command has to do with manipulation of the stack.  For example,
 <code>backtrace</code>, <code>frame</code>, and <code>return</code> are in this
 category.  Type <kbd>help stack</kbd> at the <span class="sc">gdb</span> prompt to see a
 list of commands in this category.
 
-     <p><a name="index-COMMAND_005fFILES-2111"></a><a name="index-gdb_002eCOMMAND_005fFILES-2112"></a><br><dt><code>gdb.COMMAND_FILES</code><dd>This class is used for file-related commands.  For example,
+     <p><a name="index-COMMAND_005fFILES-2123"></a><a name="index-gdb_002eCOMMAND_005fFILES-2124"></a><br><dt><code>gdb.COMMAND_FILES</code><dd>This class is used for file-related commands.  For example,
 <code>file</code>, <code>list</code> and <code>section</code> are in this category. 
 Type <kbd>help files</kbd> at the <span class="sc">gdb</span> prompt to see a list of
 commands in this category.
 
-     <p><a name="index-COMMAND_005fSUPPORT-2113"></a><a name="index-gdb_002eCOMMAND_005fSUPPORT-2114"></a><br><dt><code>gdb.COMMAND_SUPPORT</code><dd>This should be used for &ldquo;support facilities&rdquo;, generally meaning
+     <p><a name="index-COMMAND_005fSUPPORT-2125"></a><a name="index-gdb_002eCOMMAND_005fSUPPORT-2126"></a><br><dt><code>gdb.COMMAND_SUPPORT</code><dd>This should be used for &ldquo;support facilities&rdquo;, generally meaning
 things that are useful to the user when interacting with <span class="sc">gdb</span>,
 but not related to the state of the inferior.  For example,
 <code>help</code>, <code>make</code>, and <code>shell</code> are in this category.  Type
 <kbd>help support</kbd> at the <span class="sc">gdb</span> prompt to see a list of
 commands in this category.
 
-     <p><a name="index-COMMAND_005fSTATUS-2115"></a><a name="index-gdb_002eCOMMAND_005fSTATUS-2116"></a><br><dt><code>gdb.COMMAND_STATUS</code><dd>The command is an &lsquo;<samp><span class="samp">info</span></samp>&rsquo;-related command, that is, related to the
+     <p><a name="index-COMMAND_005fSTATUS-2127"></a><a name="index-gdb_002eCOMMAND_005fSTATUS-2128"></a><br><dt><code>gdb.COMMAND_STATUS</code><dd>The command is an &lsquo;<samp><span class="samp">info</span></samp>&rsquo;-related command, that is, related to the
 state of <span class="sc">gdb</span> itself.  For example, <code>info</code>, <code>macro</code>,
 and <code>show</code> are in this category.  Type <kbd>help status</kbd> at the
 <span class="sc">gdb</span> prompt to see a list of commands in this category.
 
-     <p><a name="index-COMMAND_005fBREAKPOINTS-2117"></a><a name="index-gdb_002eCOMMAND_005fBREAKPOINTS-2118"></a><br><dt><code>gdb.COMMAND_BREAKPOINTS</code><dd>The command has to do with breakpoints.  For example, <code>break</code>,
+     <p><a name="index-COMMAND_005fBREAKPOINTS-2129"></a><a name="index-gdb_002eCOMMAND_005fBREAKPOINTS-2130"></a><br><dt><code>gdb.COMMAND_BREAKPOINTS</code><dd>The command has to do with breakpoints.  For example, <code>break</code>,
 <code>clear</code>, and <code>delete</code> are in this category.  Type <kbd>help
 breakpoints</kbd> at the <span class="sc">gdb</span> prompt to see a list of commands in
 this category.
 
-     <p><a name="index-COMMAND_005fTRACEPOINTS-2119"></a><a name="index-gdb_002eCOMMAND_005fTRACEPOINTS-2120"></a><br><dt><code>gdb.COMMAND_TRACEPOINTS</code><dd>The command has to do with tracepoints.  For example, <code>trace</code>,
+     <p><a name="index-COMMAND_005fTRACEPOINTS-2131"></a><a name="index-gdb_002eCOMMAND_005fTRACEPOINTS-2132"></a><br><dt><code>gdb.COMMAND_TRACEPOINTS</code><dd>The command has to do with tracepoints.  For example, <code>trace</code>,
 <code>actions</code>, and <code>tfind</code> are in this category.  Type
 <kbd>help tracepoints</kbd> at the <span class="sc">gdb</span> prompt to see a list of
 commands in this category.
 
-     <p><a name="index-COMMAND_005fUSER-2121"></a><a name="index-gdb_002eCOMMAND_005fUSER-2122"></a><br><dt><code>gdb.COMMAND_USER</code><dd>The command is a general purpose command for the user, and typically
+     <p><a name="index-COMMAND_005fUSER-2133"></a><a name="index-gdb_002eCOMMAND_005fUSER-2134"></a><br><dt><code>gdb.COMMAND_USER</code><dd>The command is a general purpose command for the user, and typically
 does not fit in one of the other categories. 
 Type <kbd>help user-defined</kbd> at the <span class="sc">gdb</span> prompt to see
 a list of commands in this category, as well as the list of gdb macros
 (see <a href="Sequences.html#Sequences">Sequences</a>).
 
-     <p><a name="index-COMMAND_005fOBSCURE-2123"></a><a name="index-gdb_002eCOMMAND_005fOBSCURE-2124"></a><br><dt><code>gdb.COMMAND_OBSCURE</code><dd>The command is only used in unusual circumstances, or is not of
+     <p><a name="index-COMMAND_005fOBSCURE-2135"></a><a name="index-gdb_002eCOMMAND_005fOBSCURE-2136"></a><br><dt><code>gdb.COMMAND_OBSCURE</code><dd>The command is only used in unusual circumstances, or is not of
 general interest to users.  For example, <code>checkpoint</code>,
 <code>fork</code>, and <code>stop</code> are in this category.  Type <kbd>help
 obscure</kbd> at the <span class="sc">gdb</span> prompt to see a list of commands in this
 category.
 
-     <p><a name="index-COMMAND_005fMAINTENANCE-2125"></a><a name="index-gdb_002eCOMMAND_005fMAINTENANCE-2126"></a><br><dt><code>gdb.COMMAND_MAINTENANCE</code><dd>The command is only useful to <span class="sc">gdb</span> maintainers.  The
+     <p><a name="index-COMMAND_005fMAINTENANCE-2137"></a><a name="index-gdb_002eCOMMAND_005fMAINTENANCE-2138"></a><br><dt><code>gdb.COMMAND_MAINTENANCE</code><dd>The command is only useful to <span class="sc">gdb</span> maintainers.  The
 <code>maintenance</code> and <code>flushregs</code> commands are in this category. 
 Type <kbd>help internals</kbd> at the <span class="sc">gdb</span> prompt to see a list of
 commands in this category. 
@@ -233,21 +233,21 @@ from the <code>complete</code> method.  These predefined completion
 constants are all defined in the <code>gdb</code> module:
 
      
-<a name="index-COMPLETE_005fNONE-2127"></a>
-<dl><dt><code>gdb.COMPLETE_NONE</code><a name="index-gdb_002eCOMPLETE_005fNONE-2128"></a><dd>This constant means that no completion should be done.
+<a name="index-COMPLETE_005fNONE-2139"></a>
+<dl><dt><code>gdb.COMPLETE_NONE</code><a name="index-gdb_002eCOMPLETE_005fNONE-2140"></a><dd>This constant means that no completion should be done.
 
-     <p><a name="index-COMPLETE_005fFILENAME-2129"></a><br><dt><code>gdb.COMPLETE_FILENAME</code><a name="index-gdb_002eCOMPLETE_005fFILENAME-2130"></a><dd>This constant means that filename completion should be performed.
+     <p><a name="index-COMPLETE_005fFILENAME-2141"></a><br><dt><code>gdb.COMPLETE_FILENAME</code><a name="index-gdb_002eCOMPLETE_005fFILENAME-2142"></a><dd>This constant means that filename completion should be performed.
 
-     <p><a name="index-COMPLETE_005fLOCATION-2131"></a><br><dt><code>gdb.COMPLETE_LOCATION</code><a name="index-gdb_002eCOMPLETE_005fLOCATION-2132"></a><dd>This constant means that location completion should be done. 
+     <p><a name="index-COMPLETE_005fLOCATION-2143"></a><br><dt><code>gdb.COMPLETE_LOCATION</code><a name="index-gdb_002eCOMPLETE_005fLOCATION-2144"></a><dd>This constant means that location completion should be done. 
 See <a href="Specify-Location.html#Specify-Location">Specify Location</a>.
 
-     <p><a name="index-COMPLETE_005fCOMMAND-2133"></a><br><dt><code>gdb.COMPLETE_COMMAND</code><a name="index-gdb_002eCOMPLETE_005fCOMMAND-2134"></a><dd>This constant means that completion should examine <span class="sc">gdb</span>
+     <p><a name="index-COMPLETE_005fCOMMAND-2145"></a><br><dt><code>gdb.COMPLETE_COMMAND</code><a name="index-gdb_002eCOMPLETE_005fCOMMAND-2146"></a><dd>This constant means that completion should examine <span class="sc">gdb</span>
 command names.
 
-     <p><a name="index-COMPLETE_005fSYMBOL-2135"></a><br><dt><code>gdb.COMPLETE_SYMBOL</code><a name="index-gdb_002eCOMPLETE_005fSYMBOL-2136"></a><dd>This constant means that completion should be done using symbol names
+     <p><a name="index-COMPLETE_005fSYMBOL-2147"></a><br><dt><code>gdb.COMPLETE_SYMBOL</code><a name="index-gdb_002eCOMPLETE_005fSYMBOL-2148"></a><dd>This constant means that completion should be done using symbol names
 as the source.
 
-     <p><a name="index-COMPLETE_005fEXPRESSION-2137"></a><br><dt><code>gdb.COMPLETE_EXPRESSION</code><a name="index-gdb_002eCOMPLETE_005fEXPRESSION-2138"></a><dd>This constant means that completion should be done on expressions. 
+     <p><a name="index-COMPLETE_005fEXPRESSION-2149"></a><br><dt><code>gdb.COMPLETE_EXPRESSION</code><a name="index-gdb_002eCOMPLETE_005fEXPRESSION-2150"></a><dd>This constant means that completion should be done on expressions. 
 Often this means completing on symbol names, but some language
 parsers also have support for completing on field names. 
 </dl>
